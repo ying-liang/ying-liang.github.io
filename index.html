@@ -1,216 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<title>Ying's Web Portfolio</title>
-	<meta name="description" content"Portfolio by the projects">
-	<meta name="author" content="Ying">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/index-style.css">
-	<link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans" rel="stylesheet">
+	<title>Lover's requiem - A Visual Poetry Experiment</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/interactive-poem-style.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Crafty+Girls|Kreon|Shadows+Into+Light|Calligraffitti|Dancing+Script' rel='stylesheet' type='text/css'>
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
-	<![endif]-->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	
+  <script>
+function reloadPage() {
+    location.reload();
+}
+</script>
+
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+
+	<script type='text/javascript'>//<![CDATA[
+	$(document).ready(function(){
+		$('a').click(function (event) {
+	            event.preventDefault();
+
+	            var sectionId = $(this).attr("data-section"),
+	                $toSlide = $("#container section#" + sectionId),
+	                $fromSlide = $('.active');
+
+	            if (!($toSlide.hasClass("active"))) {
+	                $fromSlide.animate({
+	                    "left": "-100%"
+	                }, 500, 'linear')
+	                $toSlide.animate({
+	                    "left": "0%"
+	                }, 500, 'linear', function () {
+	                    $fromSlide.css("left", "100%");
+	                    $fromSlide.removeClass("active");
+	                    $toSlide.addClass("active");
+	                });
+	            }
+	        });
+			$("#container section:nth-child(1) .title h1").addClass("load1");
+			$("#container section:nth-child(1) .title p").addClass("load2");
+			$("#container section:nth-child(2) .content p").addClass("load3");
+			$("#container section:nth-child(3) .content p").addClass("load4");
+
+
+		});
+//]]>
+
+</script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 	<script type="text/javascript">
-	$(function () {
-		var filterList = {
-			init: function () {
-				$('#portfoliolist').mixItUp({
-  				selectors: {
-    			  target: '.portfolio',
-    			  filter: '.filter'
-    		  },
-    		  load: {
-      		  filter: '.text, .visual, .web'
-      		}
-				});
-			
-			}
-		};
-		filterList.init();
+	$(document).ready(function(){
+		$('.text').mouseover(function () {
+			$('.pic').slideToggle(400);
+	    });
 	});
 	</script>
 
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text2').mouseover(function () {
+			$('.pic2').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text3').mouseover(function () {
+			$('.pic3').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text4').mouseover(function () {
+			$('.pic4').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text5').mouseover(function () {
+			$('.pic5').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text6').mouseover(function () {
+			$('.pic6').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text7').mouseover(function () {
+			$('.pic7').slideToggle(400);
+	    });
+	});
+	</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.text8').mouseover(function () {
+			$('.pic8').slideToggle(400);
+	    });
+	});
+	</script>
+
+
+ <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(2) .content p.wish a").one("mouseover", function() {
+  $("#container section:nth-child(2) .content p.wish a").addClass('permahover');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(2) .content p.burrow a").one("mouseover", function() {
+  $("#container section:nth-child(2) .content p.burrow a").addClass('permahover2');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(2) .content p.crunch a").one("mouseover", function() {
+  $("#container section:nth-child(2) .content p.crunch a").addClass('permahover3');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(3) .content p.nothing a").one("mouseover", function() {
+  $("#container section:nth-child(3) .content p.nothing a").addClass('permahover4');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(4) .content p.sores a").one("mouseover", function() {
+  $("#container section:nth-child(4) .content p.sores a").addClass('permahover5');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(4) .content p.patience a").one("mouseover", function() {
+  $("#container section:nth-child(4) .content p.patience a").addClass('permahover6');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(4) .content p.hope a").one("mouseover", function() {
+  $("#container section:nth-child(4) .content p.hope a").addClass('permahover7');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(5) .content p.eyes a").one("mouseover", function() {
+  $("#container section:nth-child(5) .content p.eyes a").addClass('permahover8');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(5) .content p.repose a").one("mouseover", function() {
+  $("#container section:nth-child(5) .content p.repose a").addClass('permahover9');
+});
+});//]]>
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$("#container section:nth-child(6) .content p.hang a").one("mouseover", function() {
+  $("#container section:nth-child(6) .content p.hang a").addClass('permahover10');
+});
+});//]]>
+</script>
+
+
+
 </head>
+
 <body>
-  <div id="left"><span class="tit">Hi, I'm Ying.</span><span class="intro">I like to make things.</span></div>
-  <!--<div id="left"><div class="tit">Hi, I'm Ying.</div><div class="intro">I like to make things.</div></div>-->
-  <div id="top">
-    <ul id="filters" class="clearfix">
-  		<li><span class="filter active" data-filter=".text, .visual, .web">All Projects</span></li>
-  		<li><span class="filter" data-filter=".text">Writing</span></li>
-  		<li><span class="filter" data-filter=".visual">Visual Design</span></li>
-  		<li><span class="filter" data-filter=".web">Web Coding</span></li>
-		</ul>
-  </div>
-  <div class="wrap">
-    <div id="gallery">
-	<div class="container">
-		<div id="portfoliolist">
-			<div class="portfolio text" data-cat="text">
-				<div class="portfolio-wrapper">
-					<img id ="text" src="img/portfolios/text/1.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/beyonce.pdf">Beyonce Essay</a>
-							<span class="text-category">Essay on Beyonce as a feminist, general audience. Extensive background research, emphasizes Beyonce's evolution in clear & concise writing.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio visual" data-cat="visual">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/visual/1.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title">5k Logo</a>
-							<span class="text-category">Simple logo design for campus club. Non-profit donating stethoscope to medical students. Form & social media format considered. Distributed across campus and running events.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-						
-			<div class="portfolio text" data-cat="text">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/text/3.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/partnerships.pdf">Partnership Essay</a>
-							<span class="text-category">Writing sample: explaining business law concept of partnerships written for college students, given freedom to explain technical language.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio visual" data-cat="visual">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/visual/4.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="https://invis.io/7WBIHICTX">Armoire App</a>
-							<span class="text-category">Semester long startup-based project, prototype created through Invisionapp including overall design aesthetics and page flow, based on consumer insights and research.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio visual" data-cat="visual">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/visual/5.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title">Vector Art</a>
-							<span class="text-category">Vector pen tool, practice in Adobe Illustrator experimenting with stylized strokes and blocky, monochromatic aesthetics. Combination of digital still-life.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio text" data-cat="text">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/text/2.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/images/sunflower-2.jpg">Dear Object Poem</a>
-							<span class="text-category">Poem with illustration: loading affect into the un-affected, Love letter to a sunflower. Explored visceral-ness with physical form. Combined strengths of mediums to explore visual cohesion</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio visual" data-cat="visual">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/visual/2.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/thrive.pdf">Thrive Impact Poster</a>
-							<span class="text-category">Copyediting and design practice: B2B deliverable for socially-oriented startup focusing on hiring technology professionals. Received group feedback for changes.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio web" data-cat="web">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/web/space.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p1index.html">Great Space Race</a>
-							<span class="text-category">Mock company that sends students to space. Went for smooth and subdued looks. Home, students, & for kids pages functioning. Simple HTML & CSS. Designed for easy navigation and interface.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
 
-			<div class="portfolio web" data-cat="web">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/web/req.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p3Index.html">Requiem - Visual Poem</a>
-							<span class="text-category">Cross-media project, exploring physicality of one of my poems through changing, animated words & smooth transitions. HTML/CSS/Javascript. Interested in future cross-media projects</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio web" data-cat="web">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/web/folio.jpg" alt="" /></a>
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p2Portfolio.html">Portfolio Mockup</a>
-							<span class="text-category">Example photography portfolio exploring smooth transitions and changes in monitor size. Color scheme & contrasts played up. HTML, CSS & Jquery. Played with interactive click elements.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="portfolio web" data-cat="web">
-				<div class="portfolio-wrapper">
-					<a href=""><img src="img/portfolios/web/lockit.jpg" alt="" /></a>
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p5index.html">Lockit Security</a>
-							<span class="text-category">Mock company that sells online security. (group video, individual websites). Looked at intuitive animations & links in narrative form. HTML/CSS/Javascript. Explored story telling through pages.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfolio visual" data-cat="visual">
-				<div class="portfolio-wrapper">
-					<img src="img/portfolios/visual/3.jpg" alt="" />
-					<div class="label">
-						<div class="label-text">
-							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/book.pdf">Culture Book</a>
-							<span class="text-category">Created a company culture book with the help of co-workers and supervisors. Summer long project integrating into workplace culture, with visual problem solving.</span>
-						</div>
-						<div class="label-bg"></div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		</div>
+	<div id="navigation">
+		<a data-section="one" class="try" href="#">&nbsp;0&nbsp;</a>
+		<a data-section="two" class="try" href="#">&nbsp;1&nbsp;</a>
+		<a data-section="three" class="try" href="#">&nbsp;2&nbsp;</a>
+		<a data-section="four" class="try" href="#">&nbsp;3&nbsp;</a>
+		<a data-section="five" class="try" href="#">&nbsp;4&nbsp;</a>
+		<a data-section="six" class="try" href="#">&nbsp;5&nbsp;</a>
 	</div>
-</div>
+
+	<div id="container">
+
+  <div class="instruct">
+      		{Hover once across gray & red}
+	</div>
+
+    	<div class="content">
+	<section id="one" class="active">
+
+				<div class="title">
+					<h1>Lover's Requiem</h1>
+					<p>by Ying Liang</p>
+				</div>
+
+				<div class="girl">
+					<img src="images/Girl.png" width="999" height="525"/>
+				</div>
+
+				<div class="maskpic">
+					<img src="images/Maskpic.png" width="350" height="356"/>
+				</div>
+
+				<div class="burstpic">
+					<img class="rotate" src="images/burst.png" width="350" height="356"/>
+				</div>
+		</section>
+
+	    <section id="two">
+			<div class="content">
+			<p>
+			<a href="#"><p class="wish">I wish I</p></a></p>
+			<br>
+			<p>
+			<a href="#"><p class="burrow">could burrow in on myself,</p></a>
+			</p>collapse <br>
+			as an atrophied
+			<div class="picholder">
+			<p class="pic"> <img src="images/lungs.png" width="100px" height="110px">
+			</p>
+			</div>
+			<div class="text">lung </div>
+			would, <br>
+			or
+			<p><a href="#"><p class="crunch">crunch</p></a>
+
+			like the chitin-<br>
+			stained shell of
+			a decade-old <div class="picholder2">
+			<p class="pic2"> <img src="images/cicada.png" width="140px" height="100px">
+			</p></div>
+			<div class="text2">cicada</div>
+			<br>
+			Maybe then I’d<br/>
+			learn how to love an
+			<div class="picholder3">
+			<p class="pic3"> <img src="images/mask.png" width="130px" height="130px">
+			</p></div>
+			<div class="text3">epidemic.</div>
+
+			</div>
+
+		</section>
+
+	    <section id="three">
+			<div class="content">
+			<p>
+			I nearly reached
+      <div class="picholder4">
+			<p class="pic4"> <img src="images/paradise.png" width="200px" height="130px">
+			</p></div>
+			<div class="text4">Nirvana.</div><br>
+			<div class="picholder5">
+  		<p class="pic5"> <img src="images/heart.png" width="70px" height="100px">
+			</p></div>
+			<div class="text5">Masochist-at-heart,</div><br>
+			there’s
+      <p>
+			<a href="#"><p class="nothing">nothing</p></a>
+			</p>
+			left of me<br/>
+			save<br/>
+			an ache or two.<br/>
+			<div class="picholder6">
+    	<p class="pic6"> <img src="Images/guts.png" width="100px" height="85px">
+			</p></div>
+			<div class="text6">Organache.</div>
+      <div class="picholder7">
+    	<p class="pic7"> <img src="Images/mind.png" width="120px" height="70px">
+			</p></div>
+			<div class="text7">Mindache.</div>
+      <div class="picholder8">
+    	<p class="pic8"> <img src="Images/ribs.png" width="75px" height="100px">
+			</p></div>
+			<div class="text8">Ribache.</div>
+		</p>
+		</div>
+		</section>
+
+	    <section id="four">
+			<div class="content">
+			<p>
+			Sate these
+			<p>
+			<a href="#"><p class="sores">sores</p></a>
+			 on my psy-<br/>
+			che with cool balms <br/>
+			and
+			<p>
+			<a href="#"><p class="patience">patience,</p></a>
+			</p>
+			 for I<br/>
+			have yet to smell <br/>
+			the stench of<br/>
+			abortive<br/>
+			<p>
+			<a href="#"><p class="hope">hope,</p></a>
+			</p>
+			</p>
+			</div>
+		</section>
+
+	    <section id="five">
+			<div class="content">
+			<p>
+			yet to feel<br/>
+			the soil crawl underneath my
+			<a href="#"><p class="eyes">eyes</p></a>
+			and<br/>
+			<p><a href="#"><p class="repose">repose</p></a></p>  in the sweet empti-<br/>
+			ness beneath.
+			</p>
+			</div>
+		</section>
+
+	    <section id="six">
+			<div class="content">
+			<p><p>
+			<a href="#"><p class="hang">Hang Me</p></a></p>
+			<h4>on a star—I want to be beauty-full.</h4><br/>
+      <br><br><br>
+      <div class="heart pulse2"><a href="Index.html" onclick="reloadPage()">♥</a></div>
+			</p>
+			</div>
+		</section>
+	</div>
+  </div>
+
+	<div id="bottom">
+	Copyright 2014. All rights reserved.
+	</div>
+
 </body>
 </html>
