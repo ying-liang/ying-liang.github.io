@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ying's Web Portfolio</title>
+	<meta name="description" content"Portfolio by the projects">
+	<meta name="author" content="Ying">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/index-style.css">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	
+	<script type="text/javascript">
+	$(function () {
+		var filterList = {
+			init: function () {
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'
+    		  },
+    		  load: {
+      		  filter: '.text, .visual, .web'
+      		}
+				});
+			
+			}
+		};
+		filterList.init();
+	});
+	</script>
+
+</head>
+<body>
+  <div id="left"><span class="tit">Hi, I'm Ying.</span><span class="intro">I like to make things.</span></div>
+  <!--<div id="left"><div class="tit">Hi, I'm Ying.</div><div class="intro">I like to make things.</div></div>-->
+  <div id="top">
+    <ul id="filters" class="clearfix">
+  		<li><span class="filter active" data-filter=".text, .visual, .web">All Projects</span></li>
+  		<li><span class="filter" data-filter=".text">Writing</span></li>
+  		<li><span class="filter" data-filter=".visual">Visual Design</span></li>
+  		<li><span class="filter" data-filter=".web">Web Coding</span></li>
+		</ul>
+  </div>
+  <div class="wrap">
+    <div id="gallery">
+	<div class="container">
+		<div id="portfoliolist">
+			<div class="portfolio text" data-cat="text">
+				<div class="portfolio-wrapper">
+					<img id ="text" src="img/portfolios/text/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/beyonce.pdf">Beyonce Essay</a>
+							<span class="text-category">Essay on Beyonce as a feminist, general audience. Extensive background research, emphasizes Beyonce's evolution in clear & concise writing.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio visual" data-cat="visual">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/visual/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">5k Logo</a>
+							<span class="text-category">Simple logo design for campus club. Non-profit donating stethoscope to medical students. Form & social media format considered. Distributed across campus and running events.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+						
+			<div class="portfolio text" data-cat="text">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/text/3.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/partnerships.pdf">Partnership Essay</a>
+							<span class="text-category">Writing sample: explaining business law concept of partnerships written for college students, given freedom to explain technical language.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio visual" data-cat="visual">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/visual/4.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="https://invis.io/7WBIHICTX">Armoire App</a>
+							<span class="text-category">Semester long startup-based project, prototype created through Invisionapp including overall design aesthetics and page flow, based on consumer insights and research.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio visual" data-cat="visual">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/visual/5.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Vector Art</a>
+							<span class="text-category">Vector pen tool, practice in Adobe Illustrator experimenting with stylized strokes and blocky, monochromatic aesthetics. Combination of digital still-life.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio text" data-cat="text">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/text/2.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/images/sunflower-2.jpg">Dear Object Poem</a>
+							<span class="text-category">Poem with illustration: loading affect into the un-affected, Love letter to a sunflower. Explored visceral-ness with physical form. Combined strengths of mediums to explore visual cohesion</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio visual" data-cat="visual">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/visual/2.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/thrive.pdf">Thrive Impact Poster</a>
+							<span class="text-category">Copyediting and design practice: B2B deliverable for socially-oriented startup focusing on hiring technology professionals. Received group feedback for changes.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/web/space.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p1index.html">Great Space Race</a>
+							<span class="text-category">Mock company that sends students to space. Went for smooth and subdued looks. Home, students, & for kids pages functioning. Simple HTML & CSS. Designed for easy navigation and interface.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/web/req.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p3Index.html">Requiem - Visual Poem</a>
+							<span class="text-category">Cross-media project, exploring physicality of one of my poems through changing, animated words & smooth transitions. HTML/CSS/Javascript. Interested in future cross-media projects</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/web/folio.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p2Portfolio.html">Portfolio Mockup</a>
+							<span class="text-category">Example photography portfolio exploring smooth transitions and changes in monitor size. Color scheme & contrasts played up. HTML, CSS & Jquery. Played with interactive click elements.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">
+					<a href=""><img src="img/portfolios/web/lockit.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/p5index.html">Lockit Security</a>
+							<span class="text-category">Mock company that sells online security. (group video, individual websites). Looked at intuitive animations & links in narrative form. HTML/CSS/Javascript. Explored story telling through pages.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio visual" data-cat="visual">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/visual/3.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.users.miamioh.edu/Liangy3/files/book.pdf">Culture Book</a>
+							<span class="text-category">Created a company culture book with the help of co-workers and supervisors. Summer long project integrating into workplace culture, with visual problem solving.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

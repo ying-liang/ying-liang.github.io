@@ -1,0 +1,165 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} 
+
+footer, .social-media, .bottom-content, .mid-content, header, #navigation {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;	
+}
+
+/*universal start*/
+header {
+	width:1024px;
+	height: 116px;
+	color:white;
+	margin: 0 auto;
+	text-align:center;
+	font-size: 250%;
+    padding: 40px;
+}
+
+#logo {
+	width:617px;
+	height: 38px;
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:3;
+}
+
+body {
+	font-family: Verdana, Arial;
+	background-color: #2E2E2E;
+}
+
+h1 {
+	text-align:center;
+}
+
+h2 {
+	text-align:center;
+	position:relative;
+	top:-65px;
+}
+
+h3 {
+	width:1014px;
+	height: 30px;
+	color:white;
+	margin: 0 auto;
+	text-align:center;
+	font-size: 200%;
+    padding: 5px;
+}
+
+ul
+{
+	list-style-type:none;
+}
+
+li
+{
+	display:inline;
+}
+
+#navigation {
+	z-index:2;
+	text-align:center;
+	padding: 10px;
+}
+
+#container {
+	width:1024px;
+	height: 768px;
+	margin: 0px auto;
+	background-image:url('../images/p1astro-bg.png');
+}
+
+#navigation {
+	width: 1024px;
+	height: 46px;
+	background-color: rgba(255,255,255,0.2)
+}
+
+a.menu:link,a.menu:visited, a.menu:active {
+	display:inline-block;
+	width:200px;
+	text-align: center;    
+	font: 14px "Myriad Pro";
+	letter-spacing: 2px; 
+	color: #fff;
+	text-decoration: none; 
+	padding: 5px; 
+	-webkit-transition: all .6s ease-out;
+	-moz-transition: all 4s ease-out;
+	-o-transition: all .8s ease-out;
+	-ms-transition: all 4s ease-out;
+	transition: all .8s ease-out;
+} 
+
+
+li a.menu:hover { 
+	letter-spacing: 6px;
+	text-decoration: none;
+}
+
+a.menu,{
+    display: inline-block;
+}
+
+/*universal end*/
+
+.mid-content {
+  width: 640px;
+  height: 370px;
+  margin: 20px auto;
+}
+
+.bottom-content { 
+  width: 1024px;
+  height: 100px;
+  margin: 0px auto;
+  color:white;
+  padding: 15px;
+
+}
+
+.social-media {
+  width: 1024px;
+  height: 58px;
+  margin: 0px auto;
+  padding: 20px;
+  text-align:right;
+}
+
+footer {	
+	width: 1024px;
+    height: 32px;
+	margin: 0px auto;
+	font-family:"Myriad Pro";
+	color:white;
+	padding: 68px;
+  
+}
+
+
+
+
