@@ -1,0 +1,238 @@
+footer {
+  z-index: 1111 !important;
+}
+
+#popup {
+  background-color:white;
+  position: absolute;
+  z-index: 1001;
+  height: 150px;
+  width: 300px;
+  border-radius: 150px;
+  top: 900px;
+  left: 500px;
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Raleway', serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color:#084B8A;
+  line-height: 115%;
+}
+
+#popup a {
+  text-decoration: none;
+  color:#084B8A;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+#popup a:hover {
+  text-shadow: 0px 0px 5px #A9F5F2;
+}
+
+@keyframes movin {
+    from {top: 1200px;}
+    to {top: 640px;}
+}
+@-webkit-keyframes movin {
+    from {top: 1200px;}
+    to {top: 640px;}
+}
+#popup {
+    animation: movin 2s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: movin 2s forwards;
+	-webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+
+.push {
+  width: 330px;
+  height: 400px;
+  background-color: white;
+  opacity: .7;
+  font-family: 'Raleway', serif !important;
+  color: black;
+  padding: 30px;
+   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#col2 .title, #col3 .title, #col1 .title {
+  color: white;
+  text-shadow: 0 0 10px #000;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.firstlayer {
+  position: relative;
+  z-index: 1000
+}
+
+#nav {
+  height: 37px;
+}
+
+#content {
+  min-width: 1400px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+  #col1, #col2, #col3 {
+  height: 534px;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  line-height: 120%;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+#content {
+  overflow: hidden;
+}
+#col1 {
+  background-image: url('../images/binary.jpg');
+  background-size: 30%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#col2{
+  background-image: url('../images/skyline.jpg');
+  background-size: 80%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#col3{
+  background-image: url('../images/comp-chips.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#col1 {
+  float: left;
+  width: 430px;
+}
+
+#col2 {
+  display: inline-block;
+  width: 430px;
+}
+
+#col3 {
+  float: right;
+  width: 430px;
+  left: -110px;
+}
+
+@-webkit-keyframes smooth {
+    from {top: -534px;}
+    to {top: 0px;}
+}
+
+@keyframes smooth {
+    from {top:-534px;}
+    to {top: 0px;}
+}
+
+@-webkit-keyframes smooth2 {
+    from {top: 534px;}
+    to {top: 0px;}
+}
+
+@keyframes smooth2 {
+    from {top: 534px;}
+    to {top: 0px;}
+}
+
+
+#col1 {
+    position: relative;
+    animation: smooth 2s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: smooth 2s forwards;
+}
+
+#col2 {
+    position: relative;
+    animation: smooth2 2s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: smooth2 2s forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    top: 534px;
+}
+
+#col3 {
+    position: relative;
+    animation: smooth 3s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: smooth 3s forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    top: -534px;
+}
+
+footer {
+  position: relative;
+  z-index: 1000
+}
+
+@-moz-keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-webkit-keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-o-keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+.p1, .p2, .p3 {
+opacity: 0;
+    -moz-animation: fadein 3s ease-in 1s forwards;
+    -webkit-animation: fadein 3s ease-in 1s forwards;
+    -o-animation: fadein 3s ease-in 1s forwards;
+    animation: fadein 3s ease-in 1s forwards;
+	animation-iteration-count: 1;
+}
+
+.p2 {
+      -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+	
+}
+
+.p3 {
+      -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}

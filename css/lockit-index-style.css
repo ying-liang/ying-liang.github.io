@@ -1,0 +1,248 @@
+.iframe {
+  background-color: #6E6E6E;
+}
+
+.us {
+  color: #084B8A;
+  background-color: white;
+}
+
+.us:hover {
+  color: #084B8A;
+  background-color: #A9D0F5;
+}
+
+.lf-txt {
+  color: gray;
+}
+
+.rt-txt {
+  color: #333;
+}
+
+#cover {
+  background-color: blue;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 200px;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#cover:hover {
+    background-color: #FFCCCC;
+    letter-spacing: 5px;
+}
+
+
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.delay {
+opacity: 0;
+    -moz-animation: fadein 3s ease-in 1s forwards;
+    -webkit-animation: fadein 3s ease-in 1s forwards;
+    -o-animation: fadein 3s ease-in 1s forwards;
+    animation: fadein 3s ease-in 1s forwards;
+}
+
+.us {
+  width: 150px;
+  height: 150px;
+  text-decoration: none;
+  border-radius: 150px;
+  padding: 3px;
+  transition: all .25s linear;
+}
+
+.iframe {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 560px;
+    height: 380px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    top: 70px;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.lf-txt {
+  font-size: 100px;
+  position: absolute;
+}
+
+@keyframes moving {
+    from {top: 400px;}
+    to {top: 250px;}
+}
+@-webkit-keyframes moving {
+    from {top: 400px;}
+    to {top: 250px;}
+}
+.lf-txt {
+
+    animation: moving 2s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: moving 2s forwards;
+    font-family: 'Bitter', serif;
+	display: none;
+    line-height: 100%;
+
+}
+
+@keyframes moving2 {
+    from {top: 400px;}
+    to {top: 625px;}
+}
+@-webkit-keyframes moving2 {
+       from {top: 400px;}
+    to {top: 625px;}
+}
+.rt-txt {
+    animation: moving2 4s forwards;
+	animation-iteration-count: 1;
+    -webkit-animation: moving2 4s forwards;
+    display: none;
+    font-family: 'Bitter', serif;
+}
+
+.rt-txt {
+  font-size: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 55px;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#hit {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    z-index: 9;
+    left: 0px;
+    top: 350px;
+    margin-top: -150px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.split1, .split2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 1000px;
+    font-size: 120px;
+    font-family: 'Raleway', sans-serif;
+	text-shadow: #000 0 0 10px;
+}
+
+.split1, .split2{
+    background-image: url('../images/circuit-board.jpg');
+    background-size: 50%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+#top, #bottom {
+    background-image: url('../images/circuit-board2.jpg');
+    background-size: 50%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contain {
+    background-color: white;
+    width: 100%px;
+    height: 535px;
+    overflow: hidden;
+}
+
+    
+.split1 {
+    margin-top: 110px !important;
+    padding-top: 50px;
+    line-height: 20%;
+}
+
+.split2 {
+    margin-top: -33px;
+    line-height: 50%;
+    padding-bottom: 60px;
+
+}
+
+#bottom {
+    margin-bottom: 30px;
+    
+}
+
+#top, #bottom {
+    width:100%;
+    height:275px;
+    position:relative;
+    overflow:hidden;
+}
+#top div {
+    position:relative;
+    top: 90px;
+    color:#eee;
+    text-align:center;
+}
+#bottom div {
+    position:relative;
+    top: -10px;
+    color:#eee;
+    text-align:center;
+}

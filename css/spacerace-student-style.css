@@ -1,0 +1,245 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} 
+
+footer, .left-content-all, .right-content-all, header, .tour, #navigation,
+.eli, .reasons, .location, .dates, .about {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;	
+}
+
+header {
+	width:1024px;
+	height: 116px;
+	color:white;
+	margin: 0 auto;
+	text-align:center;
+	font-size: 250%;
+    padding: 40px;
+}
+
+#logo {
+	width:617px;
+	height: 38px;
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:3;
+}
+
+body {
+	font-family: Verdana, Arial;
+	background-color: #2E2E2E;
+}
+
+h1 {
+	text-align:center;
+}
+
+h2 {
+	text-align:center;
+	position:relative;
+	top:-65px;
+}
+
+h3 {
+	width:1014px;
+	height: 30px;
+	color:white;
+	margin: 0 auto;
+	text-align:center;
+	font-size: 200%;
+    padding: 5px;
+}
+
+ul
+{
+	list-style-type:none;
+}
+
+li
+{
+	display:inline;
+}
+
+#navigation {
+	z-index:2;
+	text-align:center;
+	padding: 10px;
+}
+
+#container {
+	width:1024px;
+	height: 900px;
+	margin: 0 auto;
+	background-color: #000;
+	background-image:url("space.png");
+	
+	
+}
+
+
+#navigation {
+	width: 1024px;
+	height: 46px;
+	background-color: rgba(255,255,255,0.2)
+}
+
+a.menu:link,a.menu:visited, a.menu:active {
+	display:inline-block;
+	width:200px;
+	text-align: center;    
+	font: 14px "Myriad Pro";
+	letter-spacing: 2px; 
+	color: #fff;
+	text-decoration: none; 
+	padding: 5px; 
+	-webkit-transition: all .6s ease-out;
+	-moz-transition: all 4s ease-out;
+	-o-transition: all .8s ease-out;
+	-ms-transition: all 4s ease-out;
+	transition: all .8s ease-out;
+} 
+
+
+li a.menu:hover { 
+	letter-spacing: 6px;
+	text-decoration: none;
+}
+
+a.menu,{
+    display: inline-block;
+}
+
+.left-content-all {
+  float: left;
+  width: 580px;
+  margin: 15px auto;
+}
+
+.left-top {
+  text-align:right;
+  width: 580px;
+  height: 314px;
+  margin: 15px auto;
+}
+
+.tour {
+  position: relative;
+  width: 560px;
+  height: 66px;
+  margin-top: -70px;
+  margin-left: 20px;
+  padding-top:15px;
+  text-align:center;
+  font: 34px "Myriad Pro";
+  z-index: 10;
+  color: white;
+  background-color: rgba(256,256,256,0.4);
+}
+
+.left-text {
+  text-align:left;
+  color: white;
+  width: 560px;
+  height: 130px;
+  margin: -18px auto;
+  margin-left: 20px;
+}
+
+
+/*left side end*/
+
+.right-content-all {
+  width: 400px;
+  float: right;
+  text-align:center;
+  }
+  
+a:link, a:visited, a:active {
+	width:400px;
+    font: 24px "Myriad Pro";
+	letter-spacing: 2px; 
+	color: #fff;
+	text-decoration: none
+}
+
+a:hover {
+color: #FDEA00; 
+text decoration: underlined
+}
+
+ .eli, .reasons, .location, .dates {
+  padding: 8px;
+  float:right; 
+  width: 395px;
+  height: 42px;
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color: rgba(255,255,255,0.35)
+}
+
+.about {
+  padding: 8px;
+  float:right; 
+  width: 395px;
+  height: 42px;
+  margin-top: 30px;
+  margin-right: 25px;
+  background-color: rgba(255,255,255,0.35)
+}
+
+.right-text {
+  float:right;
+  text-align:left;
+  color:white;
+  width: 394px;
+  height: 130px;
+  margin-top: 20px;
+  margin-right: 24px;
+  margin-bottom: 20px;
+}
+
+#gallery {
+	clear:both;
+    height: 100px;
+	margin: 0px auto;
+	padding: 20px;
+	text-align:center;
+}
+
+#gallery img {
+  display:inline;
+  margin:2.5px;
+  }
+
+footer {
+	width: 1024px;
+    height: 32px;
+	margin: 15px auto;
+	font-family:"Myriad Pro";
+	color:white;
+	padding: 68px;
+  
+}
+
+
+
