@@ -1,3 +1,11 @@
+
+.clearfix a{
+	color:#47a3da;
+}
+.clearfix a:hover{
+	color:gray;
+}
+
 .tabs {
 	position: relative;
 	width: 100%;
