@@ -268,7 +268,7 @@ transition: all .25s ease-in-out;
 .email-frm input[type="text"], .email-frm input[type="email"] {
     width: 200px;
 }
-    
+
 .email-frm select {
     appearance:none;
     -webkit-appearance:none;
@@ -309,4 +309,3 @@ transition: all .25s ease-in-out;
     resize: none;
     font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-

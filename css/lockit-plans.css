@@ -109,7 +109,7 @@ footer {
   overflow: hidden;
 }
 #col1 {
-  background-image: url('../images/binary.jpg');
+  background-image: url('../img/tech/binary.jpg');
   background-size: 30%;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -117,7 +117,7 @@ footer {
 }
 
 #col2{
-  background-image: url('../images/skyline.jpg');
+  background-image: url('../img/tech/skyline.jpg');
   background-size: 80%;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -125,7 +125,7 @@ footer {
 }
 
 #col3{
-  background-image: url('../images/comp-chips.jpg');
+  background-image: url('../img/tech/comp-chips.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -229,7 +229,7 @@ opacity: 0;
 .p2 {
       -webkit-animation-delay: 2s;
     animation-delay: 2s;
-	
+
 }
 
 .p3 {

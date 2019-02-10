@@ -126,7 +126,7 @@ footer {
 	animation-interation-count: 1;
     animation: smooth 2s forwards;
     -webkit-animation: smooth 2s forwards;
-    -webkit-animation-delay: 1s; 
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
     top: 800px;
     margin-top: 20px;

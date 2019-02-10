@@ -187,7 +187,7 @@ opacity: 0;
 }
 
 .split1, .split2{
-    background-image: url('../images/circuit-board.jpg');
+    background-image: url('../img/tech/circuit-board.jpg');
     background-size: 50%;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -195,7 +195,7 @@ opacity: 0;
 
 }
 #top, #bottom {
-    background-image: url('../images/circuit-board2.jpg');
+    background-image: url('../img/tech/circuit-board2.jpg');
     background-size: 50%;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -209,7 +209,7 @@ opacity: 0;
     overflow: hidden;
 }
 
-    
+
 .split1 {
     margin-top: 110px !important;
     padding-top: 50px;
@@ -225,7 +225,7 @@ opacity: 0;
 
 #bottom {
     margin-bottom: 30px;
-    
+
 }
 
 #top, #bottom {
