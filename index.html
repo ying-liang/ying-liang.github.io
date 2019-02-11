@@ -8,9 +8,8 @@
 		<meta name="description" content="A portfolio website showcasing my design, technology, and business work. User experience, app prototyping, brand & content strategy, art, and more. Freelancing" />
 		<meta name="keywords" content="responsive layout, portfolio, website, freelancing, freelance" />
 		<meta name="author" content="Ying - Adapted from Codrops"/>
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/demo.css"/>
-		<link rel="stylesheet" type="text/css" href="css/component.css"/>
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
 
 		<style>
 		.mystyle {
@@ -24,7 +23,7 @@
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<h1>Ying Liang | <a href="files/ux-resume.pdf"> Résumé</a>
+				<h1>Ying Liang
 					<button class="toggle" onclick="myFunction()">Toggle Color Mode</button></h1>
 
 					<script>
@@ -52,6 +51,11 @@
 					<a href="https://www.pinterest.com/flawling/" target="_blank" data-info="Pinterest"><img src="img/links/pin.png"><span>Pinterest</span></a>
 				</nav>
 			</header>
+			<div id="mid">Hi there! I'm Ying. I'm interested in the intersection of humans and technology.
+				Coming from a cross-disciplinary background, I enjoy creative problem-solving in business & design.
+				I'm actively looking for work opportunities at the moment so feel free to check out my work below, take a
+				pass at my <a href="files/ux-resume.pdf">résumé</a>, and <a href="mailto:liangy.mu@gmail.com" target="_top">send me an email</a>. Thanks for stopping by!
+			</div>
 			<div id="tabs" class="tabs">
 				<nav>
 					<ul>
@@ -220,6 +224,20 @@
 
 					<section id="section-3">
 						<div class="mediabox">
+							<a href="bw-portfolio.html" target="_blank"><img src="img/prev/bw-portfolio.png"/></a>
+							<h3>Stylized Portfolio (2017)</h3>
+							<p class="category">HTML/CSS/Javascript</p>
+							<p>Example resizable portfolio. Experimenting with different jQuery effects and css color transitions.
+								</p>
+						</div>
+						<div class="mediabox">
+							<a href="stress-book.html" target="_blank"><img src="img/prev/stress.png"/></a>
+							<h3>Book Effect (2016)</h3>
+							<p class="category">HTML/CSS/Javascript</p>
+							<p>Exploring the topic of stress and mental health in a flipping book/pages animation effect. Coding adapted from codrops.
+								</p>
+						</div>
+						<div class="mediabox">
 							<a href="lockit-index.html" target="_blank"><img src="img/prev/lockit.jpg"/></a>
 							<h3>Lock-it Security (2015)</h3>
 							<p class="category">HTML/CSS/Javascript</p>
@@ -314,11 +332,11 @@
 
 				</div><!-- /content -->
 			</div><!-- /tabs -->
-			<p class="info">Looking for work opportunities! Feel free to <a href="mailto:liangy.mu@gmail.com" target="_top"> send me an email</a> | © 2019 All Rights Reserved | Layout Inspired by <a href="https://www.tympanus.net/codrops">Codrops</a></p>
+			<p class="info">© 2019 All Rights Reserved | Layout Inspired by <a href="https://www.tympanus.net/codrops">Codrops</a></p>
 		</div>
-		<script src="js/cbpFWTabs.js"></script>
+		<script src="js/tabmix.js"></script>
 		<script>
-			new CBPFWTabs( document.getElementById( 'tabs' ) );
+			new Tabs( document.getElementById( 'tabs' ) );
 		</script>
 	</body>
 </html>

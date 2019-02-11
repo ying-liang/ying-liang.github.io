@@ -11,18 +11,18 @@
 		return a;
 	}
 
-	function CBPFWTabs( el, options ) {
+	function Tabs( el, options ) {
 		this.el = el;
 		this.options = extend( {}, this.options );
   		extend( this.options, options );
   		this._init();
 	}
 
-	CBPFWTabs.prototype.options = {
+	Tabs.prototype.options = {
 		start : 0
 	};
 
-	CBPFWTabs.prototype._init = function() {
+	Tabs.prototype._init = function() {
 		// tabs elemes
 		this.tabs = [].slice.call( this.el.querySelectorAll( 'nav > ul > li' ) );
 		// content items
@@ -35,7 +35,7 @@
 		this._initEvents();
 	};
 
-	CBPFWTabs.prototype._initEvents = function() {
+	Tabs.prototype._initEvents = function() {
 		var self = this;
 		this.tabs.forEach( function( tab, idx ) {
 			tab.addEventListener( 'click', function( ev ) {
@@ -45,7 +45,7 @@
 		} );
 	};
 
-	CBPFWTabs.prototype._show = function( idx ) {
+	Tabs.prototype._show = function( idx ) {
 		if( this.current >= 0 ) {
 			this.tabs[ this.current ].className = '';
 			this.items[ this.current ].className = '';
@@ -57,6 +57,6 @@
 	};
 
 	// add to global namespace
-	window.CBPFWTabs = CBPFWTabs;
+	window.Tabs = Tabs;
 
 })( window );
