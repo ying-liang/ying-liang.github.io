@@ -11,7 +11,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    /*color: #47a3da;*/
     color: 000;
 }
 
@@ -88,7 +87,6 @@ a:hover {
 	text-align: left;
 	width: 2.5em;
 	height: 2.5em;
-	background: #fff;
 	border-radius: 50%;
 	margin: 0 0.1em;
 	/*border: 3px solid #47a3da;*/
@@ -120,7 +118,6 @@ a:hover {
 }
 
 .container > header nav a:hover:after {
-	color: #fff;
 }
 
 p.info {
