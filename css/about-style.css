@@ -1,0 +1,159 @@
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr auto;
+	grid-template-areas: "Intro Intro Intro" "Txt Txt Resume" "Txt Txt Resume";
+	column-gap: var(--r-unit);
+	margin-bottom: 1rem;
+}
+/*article, summary, section {
+	border: 1px solid red;
+}*/
+summary {
+	grid-area: Intro;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 15vmin;
+	min-height: 100px;
+}
+article {
+	grid-area: Txt;
+}
+section {
+	grid-area: Resume;
+	height: 100%;
+	padding-left: 1.5rem;
+}
+strong {
+	font-weight: 600;
+	/*color: var(--accent-color);*/
+}
+h1 {
+	font: 1.5rem var(--body-font);
+	margin-left: var(--half-r-unit);
+}
+h2 {
+	font: 1.3rem var(--title-font);
+	color: var(--accent-color);
+	text-transform: uppercase;
+	margin-bottom: .5em;
+}
+h3 {
+	font: 1.1rem var(--body-font);
+}
+h2 a {
+	color: var(--accent-color);
+	transition: all .3s ease;
+}
+h2 a:hover {
+	color: var(--light-accent-color);
+	transition: all .3s ease;
+}
+.fa-print {
+	font: 1.1rem var(--body-font);
+	margin-left: 3rem;
+	text-align: right;
+	width: 100%;
+	float: right;
+	margin-top: -1.5rem;
+}
+em {
+	font: .9rem var(--body-font);
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+summary img {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+}
+article p {
+	margin-bottom: 1em;
+	font: 1.2rem var(--body-font);
+}
+section ul li {
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent: -1.5rem;
+	font: 1rem var(--body-font);
+	margin-right: 20px;
+}
+ul.split {
+	columns: 2;
+}
+li.cat{
+	list-style-type: none;
+}
+
+.tooltip {
+	border-bottom: 1px dotted #888;
+	position: relative;
+	cursor: pointer;
+}
+.tooltip:hover:after {
+	content: attr(title);
+	position: absolute;
+	white-space: nowrap;
+	background: var(--accent-color);
+	color: #fff;
+	padding: 2px 7px;
+	top: -25px;
+	text-align: center;
+	font: .8rem var(--body-font);
+	font-weight: 600;
+	border-radius: 3px;
+	text-indent: 0rem;
+	left: -10px;
+}
+.tooltip:hover:before {
+	content:"";
+	position: absolute;
+	white-space: nowrap;
+	top: -5px;
+	left: 0px;
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid var(--accent-color);;
+}
+strong a {
+	position: relative;
+}
+a.tooltip {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+a.tooltip:hover {
+	color: var(--light-accent-color);
+	transition: .5s all ease;
+}
+
+@media (max-width: 500px) {
+	main {
+	grid-template-areas: "Intro Intro Intro" "Txt Txt Txt" "Resume Resume Resume";
+	}
+	ul.split {
+		columns: 1;
+	}
+}
+
+@media (max-width: 800px) {
+	main {
+		grid-template-areas: "Intro Intro Intro" "Txt Txt Txt" "Resume Resume Resume";
+	}
+	section ul li, article p {
+		font-size: 1rem;
+	}
+	h1 {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	main {
+		grid-template-columns: repeat(autofit, 1fr);
+	}
+}

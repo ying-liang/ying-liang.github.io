@@ -1,506 +1,71 @@
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-body, html { font-size: 100%; padding: 0; margin: 0;}
-
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
-
-.clearfix nav img {
-  width: 35px;
-  height: 35px;
+section {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: var(--r-unit);
 }
-
-@font-face {
-	font-family: 'icomoon';
-	src:url('https://ying-liang.github.io/fonts/icomoon/icomoon.eot?pvm5gj');
-	src:url('https://ying-liang.github.io/fonts/icomoon/icomoon.eot?#iefixpvm5gj') format('embedded-opentype'),
-		url('https://ying-liang.github.io/fonts/icomoon/icomoon.woff?pvm5gj') format('woff'),
-		url('https://ying-liang.github.io/fonts/icomoon/icomoon.ttf?pvm5gj') format('truetype'),
-		url('https://ying-liang.github.io/fonts/icomoon/icomoon.svg?pvm5gj#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-} /* Icons created with icomoon.io/app */
-
-@font-face {
-font-family: 'Avenir Next LT Pro Regular';
-font-style: normal;
-font-weight: normal;
-src: url('https://ying-liang.github.io/fonts/avenir/AvenirNextLTPro-Regular.woff') format('woff');
+figure {
+	width: 100%;
+	position: relative;
+	background: #eee;
 }
-
-@font-face {
-font-family: 'Avenir Next LT Pro Italic';
-font-style: normal;
-font-weight: normal;
-src: url('https://ying-liang.github.io/fonts/avenir/AvenirNextLTPro-It.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Avenir Next LT Pro Demi';
-font-style: normal;
-font-weight: normal;
-src: url('https://ying-liang.github.io/fonts/avenir/AvenirNextLTPro-Demi.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Avenir Next LT Pro Demi Italic';
-font-style: normal;
-font-weight: normal;
-src: url('https://ying-liang.github.io/fonts/avenir/AvenirNextLTPro-DemiIt.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Avenir Next LT Pro Bold';
-font-style: normal;
-font-weight: normal;
-src: url('https://ying-liang.github.io/fonts/avenir/AvenirNextLTPro-Bold.woff') format('woff');
-}
-
-
 h1 {
-  color: #2cace3;
+	font: 1.5rem var(--body-font);
+	padding-bottom: var(--r-unit);
+	text-align: center;
 }
-
-#mid {
-  width: 90%;
-  max-width: 69em;
-  margin: 0 auto;
-  padding-bottom: 1em;
-  line-height: 17pt;
-  font-size: 17px;
-}
-
-#mid a{
-  font-weight: bold;
-  color: #2cace3;
-}
-
-#mid a:hover{
-  font-weight: bold;
-  color: gray;
-}
-
-body {
-    font-family:'Avenir Next LT Pro Regular';
-    color: 000;
-}
-
-a {
-	color: #ccc;
-	text-decoration: none;
-	outline: none;
-}
-
-a:hover {
-	color: #000;
-}
-
-.container > header {
-	width: 90%;
-	max-width: 69em;
-	margin: 0 auto;
-	padding: 2.875em 1.875em 1.875em;
-}
-
-.container > header h1 {
-	font-size: 2.125em;
-	line-height: 1.3;
-	margin: 0 0 0.6em 0;
-	float: left;
-	font-weight: 400;
-}
-
-.container > header > span {
-	display: block;
-	position: relative;
-	z-index: 9999;
-	font-weight: 700;
+h2 {
+	font: 1.3rem var(--title-font);
+	padding-bottom: var(--r-unit);
 	text-transform: uppercase;
-	letter-spacing: 0.5em;
-	padding: 0 0 0.6em 0.1em;
 }
-
-.container > header > span span:after {
-	width: 30px;
-	height: 30px;
-	left: -12px;
-	font-size: 50%;
-	top: -8px;
-	font-size: 75%;
-	position: relative;
-}
-
-.container > header > span span:hover:before {
-	content: attr(data-content);
-	text-transform: none;
-	text-indent: 0;
-	letter-spacing: 0;
-	font-weight: 300;
-	font-size: 110%;
-	padding: 0.8em 1em;
-	line-height: 1.2;
-	text-align: left;
-	left: auto;
-	margin-left: 4px;
-	position: absolute;
-	color: #fff;
-	background: #2cace3;
-}
-
-.container > header nav {
-	float: right;
-	text-align: center;
-}
-
-.container > header nav a {
+h3 {
+	font: 1.2rem var(--title-font);
 	display: inline-block;
-	position: relative;
-	text-align: left;
-	width: 2.5em;
-	height: 2.5em;
-	border-radius: 50%;
-	margin: 0 0.1em;
-	/*border: 3px solid #2cace3;*/
+	width: 100%;
+	margin-bottom: .5em;
+	color: var(--accent-color);
+	text-transform: uppercase;
 }
-
-.container > header nav a > span {
-	display: none;
-}
-
-.container > header nav a:hover:before {
-	content: attr(data-info);
-	color: #2cace3;
-	position: absolute;
-	width: 150%;
-	top: 120%;
-	text-align: center;
-	right: 0;
-	pointer-events: none;
-}
-
-.container > header nav .bp-icon:after {
+figcaption {
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
-	line-height: 2;
-	text-indent: 0;
-}
-
-.container > header nav a:hover:after {
-}
-
-p.info {
+	opacity: 0;
+	transition: all .3s ease-out;
 	text-align: center;
-	padding: 20px;
+	background: var(--light-color);
+	padding: calc(var(--r-unit) * 2 / 3);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-
-@media screen and (max-width: 55em) {
-
-	.container > header h1,
-	.container > header nav {
-		float: none;
-	}
-
-	.container > header > span,
-	.container > header h1 {
-		text-align: center;
-	}
-
-	.container > header nav {
-		margin: 0 auto;
-	}
-
-	.container > header > span {
-		text-indent: 30px;
-	}
-}
-
-.info a{
-	color:#2cace3;
-	font-weight: bold;
-}
-
-.info a:hover{
-	color: gray;
-	font-weight: bold;
-}
-
-.clearfix a{
-	color:#2cace3;
-}
-.clearfix a:hover{
-	color:gray;
-}
-
-.tabs {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	margin: 1em 0 2em;
-	font-weight: 300;
-}
-
-.mediabox a {
-	color:#2cace3;
-	font-weight: bold;
-}
-
-.mediabox a:hover {
+figcaption p {
+	font: 1.2rem var(--body-font);
 	color: #000;
 }
-
-.category {
-	font-style: italic;
+figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
-
-/* Nav */
-.tabs nav {
-	text-align: center;
+figure:hover > figcaption {
+	transition: all .3s ease-in;
+	opacity: .9;
 }
-
-.tabs nav ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	display: inline-block;
-}
-
-.tabs nav ul li {
-	border: 1px solid #becbd2;
-	border-bottom: none;
-	margin: 0 0.25em;
-	display: block;
-	float: left;
-	position: relative;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-}
-
-.tabs nav li.tab-current {
-	border: 1px solid #2cace3;
-	box-shadow: inset 0 1px #2cace3;
-	border-bottom: none;
-	z-index: 100;
-}
-
-.tabs nav li.tab-current:before,
-.tabs nav li.tab-current:after {
-	content: '';
-	position: absolute;
-	height: 1px;
-	right: 100%;
-	bottom: 0;
-	width: 1000px;
-	background: #2cace3;
-}
-
-.tabs nav li.tab-current:after {
-	right: auto;
-	left: 100%;
-	width: 4000px;
-}
-
-.tabs nav a {
-	color: #becbd2;
-	display: block;
-	font-size: 1.45em;
-	line-height: 2.5;
-	padding: 0 1.25em;
-	white-space: nowrap;
-}
-
-.tabs nav a:hover {
-	color: #768e9d;
-}
-
-.tabs nav li.tab-current a {
-	color: #2cace3;
-}
-
-.tabs nav a:before {
-	display: inline-block;
-	vertical-align: middle;
-	text-transform: none;
-	font-weight: normal;
-	font-variant: normal;
-	font-family: 'icomoon';
-	line-height: 1;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	margin: -0.25em 0.4em 0 0;
-}
-
-.icon-pencil:before {
-	content: "\e905";
-}
-
-.icon-usability:before {
-	content: "\e972";
-}
-
-.icon-art:before {
-	content: "\e90d";
-}
-
-.icon-brand:before {
-	content: "\e9a5";
-}
-
-.icon-web:before {
-	content: "\ea80";
-}
-
-/* Content */
-.content section {
-	font-size: 1.10em;
-	padding: 3em 1em;
-	display: none;
-	max-width: 1230px;
-	margin: 0 auto;
-}
-
-.content section:before,
-.content section:after {
-	content: '';
-	display: table;
-}
-
-.content section:after {
-	clear: both;
-}
-
-/* Fallback example */
-.no-js .content section {
-	display: block;
-	padding-bottom: 2em;
-	border-bottom: 1px solid #2cace3;
-}
-
-.content section.content-current {
-	display: block;
-}
-
-.mediabox {
-	float: left;
-	width: 33%;
-	padding: 0 25px;
-}
-
-.mediabox img {
-	max-width: 100%;
-	display: block;
-	margin: 0 auto;
-}
-
-.mediabox h3 {
-	margin: 0.75em 0 0.5em;
-	color:#2cace3;
-  font-family: 'Avenir Next LT Pro Bold';
-}
-
-.mediabox .category {
-	color:gray;
-}
-
-.mediabox p {
-	padding: 0 0 1em 0;
-	margin: 0;
-	line-height: 1.3;
-}
-
-/* Example media queries */
-
-@media screen and (max-width: 52.375em) {
-	.tabs nav a span {
-		display: none;
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 400px) {
+	h1 {
+		font-size: 1.1rem;
 	}
-
-	.tabs nav a:before {
-		margin-right: 0;
-	}
-
-	.mediabox {
-		float: none;
-		width: auto;
-		padding: 0 0 35px 0;
-		font-size: 90%;
-	}
-
-	.mediabox img {
-		float: left;
-		margin: 0 25px 10px 0;
-		max-width: 40%;
-	}
-
-	.mediabox h3 {
-		margin-top: 0;
-	}
-
-	.mediabox p {
-		margin-left: 40%;
-		margin-left: calc(40% + 25px);
-	}
-
-	.mediabox:before,
-	.mediabox:after {
-		content: '';
-		display: table;
-	}
-
-	.mediabox:after {
-		clear: both;
-	}
-}
-
-@media screen and (max-width: 32em) {
-	.tabs nav ul,
-	.tabs nav ul li a {
-		width: 100%;
-		padding: 0;
-	}
-
-	.tabs nav ul li {
-		width: 20%;
-		width: calc(20% + 1px);
-		margin: 0 0 0 -1px;
-	}
-
-	.tabs nav ul li:last-child {
-		border-right: none;
-	}
-
-	.mediabox {
+	h2 {
 		text-align: center;
 	}
-
-	.mediabox img {
-		float: none;
-		margin: 0 auto;
-		max-width: 100%;
+	figcaption p {
+		font: 1.2rem var(--body-font);
 	}
-
-	.mediabox h3 {
-		margin: 1.25em 0 1em;
+	section {
+		grid-template-columns: repeat(auto-fit, minmax(calc(320px - (2 * var(--r-unit))), 1fr));
 	}
-
-	.mediabox p {
-		margin: 0;
-	}
-}
-
-.toggle:hover {
-  background-color:#2cace3;
-}
-
-.toggle {
-  background-color:#A0A0A0;
-  border: none;
-  vertical-align: text-top;
-  color: white;
-  padding: 6px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 50% !important;
-	border-radius: 20px;
 }

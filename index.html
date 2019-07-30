@@ -1,357 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ying Liang - Portfolio</title>
-		<meta name="description" content="A portfolio website showcasing my design, technology, and business work. User experience, app prototyping, brand & content strategy, art, and more. Freelancing" />
-		<meta name="keywords" content="responsive layout, portfolio, website, freelancing, freelance" />
-		<meta name="author" content="Ying - Adapted from Codrops"/>
-		<link href="css/reset.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+<!--NEXT STEPS:
+  META TAGS FOR SOCIAL SHARING
+  PRINT LAYOUT
+  READER MODE
+  DARK MODE
+  ACCESSIBILITY + KEYBOARD NAVIGATION
+  CSS VARIABLES - COLOR COORDINATE
+  SASS PRE-PROCESSOR - INCORPORATE
+  GOOGLE ANALYTICS INCORPORATION
+  GATSBY STATIC SITE GENERATOR - BLOG(?)
+-->
+<html lang="en-US">
+  <head>
+    <title>Ying Liang | Portfolio</title>
+    <meta name="description" content="Ying Liang's digital web portfolio for UX projects"/>
+    <link rel="stylesheet" type="text/css" href="css/global-style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:700&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/af8c3d917e.js"></script>
+  </head>
 
-		<style>
-		.mystyle {
-		  background-color: #404040;
-		  color: white;
-		  box-sizing: border-box;
-		}
-		</style>
+  <body>
+    <!--UNIVERSAL HEADER - CHANGE ACTIVE LINK BY PAGE-->
+    <header>
+      <ul>
+        <li class="name-left">Ying Liang</li>
+        <li class="nav-active">Work</li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136697979-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!--PAGE CONTENT-->
+    <main>
+      <h1>
+        Systems thinker committed to collaborative problem-solving through tech & design. <br>
+        Looking for work opportunities with plenty of coffee & conversations.
+      </h1>
+      <h2>UX Projects</h2>
+      <section>
 
-  gtag('config', 'UA-136697979-1');
-</script>
+        <!--PROJECT GRID-->
+        <a href="project1.html">
+          <figure>
+            <img src="img/hold.jpeg">
+            <figcaption>
+              <h3>Title</h3>
+              <p>
+                This is the first paragraph! This is the first paragraph.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
 
+        <a href="#">
+          <figure>
+            <img src="img/hold.jpeg">
+            <figcaption>
+              <h3>Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
 
+          <a href="#">
+            <figure>
+              <img src="img/hold.jpeg">
+              <figcaption>
+                <h3>Title</h3>
+                <p>
+                  This is the first paragraph! This is the first paragraph.
+                </p>
+              </figcaption>
+            </figure>
+          </a>
+          
+          <a href="project1.html">
+            <figure>
+              <img src="img/hold.jpeg">
+              <figcaption>
+                <h3>Title</h3>
+                <p>
+                  This is the first paragraph! This is the first paragraph.
+                </p>
+              </figcaption>
+            </figure>
+          </a>
 
-	</head>
-	<body>
-		<div class="container">
-			<header class="clearfix">
-				<h1>Ying Liang
-					<button class="toggle" onclick="myFunction()">Toggle Color Mode</button></h1>
+          <a href="#">
+            <figure>
+              <img src="img/hold.jpeg">
+              <figcaption>
+                <h3>Title</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqn.
+                </p>
+              </figcaption>
+            </figure>
+          </a>
 
-					<script>
-					function myFunction() {
-					  var element = document.body;
+      </section>
+    </main>
 
-					  if (element.classList) {
-					    element.classList.toggle("mystyle");
-					  } else {
-					    var classes = element.className.split(" ");
-					    var i = classes.indexOf("mystyle");
-
-					    if (i >= 0)
-					      classes.splice(i, 1);
-					    else
-					      classes.push("mystyle");
-					      element.className = classes.join(" ");
-					  }
-					}
-					</script>
-				<nav>
-					<a href="https://linkedin.com/in/ying-liang" target="_blank" data-info="LinkedIn"><img src="img/links/lnk.png"><span>LinkedIn</span></a>
-					<a href="https://www.behance.net/yingliang" target="_blank" data-info="Behance"><img src="img/links/beh.png"><span>Behance</span></a>
-					<a href="https://www.instagram.com/ying.aling/" target="_blank" data-info="Instagram"><img src="img/links/insta.png"><span>Instagram</span></a>
-					<a href="https://www.pinterest.com/flawling/" target="_blank" data-info="Pinterest"><img src="img/links/pin.png"><span>Pinterest</span></a>
-				</nav>
-			</header>
-			<div id="mid">Hi there! I'm Ying. I'm interested in the intersection of humans and technology.
-				Coming from a cross-disciplinary background, I enjoy creative problem-solving in business through design.
-				I'm actively looking for work opportunities at the moment so feel free to check out my work below, take a
-				pass at my <a href="files/ux-resume.pdf">résumé</a>, or <a href="mailto:liangy.mu@gmail.com" target="_top">send me an email</a>. Thanks for stopping by!
-			</div>
-			<div id="tabs" class="tabs">
-				<nav>
-					<ul>
-						<li><a href="#section-1" class="icon-usability"><span>Usability</span></a></li>
-						<li><a href="#section-2" class="icon-pencil"><span>Writing</span></a></li>
-						<li><a href="#section-3" class="icon-web"><span>Web Design</span></a></li>
-						<li><a href="#section-4" class="icon-brand"><span>Branding</span></a></li>
-						<li><a href="#section-5" class="icon-art"><span>Visual Art</span></a></li>
-					</ul>
-				</nav>
-				<div class="content">
-					<section id="section-1">
-
-						<div class="mediabox">
-							<a href="files/makeupapp.pdf" target="_blank"><img src="img/prev/makeup-app.png"/></a>
-							<h3>Makeup App Prototype (2018)</h3>
-							<p class="category">Entrepreneurship/UX Design/InVisionapp</p>
-							<p>Startup idea for a B2C makeup app that saves consumers & brands money.
-								Market research, audience analysis, and usability tests conducted.
-								A video walkthrough of the app prototype can be found
-								<a href="https://vimeo.com/312312192" target="_blank">here</a>.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/armoire.pdf" target="_blank"><img src="img/prev/armoire.png"/></a>
-							<h3>Fashion App Prototype (2017)</h3>
-							<p class="category">Entrepreneurship/UI Design/Adobe CC</p>
-							<p>Startup idea for a virtual closet app that improves
-								online shopping and decreases product returns.
-								Market research, audience analysis, and business plans created
-								 for Demo Day pitch. Walkthrough of prototype can be found
-								<a href="https://vimeo.com/312320952" target="_blank">here</a>.</p>
-						</div>
-
-						<div class="mediabox">
-							<a href="files/raincheck-ux.pdf" target="_blank"><img src="img/prev/raincheck.png"/></a>
-							<h3>Expense App Prototype (2017)</h3>
-							<p class="category">Usability Testing/UX Design/Prototype</p>
-							<p>Rapid prototyping of an expense-sharing app, following a user-centered design process.
-								Competitive analysis, heuristics analysis, and user testing conducted.
-								A video walkthrough of the prototype walkthrough can be found
-								<a href="https://vimeo.com/312289671" target="_blank">here</a>.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/nyis.pdf" target="_blank"><img src="img/prev/nyis.png"/></a>
-							<h3>Ambassador Program (2017)</h3>
-							<p class="category">Branding/UX Design/Agile Scrum</p>
-							<p>Led biweekly sprints as scrum master on group project for
-							international law firm client. Conducted usability testing (heatmap/eyetracking,
-							quantitative & qualitative interviews, etc) and helped design final web/app prototype.
-						</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/17strong.pdf" target="_blank"><img src="img/prev/17strong.png"/></a>
-							<h3>Visual Rhetoric + Branding (2017)</h3>
-							<p class="category">Research/Usability/Adobe CC</p>
-							<p>Rebranded City of Hamilton's neighborhood volunteer initiative
-								with usability testing of marketing piece/brochure to encourage
-							more engagement. Created new logo, style guide, and marketing piece.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/writing-center.pdf" target="_blank"><img src="img/prev/write.jpg"/></a>
-							<h3>The Rhetoric of Space (2016)</h3>
-							<p class="category">Research/Usability/InDesign</p>
-							<p>A group consultation for the Howe Writing Center at Miami University measuring
-							student sentiment of the writing center with recommendations for improving the space.
-							Background literature research and quantitative/qualitative surveys conducted.</p>
-						</div>
-
-					</section>
-
-					<section id="section-2">
-						<div class="mediabox">
-							<a href="files/rfp.pdf" target="_blank"><img src="img/prev/rfp.png"></a>
-							<h3>RFP Whitepaper (2018)</h3>
-							<p class="category">B2B Business Writing/Supply Chain</p>
-							<p>Branded whitepaper for an industry conference featuring original research &
-								best practices/call to action in the Request For Proposals (RFP) business sourcing process.</p>
-						</div>
-						<div class="mediabox">
-								<a href="files/mark.pdf" target="_blank"><img src="img/prev/mark.png"/></a>
-								<h3>Industry Influencer Blog (2018)</h3>
-								<p class="category">Cybersecurity/Small Business</p>
-								<p>Thought leadership blog engaging small business attorney with expertise in
-									cybersecurity. Blog written as a resource for suppliers. Live version can be found
-									 <a href="https://connxus.com/cybersecurity-with-mark-spitz/" target="_blank">here</a>.</p>
-							</div>
-							<div class="mediabox">
-							<a href="files/indesign.pdf" target="_blank"><img src="img/prev/indesign.png"/></a>
-							<h3>Intro to Book Printing (2017)</h3>
-							<p class="category">Instructional/Software Tutorial</p>
-							<p>A guide to the basics of InDesign CC for long-form print publication,
-								with an introduction to vector-based design for newcomers. Created for graphic design
-							 transition.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/mind.pdf" target="_blank"><img src="img/prev/mind.png"></a>
-							<h3>Mind Sickness (2018)</h3>
-							<p class="category">Personal Blog/Mental Health</p>
-							<p>Personal reflection on the topic of stress: How do we deal with the stigma associated
-							with mental illness in a healthy and productive way? </p>
-						</div>
-						<div class="mediabox">
-							<a href="files/ghost.pdf" target="_blank"><img src="img/prev/ghost.png"></a>
-							<h3>C-Suite Writing (2018)</h3>
-							<p class="category">Business Writing - Supply Chain</p>
-							<p>Writing blogs on behalf of an executive/adopting his voice. Select live articles include:
-								<a href="https://www.procurementleaders.com/blog/blog/how-to-build-a-sustainable-supply-chain-in-four-simple-steps-683334#.XF35yy2ZN24" target="_blank">
-								Sustainabiility</a>,
-								<a href="https://www.procurementleaders.com/blog/guest/how-the-right-technology-provider-can-increase-procurement-agility-682626#.XF35zC2ZN24" target="_blank">
-									Technology</a>, <a href="https://www.procurementleaders.com/blog/blog/bring-your-supplier-diversity-programme-back-to-life-683178#.XF350i2ZN24" target="_blank">
-										Supplier Diversity</a>, & <a href="https://www.procurementleaders.com/blog/guest/why-buyers-should-work-towards-unconditional-procurement-683600#.XF350i2ZN24" target="_blank">
-										Unconditional Procurement</a>.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/apis.pdf" target="_blank"><img src="img/prev/apis.png"></a>
-							<h3>All About APIs (2017)</h3>
-							<p class="category">Technology</p>
-							<p>Content marketing blog explaining the advantage of using API technology to business users. Live version can be found
-								<a href="https://connxus.com/tech-forward-apis-emerging-player-supply-chain/" target="_blank">here</a>. Soft product sale blurbs at the end,
-								part of an email drip campaign.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/psy.pdf" target="_blank"><img src="img/prev/psy.png"></a>
-							<h3>Neurobiology Research (2017)</h3>
-							<p class="category">Scientific Writing</p>
-							<p>Psychology grant proposal write-up for mindfulness training and
-								paper writeup on original research in hippocampal area of rat brains/gene expression.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/partnerships.pdf" target="_blank"><img src="img/prev/partnerships.png"></a>
-							<h3>Gimme the Juice (2016)</h3>
-							<p class="category">Legal/Business Writing </p>
-							<p>Introduction to forming a legal business entity through partnerships:
-							illustrated by the example of starting a juicery. Written in a fun & engaging way.</p>
-						</div>
-							<div class="mediabox">
-								<a href="files/beyonce.pdf" target="_blank"><img src="img/prev/beyonce.png"></a>
-								<h3>Beyoncé (2016)</h3>
-								<p class="category">Rhetoric/Essay</p>
-								<p>Opinion piece on Beyoncé's status as a feminist icon
-									and her influence through discography and videography in contemporary R&B/Hip Hop.</p>
-							</div>
-							<div class="mediabox">
-								<a href="files/poems.pdf" target="_blank"><img src="img/prev/poems.png"></a>
-								<h3>Select Poems (2014 - 2017)</h3>
-								<p class="category">Poetry</p>
-								<p>A small collection of short poems written, an invocation to the every day.</p>
-							</div>
-							<div class="mediabox">
-								<a href="files/nonfic.pdf" target="_blank"><img src="img/prev/nonfic.png"></a>
-								<h3>Sedation (2016)</h3>
-								<p class="category">Presonal/Creative Nonfiction</p>
-								<p>Slices of life as a second gen - with some learning in between.</p>
-							</div>
-							<div class="mediabox">
-								<a href="files/news.pdf" target="_blank"><img src="img/prev/news.png"></a>
-								<h3>Newspaper Articles (2014)</h3>
-								<p class="category">Journalism</p>
-								<p>Articles written for & published in the Miami Student - community section.</p>
-							</div>
-							<div class="mediabox">
-								<a href="files/film.pdf" target="_blank"><img src="img/prev/film.png"></a>
-								<h3>The Power of Animation (2013)</h3>
-								<p class="category">Film Review/Analysis</p>
-								<p>Truth in retrospect: paper exploring the effects of animation in war films,
-									specifically Waltz with Bashir and Grave of the Fireflies. *Spoilers*</p>
-							</div>
-					</section>
-
-					<section id="section-3">
-						<div class="mediabox">
-							<a href="bw-portfolio.html" target="_blank"><img src="img/prev/bw-portfolio.png"/></a>
-							<h3>Stylized Portfolio (2017)</h3>
-							<p class="category">HTML/CSS/Javascript</p>
-							<p>Example resizable portfolio. Experimenting with different jQuery effects and css color transitions.
-								</p>
-						</div>
-						<div class="mediabox">
-							<a href="stress-book.html" target="_blank"><img src="img/prev/stress.png"/></a>
-							<h3>Book Effect (2016)</h3>
-							<p class="category">HTML/CSS/Javascript</p>
-							<p>Exploring the topic of stress and mental health in a flipping book/pages animation effect. Coding adapted from codrops.
-								</p>
-						</div>
-						<div class="mediabox">
-							<a href="lockit-index.html" target="_blank"><img src="img/prev/lockit.jpg"/></a>
-							<h3>Lock-it Security (2015)</h3>
-							<p class="category">HTML/CSS/Javascript</p>
-							<p>Website design for mock company selling online security.
-								Explored story telling through page navigation.
-								</p>
-						</div>
-						<div class="mediabox">
-							<a href="interactive-poem.html" target="_blank"><img src="img/prev/poem.jpg"/></a>
-							<h3>Interactive Poem (2014)</h3>
-							<p class="category">HTML/CSS/Javascript</p>
-							<p>Cross-media project exploring physicality in one of my poems through changing, animated words & smooth transitions. </p>
-						</div>
-						<div class="mediabox">
-							<a href="panel-portfolio.html" target="_blank"><img src="img/prev/folio.jpg"/></a>
-							<h3>3-Panel Portfolio (2014)</h3>
-							<p class="category">HTML/CSS/Javascript</p>
-							<p>Example photography portfolio exploring smooth transitions and changes in monitor size.
-							Color scheme & contrasts played up with interactive click elements.</p>
-						</div>
-					</section>
-
-					<section id="section-4">
-						<div class="mediabox">
-							<a href="files/connxus.pdf" target="_blank"><img src="img/prev/connxus.png"></a>
-							<h3>ConnXus Rebranding (2018)</h3>
-							<p class="category">Adobe Photoshop/Illustrator/InDesign</p>
-							<p>Revamped brand & assets with new icons and style guide.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/conference-one-pagers.pdf" target="_blank"><img src="img/prev/conference.jpg"></a>
-							<h3>Conference Flyers (2018)</h3>
-							<p class="category">Adobe Photoshop/Illustrator/InDesign</p>
-							<p>Product one-pagers to be taken during trade shows and conferences.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/style-guides.pdf" target="_blank"><img src="img/prev/style-guides.jpg"/></a>
-							<h3>Style Guides (2017)</h3>
-							<p class="category">Adobe Photoshop/Illustrator/InDesign</p>
-							<p>A collection of revamped style guides for brand consistency.</p>
-						</div>
-						<div class="mediabox">
-							<a href="files/recruitment-flyers.pdf" target="_blank"><img src="img/prev/recruitment.jpg"/></a>
-							<h3>IT Recruitment Posters (2016)</h3>
-							<p class="category">Adobe Photoshop/Illustrator/InDesign</p>
-							<p>Flyers created showcasing IT consulting services for trade shows.</p>
-						</div>
-					</section>
-
-					<section id="section-5">
-						<div class="mediabox">
-							<a href="files/ink.pdf" target="_blank"><img src="img/prev/ink.png"></a>
-							<h3>Freehand Ink (2016 - 2018)</h3>
-							<p class="category">Ink on Moleskin</p>
-							<p>Ink sketches - practice with abstract surrealism.</p>
-						</div>
-						<div class="mediabox">
-								<a href="files/manifesto.pdf" target="_blank"><img src="img/prev/manifesto.png"/></a>
-								<h3>Creativity Manifesto (2017)</h3>
-								<p class="category">Paper Craft</p>
-								<p>Committment to the creative process and words to live by.</p>
-							</div>
-							<div class="mediabox">
-								<a href="files/dear-objects.pdf" target="_blank"><img src="img/prev/sunflower.jpg"></a>
-								<h3>Dear Objects Series (2016)</h3>
-								<p class="category">Mixed Media Collage (Poetry/Ink)</p>
-								<p>Illustrated poems - love letters adding emotion to the unexpected.</p>
-							</div>
-							<div class="mediabox">
-							<a href="files/photos.pdf" target="_blank"><img src="img/prev/photos.png"/></a>
-							<h3>Days We Live For (2015 - 2018)</h3>
-							<p class="category">Photography, Nature & Portraits</p>
-							<p>A selection of nature and portrait shots during travel. iPhone camera, Nikon D7000 DSLR,
-							and Photoshop CC/Lightroom used.</p>
-						</div>
-							<div class="mediabox">
-							<a href="files/metalworking.pdf" target="_blank"><img src="img/prev/ring.jpg"/></a>
-							<h3>Metalworking (2015)</h3>
-							<p class="category">Jewelry/Metalworking</p>
-							<p>Metalworking portfolio consisting of 4 projects: copper patina sculptural bracelet,
-								 raised vessel jellyfish, nickle & brass textured brooch, & double-banded sterling silver ring with bezel set stone.</p>
-						</div>
-						<div class="mediabox">
-						<a href="files/imvu.pdf" target="_blank"><img src="img/prev/imvu.png"/></a>
-						<h3>IMVU 3D Outfits (2011 - 2013)</h3>
-						<p class="category">Digital/3D/Fashion</p>
-						<p>Select fantasy outfits/costumes textured for 3D avatars. Learned sketchUp 3D modeling, Fireworks (Vectors) and Photoshop.
-							Full product catalog can be found <a href="https://www.imvu.com/shop/web_search.php?manufacturers_id=12614191&r=acw">here</a>.</p>
-					</div>
-
-					</section>
-
-				</div><!-- /content -->
-			</div><!-- /tabs -->
-			<p class="info">© 2019 All Rights Reserved | Layout Inspired by <a href="https://www.tympanus.net/codrops">Codrops</a></p>
-		</div>
-		<script src="js/tabmix.js"></script>
-		<script>
-			new Tabs( document.getElementById( 'tabs' ) );
-		</script>
-	</body>
+    <!--UNIVERSAL FOOTER-->
+    <footer>
+      <ul>
+        <li><a href="https://linkedin.com/in/ying-liang" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://medium.com/@liangy.mu" title="Medium"><i class="fab fa-medium-m"></i></a></li>
+        <li><a href="http://codepen.io/Liangy" title="Codepen"><i class="fab fa-codepen"></i></a></li>
+        <li><a href="https://www.behance.net/yingliang" title="Behance"><i class="fab fa-behance"></i></a></li>
+        <!--<li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>-->
+        <li><a href="https://www.instagram.com/ying.aling/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+      <address title="Send Email"><a href="mailto:liangy.mu@gmail.com"><i class="fas fa-paper-plane"></i> liangy.mu@gmail.com</a></address>
+      <small title="Copyright">&copy; 2019 Ying Liang | All Rights Reserved.</small>
+    </footer>
+  </body>
 </html>

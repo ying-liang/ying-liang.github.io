@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	--body-font: 'Open Sans', sans-serif;
+	--title-font: 'Raleway', sans-serif;
+	--top-pad: 5vmin;
+	--r-unit: 3rem;
+	--half-r-unit: 1.5rem;
+	--icon-size: 30px;
+	--accent-color: #256E98;
+	--light-accent-color: #70a4c2;
+	--mid-color: #696969;
+	--light-color: #e8ebed;
+	min-width: 320px;
+}
+header {
+	background: var(--light-color);
+}
+header, footer, main {
+	width: 100%;
+	padding: var(--top-pad) var(--r-unit);
+}
+main {
+	margin-bottom: var(--half-r-unit);
+}
+footer {
+	text-align: center;
+	background: var(--light-color);
+}
+address {
+	font: .9rem var(--body-font);
+	margin-bottom: .4em;
+}
+small {
+	font: .8rem var(--body-font);
+}
+.fa-paper-plane {
+	font-size: .8rem;
+}
+header ul {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+header ul li {
+	list-style-type: none;
+	text-transform: uppercase;
+}
+header ul li:nth-child(n+2) {
+	font: 1.5rem var(--title-font); 
+	margin-left: var(--r-unit);
+}
+header ul li:first-child {
+	font: 2rem var(--title-font);
+	margin-right: auto;
+}
+.nav-active {
+	color: var(--accent-color);
+}
+header ul li a {
+	text-decoration: none;
+	color: var(--mid-color);
+}
+header ul li a:hover {
+	color: var(--light-accent-color);
+	transition: .5s all ease;
+}
+footer a {
+	text-decoration: none;
+	color: var(--mid-color);
+	font-size: 1rem;
+}
+footer a:hover {
+	font-weight: 600;
+}
+footer ul {
+	margin-bottom: 1em;
+}
+footer ul li {
+	list-style-type: none;
+	display: inline-block;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	border-radius: 50%;
+	background: var(--accent-color);
+	margin: .3rem;
+	position: relative;
+}
+footer ul li a {
+	height: inherit;
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--light-color);
+	transition: all .3s ease;
+	border-radius: 50%;
+}
+footer ul li a:hover {
+	background: var(--light-accent-color);
+	border-radius: 50%;
+	color: #fff;
+	transition: all .3s ease;
+}
+@media screen and (max-width: 550px) {
+	header ul {
+		justify-content: flex-start;
+	}
+	header ul li:first-child {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: var(--half-r-unit);
+	}
+	header ul li:nth-child(n+2) {
+		font-size: 1.4rem;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 400px) {
+	html {
+		--r-unit: 2rem;
+		--top-pad: 7vmin;
+	}
+	footer ul li {
+		margin: .2rem;
+	}
+}
