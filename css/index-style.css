@@ -7,8 +7,8 @@ section {
 figure {
 	width: 100%;
 	position: relative;
-	background: #eee;
 }
+
 h1 {
 	font: 1.5rem var(--body-font);
 	padding-bottom: var(--r-unit);
@@ -24,7 +24,7 @@ h3 {
 	display: inline-block;
 	width: 100%;
 	margin-bottom: .5em;
-	color: var(--accent-color);
+	color: #fff;
 	text-transform: uppercase;
 }
 figcaption {
@@ -35,7 +35,6 @@ figcaption {
 	opacity: 0;
 	transition: all .3s ease-out;
 	text-align: center;
-	background: var(--light-color);
 	padding: calc(var(--r-unit) * 2 / 3);
 	display: flex;
 	flex-direction: column;
@@ -43,16 +42,21 @@ figcaption {
 }
 figcaption p {
 	font: 1.2rem var(--body-font);
-	color: #000;
+	color: #fff;
 }
 figure img {
 	width: 100%;
-	height: 100%;
+	height: 20rem;
 	object-fit: cover;
 }
+.pink {background: #e097b2}
+.blue {background: #4f71b1}
+.dark {background: #1d2028}
+.wood {background: #9f8b7b}
+.green {background: #6ab445}
 figure:hover > figcaption {
 	transition: all .3s ease-in;
-	opacity: .9;
+	opacity: .93;
 }
 /*RESPONSIVE DESIGN*/
 @media screen and (max-width: 400px) {

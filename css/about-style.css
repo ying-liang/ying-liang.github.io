@@ -11,11 +11,8 @@ main {
 }*/
 summary {
 	grid-area: Intro;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 	height: 15vmin;
-	min-height: 100px;
+	min-height: 130px;
 }
 article {
 	grid-area: Txt;
@@ -31,7 +28,6 @@ strong {
 }
 h1 {
 	font: 1.5rem var(--body-font);
-	margin-left: var(--half-r-unit);
 }
 h2 {
 	font: 1.3rem var(--title-font);
