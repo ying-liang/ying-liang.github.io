@@ -1,0 +1,34 @@
+{
+  "name": "ying-liang.github.io",
+  "version": "1.0.0",
+  "description": "portfolio automation test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ying-liang/ying-liang.github.io.git"
+  },
+  "keywords": [
+    "automation",
+    "website",
+    "design",
+    "web",
+    "web",
+    "development",
+    "development",
+    "dev"
+  ],
+  "author": "Ying Liang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ying-liang/ying-liang.github.io/issues"
+  },
+  "homepage": "https://github.com/ying-liang/ying-liang.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {}
+}
