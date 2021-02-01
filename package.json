@@ -28,7 +28,12 @@
   "homepage": "https://github.com/ying-liang/ying-liang.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-image": "^6.2.1",
+    "gulp-uglify-es": "^2.0.0",
     "node-sass": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  }
 }
