@@ -1,15 +1,18 @@
-const gulp = require("gulp");
-const htmlmin = require("gulp-htmlmin");
+const gulp = require('gulp');
+const { src, series, parallel, dest, watch } = require('gulp');
+const html = require('gulp-htmlmin');
+const image = require('gulp-image');
+const cleanCSS = require('gulp-clean-css');
+const terser = require('gulp-terser');
 function htmlMin () {
     return gulp
-        .src("src/*.html")
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest("./"));
+        .src('src/*.html')
+        .pipe(html({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./'));
 }
-const image = require("gulp-image");
 function imgMin() {
     return gulp
-        .src("./src/img/*")
+        .src('./src/img/*')
         .pipe(image({
             pngquant: true,
             optipng: false,
@@ -21,20 +24,21 @@ function imgMin() {
             concurrent: 10,
             quiet: true
         }))
-        .pipe(gulp.dest("./img"));
+        .pipe(gulp.dest('./img'));
 }
-const cleanCSS = require("gulp-clean-css");
 function cssMin () {
     return gulp
-        .src("./src/css/*.css")
-        .pipe(cleanCSS({compatibility: "ie8"}))
-        .pipe(gulp.dest("./css"));
+        .src('./src/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('./css'));
 }
-/*gulp imgMin*/ exports.imgMin = imgMin;
-/*gulp cssMin*/ exports.cssMin = cssMin;
-/*gulp htmlMin*/ exports.htmlMin = htmlMin;
-/*default gulp task example*/
-//gulp.task("imgMin", imgMin);
-//gulp.task("default", gulp.series("imgMin"));
-
-
+function jsMin(){
+  return gulp.src('./src/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('./js'));
+}
+exports.htmlMin = htmlMin;
+exports.cssMin = cssMin;
+exports.jsMin = jsMin;
+exports.imgMin = imgMin;
+exports.default = series(htmlMin, cssMin, jsMin, imgMin);
