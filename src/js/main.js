@@ -1,1 +1,0 @@
-document.getElementById("year").innerHTML = new Date().getFullYear() + " Content & Code by Ying Liang ";

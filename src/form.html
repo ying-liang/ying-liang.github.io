@@ -10,44 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global-style.css">
     <style>
+main {
+  padding: 0;
+}
 form {
 	width: 100%;
-	background: var(--col-s2);
-	padding: calc(var(--baseSpaceWidth)/2);
-	margin-bottom: calc(var(--baseSpaceWidth)/2);
-	border-radius: calc(var(--baseSpaceWidth)/4);
+	background-color: var(--col-s2);
+  background-image: linear-gradient(to right, var(--col-s2), var(--col-p4));
+	padding: calc(var(--baseSpace)*1) calc(var(--baseSpace)*2);
+  border-left: 10px solid var(--col-p3);
 }
 body, main, form {
-  height: 40em !important;
+  height: 35em !important;
+  overflow: auto;
+}
+form > *:not(input[type=submit]) {
+  margin: calc(var(--baseSpace)/4) 0;
+  padding: calc(var(--baseSpace)/8);
 }
 form input, form textarea {
 	font: var(--fontH4);
-	margin-bottom: calc(var(--baseSpaceWidth)/4);
 }
 form label {
 	font: var(--fontH3);
-	margin-bottom: calc(var(--baseSpaceWidth)/4);
 }
 form textarea {
 	width: 100%;
-	padding: calc(var(--baseSpaceWidth)/8);
 }
 label {
 	display: inline-block;
-	width: calc(var(--baseSpaceWidth)*1.5);
+  width: calc(var(--baseSpace)*2);
+  margin-right: calc(var(--baseSpace)/4);
 }
 label:nth-of-type(4) {
 	display: none;
 }
 input, textarea {
 	color: var(--col-n4);
-	border: 2px solid var(--col-p3);
-	border-radius: calc(var(--baseSpaceWidth)/16);
-	padding: calc(var(--baseSpaceWidth)/16);
-}
-input:nth-of-type(1), 
-input:nth-of-type(2) {
-	margin-right: calc(var(--baseSpaceWidth)/2);
 }
 textarea::placeholder {
 	font-style: italic;
@@ -55,17 +54,14 @@ textarea::placeholder {
 }
 input[type=submit] {
     background: var(--col-p3); 
-	color: var(--col-n1);
-	padding: calc(var(--baseSpaceWidth)/8);
+    color: var(--col-n1);
     cursor:pointer;
-}
-main {
-  padding: 0;
+    margin: calc(var(--baseSpace)/4) 0;
+    padding: calc(var(--baseSpace)/4);
 }
 /*Hover states*/
 input[type=submit]:hover {
     background: var(--col-s5); 
-	padding: calc(var(--baseSpaceWidth)/8);
     cursor:pointer;
 }
     </style>
@@ -82,7 +78,7 @@ input[type=submit]:hover {
         <label for="entry.1166974658">Phone</label>
         <input name="entry.1166974658" title="Enter Your Phone Number" type="tel" />  <br>
         <label for="entry.839337160">Comment</label>
-        <textarea rows="10" name="entry.839337160" title="Add Your Comment Here" placeholder="Add comments here. Form submission securely powered by Google Forms. Please do not submit passwords or sensitive information."></textarea>
+        <textarea rows="7" name="entry.839337160" title="Add Your Comment Here" placeholder="Add comments here. Please do not submit passwords or sensitive information."></textarea>
         <input class="hov" type="submit" title="Submit Form" value="Send Form" />
       </form>
     </main>

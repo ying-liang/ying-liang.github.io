@@ -1,77 +1,43 @@
-main {
-	overflow: auto;
+/*Page Thirds Layout*/
+main {overflow: auto;
 	display: grid;
-	grid-gap: var(--baseSpaceWidth);
-    grid-template-columns: repeat(3, 1fr);
-}
-article, section {
-	padding: calc(var(--baseTextSpace)/2) 0;
-}
+	grid-gap: 0;
+	grid-template-columns: repeat(3, 1fr);}
 article {grid-column: 1 / span 2;}
 section {grid-column: 3 / span 1;}
-
-main {
-	height: 80vh;
-	overflow: auto;
+section {
+	background-color: var(--col-s1);
 }
-strong, em {
-	font: var(--fontStrong);
+section, article {
+	padding: 0 var(--baseSpaceWidth);
 }
-section table {
-	width: 100%;
+article > *:not(iframe) {
+	margin: calc(var(--baseSpace)/2) 0;
 }
-section table tr th {
-	text-align: left;
+section > *:not(em):not(span) {
+	margin: calc(var(--baseSpace)/3) 0;
 }
-section span {
-	display: block;
-	padding-bottom: calc(var(--baseSpaceWidth)/8);
+article img, article h1.topMarg {
+	display: inline-block;
 }
-section p.role {
-	padding-top: 0;
-	font: var(--fontSmallHeight);
+article h1.topMarg {
+	position: relative;
+	margin-left: calc(var(--baseSpace)/3);
+	bottom: calc(var(--baseSpace)/3);
 }
-section p.role: {
-	padding-top: 0;
-	font: var(--fontSmallHeight);
-}
-section p.role:last-of-type {padding-bottom: 0;}
-ul li {
-	font: var(--fontSmallHeight);
-}
-a {
-	font: var(--fontSmallHeight);
-    color: var(--col-p2);
-}
+main strong, main em {font: var(--fontStrong);}
+main ul li {font: var(--fontSmallHeight);}
+main a {color: var(--col-p2);}
+section span {display: block;}
+section p.role {font: var(--fontSmallHeight);}
 section em + a {
 	font: var(--fontStrongSmallH);
 	font-weight: 600;
 }
-img:first-child {
-	border-radius: 50%;
-	width: 7em;
-	padding: 0;
-	margin-top: calc(var(--baseSpaceWidth)/4);
-}
-article h1 {
-	display: inline-block;
-	position: relative;
-	padding: 0 calc(var(--baseSpaceWidth)/4);
-	bottom: calc(var(--baseSpaceWidth)/3);
-}
-iframe {
-	border: 0;
-	overflow: hidden;
-	height: 40em;
-}
-i.fa-print {
-	color: var(--col-p2);
-	font-size: 1.5em;
-	position: relative;
-}
-i.fa-print:hover {
-	color: var(--col-p1);
-}
+img:first-child {border-radius: 50%;width: 7em;}
+iframe {border: 0; overflow: hidden; height: 40em;}
+i.fa-print {color: var(--col-p2); font-size: calc(var(--fontIconSize)*1.5); position: relative;}
+i.fa-print:hover {color: var(--col-p1);}
 i.fa-print::after {
 	content: "view/print résumé";
 	font: var(--fontH3);
@@ -81,6 +47,49 @@ i.fa-print::after {
 	width: 10em;
 	opacity: 0;
 }
-i.fa-print:hover::after {
-	opacity: 1;
+section ul {list-style: none outside;}
+.list {
+	display: inline-block;
+	margin: calc(var(--baseSpace)/3) 0;
+	width: auto;
+	position: relative;
+}
+.list:first-of-type {
+	margin-right: calc(var(--baseSpaceWidth)/3);
+}
+i.fa-print:hover::after {opacity: 1;}
+
+@media only screen and (max-width: 950px) {
+	article, section {
+		grid-column: 1 / span 3;
+	}
+	article.sectPad {
+		padding-bottom: 0;
+	}
+	section {
+		margin-top: 0;
+	}
+
+	article img, article h1.topMarg {
+		display: block;
+	}
+	article h1.topMarg {
+		margin-left: 0;
+		top: 0;
+		margin-top: calc(var(--baseSpace)/3);
+	}
+}
+@media only screen and (max-width: 600px) {
+	header > nav > ul > li > a {
+		display: inline-block;
+		text-align: center;
+		margin: auto;
+		padding: auto;
+	}
+    body > header, body > footer {
+        height: 12vh;
+    }
+    main {
+        height: 76vh;
+    }
 }

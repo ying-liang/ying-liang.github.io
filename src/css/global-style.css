@@ -1,69 +1,79 @@
 /*global vars*/
 :root {
+    /*brand colors*/
+    /*Don't forget to switch out alpha colors for bg opacity!*/
     --col-p1: #40a8f5; --col-p2: #2b73a8; --col-p3: #8c8ff7; --col-p4: #70f7c9; --col-p5: #3da899;
     --col-s1: #d9eefd; --col-s2: #e3e3fd; --col-s3: #e3fdf4; --col-s4: #2b74a8; --col-s5: #5556b9;
     --col-n1: #fff; --col-n2: #d5d5d5; --col-n3: #aaa; --col-n4: #555; --col-n5: #151515;
     --col-int: #8f805e; --col-info: #6b9cbf; --col-warn: #ffc235; --col-succ: #8abf28; --col-dang: #f85333;
+    /*declared font styles*/
     --fontH1: 700 calc(48rem/16)/calc(54rem/16) 'Public Sans';
     --fontH2: 600 calc(32rem/16)/calc(38rem/16) 'Public Sans';
     --fontH3: 400 calc(22rem/16)/calc(28rem/16) 'Public Sans';
     --fontH4: 300 calc(20rem/16)/calc(26rem/16) 'Public Sans';
     --fontP: 400 calc(18rem/16)/calc(24rem/16)'Roboto';
+    /*small to regular font variations*/
     --fontStrong: 700 calc(18rem/16)/calc(24rem/16)'Roboto';
     --fontStrongSmallH: 700 calc(18rem/16)/calc(20rem/16)'Roboto';
     --fontSmallHeight: 400 calc(16rem/16)/calc(20rem/16)'Roboto';
     --fontSmall: 400 calc(14rem/16)/calc(16rem/16) 'Public Sans';
-    --gridGap: 0rem;
+    /*spacing control*/
+    --fontIconSize: 1.2rem;
+    --mainGridGap: 0rem;
     --baseSpace: 2em;
-    --baseTextSpace: 1.5rem;
-    --baseSpaceWidth: 5vw;
-
+    --baseSpaceWidth: 4vw;
 }
-/*reset + base*/
-* {margin: 0; padding: 0; border: 0;
+/*reset styling and base*/
+* {
+    margin: 0; padding: 0; border: 0;
     font: 1rem/1 'Roboto', sans-serif;
-    vertical-align: baseline; box-sizing: border-box;}
-body {/*min-height: 100vh*/
-    height: 100vh; width: 100%;
-    scroll-behavior: smooth; text-rendering: optimizeSpeed;}
-main ul {list-style: disc inside;} main ol {list-style: decimal inside;} a {text-decoration: none;}
-h1 {font: var(--fontH1);} h2 {font: var(--fontH2);} h3 {font: var(--fontH3);} h4 {font: var(--fontH4);}
-p {font: var(--fontP);} small {font: var(--fontSmall);}
-/*layout*/
-body {display: grid; gap: var(--gridGap);
+    vertical-align: baseline; box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+/*main text styles*/
+a {text-decoration: none;}
+h1 {font: var(--fontH1);}
+h2 {font: var(--fontH2);}
+h3 {font: var(--fontH3);}
+h4 {font: var(--fontH4);}
+p {font: var(--fontP);}
+small {font: var(--fontSmall); color: var(--col-n1);}
+main ul {list-style: disc inside;}
+main ol {list-style: decimal inside;}
+a.active {color: var(--col-n1);}
+/*page grid*/
+body {display: grid; gap: var(--mainGridGap);
     grid-template-columns: repeat(12, 1fr);
 }
 body > header, body > footer, main {
     grid-column: 1 / span 12;
+}
+body > header, body > footer {
     padding: 0 var(--baseSpaceWidth);
 }
-/*PROJECT SPECIFIC START*/
-.flexH {
-    display: flex;
-	align-items: center;
-}
-main  h1, main  h2, main h3, main p, main img {
-    padding: calc(var(--baseTextSpace)/1) 0;
-}
-a.active {
-    color: var(--col-p1);
-}
+/*PAGE LAYOUT*/
 body > header {
-    background: var(--col-s1);
+    background-color: var(--col-p2);
+    background-image: linear-gradient(to bottom left, var(--col-p1), var(--col-s4));
     width: inherit;
-    height: 10vh;
+    height: 8vh;
 }
 body > footer {
-    background: var(--col-s1);
+    background-color: var(--col-p2);
+    background-image: linear-gradient(to top right, var(--col-p1), var(--col-s4));
     width: inherit;
-    height: 10vh;
+    height: 8vh;
 }
 main {
-    height: 80vh;
+    height: 84vh;
 }
-header > nav {
-    height: inherit;
-}
+/*HEADER NAV*/
+header > nav {height: inherit;}
 header > nav > ul {
     width: inherit;
     height: inherit;
@@ -74,47 +84,23 @@ header > nav > ul > li {
     text-align: right;
 }
 header > nav > ul > li > a {
-    font: var(--fontH2);
-    color: var(--col-p2);
+    font: var(--fontH3);
+    color: var(--col-s1);
 }
 header > nav > ul > li:nth-of-type(1) {
     margin-right: auto;
     text-align: left;
 }
 header > nav > ul > li:nth-of-type(2), 
-header > nav > ul > li:nth-of-type(3) {
-    margin-right: var(--baseTextSpace);
+header > nav > ul > li:nth-of-type(3),
+header > nav > ul > li:nth-of-type(4) {
+    margin-right: var(--baseSpace);
 }
-header > nav > ul > li:nth-of-type(1) > a {
-    color: var(--col-n4);
-}
+header > nav > ul > li:nth-of-type(1) > a {color: var(--col-s1);}
+/*FOOTER CONTENT*/
 footer {
     display: flex;
     justify-content: center;
-}
-footer > ul {
-    width: inherit;
-    flex-wrap: wrap;
-    list-style: none;
-    margin-left: calc(var(--baseSpace)/-4);
-}
-footer > ul > li {
-    display: inline-block;
-    position: relative;
-    width: calc(var(--baseSpace)*1.5);
-    height: calc(var(--baseSpace)*1.5);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--col-p2);
-    margin: calc(var(--baseSpace)/4);
-}
-footer > ul > li > a, footer > ul > li > address > a {
-    color: var(--col-n1);
-}
-.fab {
-    font-size: var(--baseTextSpace) !important;
 }
 footer > small {
     display: block;
@@ -130,19 +116,53 @@ footer > small > span {
     display: inline;
     font: var(--fontSmall);
 }
-/*hover states*/
-/*media queries*/
+footer > ul {
+    width: inherit;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin-left: calc(var(--baseSpace)/-4);
+}
+footer > ul > li {
+    display: inline-block;
+    position: relative;
+    width: calc(var(--fontIconSize)*2);
+    height: calc(var(--fontIconSize)*2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--col-p2);
+    margin: calc(var(--baseSpace)/4);
+}
+footer > ul > li > a, footer > ul > li > address > a {
+    color: var(--col-n1);
+}
+/*UTILITIES*/
+.fab {font-size: var(--fontIconSize);}
+.flexH {
+    display: flex;
+	align-items: center;
+}
+.sectPad {
+    padding-top: calc(var(--baseSpace)*1.5);
+    padding-bottom: calc(var(--baseSpace)*1.5);
+}
+.topMarg {margin-top: 0;}
+.bottomMarg {margin-bottom: 0;}
+/*MEDIA QUERIES*/
 @media(hover: hover) and (pointer: fine) {
-    /*hover states: use only on desktop as visual cue*/
+    /*desktop visual cue*/
     .hov {
         transition: all 0.5s ease-in-out;
     }
     a:hover {
         color: var(--col-p1);
     }
+    /*header nav*/
     header > nav > ul > li > a:hover {
-        color: var(--col-p1);
+        color: var(--col-n1);
     }
+    /*footer icons*/
     footer > ul > li > a:hover, 
     footer > ul > li > address > a:hover {
         color: var(--col-n1);
@@ -151,7 +171,7 @@ footer > small > span {
         display: block;
         position: absolute;
         top: calc(var(--baseSpace)*-1.3);
-        padding: calc(var(--baseTextSpace)/4);
+        padding: calc(var(--baseSpace)/5);
         border-radius: 10%;
         background: var(--col-p2);
         color: white;
@@ -160,21 +180,21 @@ footer > small > span {
     footer > ul > li > span::after {
         position: absolute;
         content: "";
-        bottom: calc(var(--baseTextSpace)*-1.1);
+        bottom: calc(var(--baseSpace)*-.8);
         border-style: solid;
-        border-width: calc(var(--baseTextSpace)/1.5);
+        border-width: calc(var(--baseSpace)/1.9);
         border-color: var(--col-p2) transparent transparent transparent;
         width: 0;
         height: 0;
         z-index: 10;
     }
     footer > ul > li:nth-of-type(1) > span::after, 
-    footer > ul > li:nth-of-type(2) > span::after {right: calc(var(--baseTextSpace)*.9);}
-    footer > ul > li:nth-of-type(3) > span::after {right: calc(var(--baseTextSpace)*.6);}
-    footer > ul > li:nth-of-type(4) > span::after {right: calc(var(--baseTextSpace)*1.1);}
-    footer > ul > li:nth-of-type(5) > span::after {right: calc(var(--baseTextSpace)*.4);}
+    footer > ul > li:nth-of-type(2) > span::after {right: calc(var(--baseSpace)*.6);}
+    footer > ul > li:nth-of-type(3) > span::after {right: calc(var(--baseSpace)*.4);}
+    footer > ul > li:nth-of-type(4) > span::after {right: calc(var(--baseSpace)*.8);}
+    footer > ul > li:nth-of-type(5) > span::after {right: calc(var(--baseSpace)*.3);}
     footer > ul > li:hover {
-        background: var(--col-p1);
+        background: var(--col-s5);
     }
     footer > ul > li:hover span {
         opacity: 1;
