@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Submission Form</title><link rel="apple-touch-icon" sizes="180x180" href="img/icons/touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav-icon.png"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/global-style.css"><style>form {
+	width: 100%;
+	background: var(--col-s2);
+	padding: calc(var(--baseSpaceWidth)/2);
+	margin-bottom: calc(var(--baseSpaceWidth)/2);
+	border-radius: calc(var(--baseSpaceWidth)/4);
+}
+body, main, form {
+  height: 40em !important;
+}
+form input, form textarea {
+	font: var(--fontH4);
+	margin-bottom: calc(var(--baseSpaceWidth)/4);
+}
+form label {
+	font: var(--fontH3);
+	margin-bottom: calc(var(--baseSpaceWidth)/4);
+}
+form textarea {
+	width: 100%;
+	padding: calc(var(--baseSpaceWidth)/8);
+}
+label {
+	display: inline-block;
+	width: calc(var(--baseSpaceWidth)*1.5);
+}
+label:nth-of-type(4) {
+	display: none;
+}
+input, textarea {
+	color: var(--col-n4);
+	border: 2px solid var(--col-p3);
+	border-radius: calc(var(--baseSpaceWidth)/16);
+	padding: calc(var(--baseSpaceWidth)/16);
+}
+input:nth-of-type(1), 
+input:nth-of-type(2) {
+	margin-right: calc(var(--baseSpaceWidth)/2);
+}
+textarea::placeholder {
+	font-style: italic;
+	color: var(--col-n4);
+}
+input[type=submit] {
+    background: var(--col-p3); 
+	color: var(--col-n1);
+	padding: calc(var(--baseSpaceWidth)/8);
+    cursor:pointer;
+}
+main {
+  padding: 0;
+}
+/*Hover states*/
+input[type=submit]:hover {
+    background: var(--col-s5); 
+	padding: calc(var(--baseSpaceWidth)/8);
+    cursor:pointer;
+}</style></head><body><main><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='form-thanks.html';}"></iframe><form action="https://docs.google.com/forms/d/e/1FAIpQLSdxN-tBNhVNQnbNyn2c73mt0xsYrRlWxtnYC9kTxh12rrBlvA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><label for="entry.2005620554">Name</label> <input name="entry.2005620554" title="Enter Your Name" type="text"><br><label for="entry.1045781291">Email</label> <input name="entry.1045781291" title="Enter Your Email Address" type="email" autocompleted="on" required><br><label for="entry.1166974658">Phone</label> <input name="entry.1166974658" title="Enter Your Phone Number" type="tel"><br><label for="entry.839337160">Comment</label> <textarea rows="10" name="entry.839337160" title="Add Your Comment Here" placeholder="Add comments here. Form submission securely powered by Google Forms. Please do not submit passwords or sensitive information."></textarea> <input class="hov" type="submit" title="Submit Form" value="Send Form"></form></main></body></html>
