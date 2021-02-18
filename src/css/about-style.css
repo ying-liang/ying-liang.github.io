@@ -1,95 +1,98 @@
-/*Page Thirds Layout*/
-main {overflow: auto;
+main {
+	overflow: auto;
+	width: 100%;
+	height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+	--gridGap: 0;
+	overflow: auto;
 	display: grid;
-	grid-gap: 0;
-	grid-template-columns: repeat(3, 1fr);}
-article {grid-column: 1 / span 2;}
-section {grid-column: 3 / span 1;}
+	grid-gap: var(--gridGap);
+	grid-template-columns: repeat(3, 1fr);
+}
+article, section {
+	width: inherit;
+	grid-column: 1 / span 3;
+	padding: 1rem var(--baseWidPer);
+}
 section {
 	background-color: var(--col-s1);
+
 }
-section, article {
-	padding: 0 var(--baseSpaceWidth);
+@media only screen and (min-width: 800px) {
+	article {grid-column: 1 / span 2;}
+	section {grid-column: 3 / span 1;}
 }
-article > *:not(iframe) {
-	margin: calc(var(--baseSpace)/2) 0;
+section ul {
+	list-style: none outside;
+	font: var(--fontP);
 }
-section > *:not(em):not(span) {
-	margin: calc(var(--baseSpace)/3) 0;
+section a {
+	text-decoration: none;
+	color: var(--col-p2);
 }
-article img, article h1.topMarg {
+article > *, section > *:not(span) {
+	margin: 1rem 0;
+}
+article img, article h1.noTopMar {
 	display: inline-block;
 }
-article h1.topMarg {
+article h1.noTopMar {
 	position: relative;
-	margin-left: calc(var(--baseSpace)/3);
-	bottom: calc(var(--baseSpace)/3);
+	margin-left: 1rem;
+	bottom: 2rem;
 }
+img:first-child {border-radius: 50%;width: 5rem;}
+
 main strong, main em {font: var(--fontStrong);}
-main ul li {font: var(--fontSmallHeight);}
+main ul li {font: var(--fontSmall);}
 main a {color: var(--col-p2);}
 section span {display: block;}
-section p.role {font: var(--fontSmallHeight);}
+section p.role {font: var(--fontSmall);}
 section em + a {
-	font: var(--fontStrongSmallH);
+	font: var(--fontStrong);
 	font-weight: 600;
 }
-img:first-child {border-radius: 50%;width: 7em;}
-iframe {border: 0; overflow: hidden; height: 40em;}
-i.fa-print {color: var(--col-p2); font-size: calc(var(--fontIconSize)*1.5); position: relative;}
+iframe {border: 0; overflow: hidden; height: 35em;}
+i.fa-print {
+	color: var(--col-p2); 
+	font-size: 1.5rem; 
+	position: relative;}
 i.fa-print:hover {color: var(--col-p1);}
 i.fa-print::after {
 	content: "view/print résumé";
 	font: var(--fontH3);
 	position: absolute;
 	display: inline-block;
-	left: 1.5em;
-	width: 10em;
+	left: 2rem;
+	bottom: .1rem;
+	width: 15rem;
 	opacity: 0;
 }
-section ul {list-style: none outside;}
 .list {
 	display: inline-block;
-	margin: calc(var(--baseSpace)/3) 0;
+	margin-bottom: 1rem;
 	width: auto;
 	position: relative;
 }
+.list ul li {
+	font: var(--fontP);
+}
 .list:first-of-type {
-	margin-right: calc(var(--baseSpaceWidth)/3);
+	margin-right: 1rem;
 }
 i.fa-print:hover::after {opacity: 1;}
 
-@media only screen and (max-width: 950px) {
-	article, section {
-		grid-column: 1 / span 3;
-	}
-	article.sectPad {
-		padding-bottom: 0;
-	}
-	section {
-		margin-top: 0;
-	}
-
-	article img, article h1.topMarg {
+@media only screen and (max-width: 920px) {
+	article img, article h1.noTopMar {
 		display: block;
 	}
-	article h1.topMarg {
+	article h1.noTopMar {
 		margin-left: 0;
-		top: 0;
-		margin-top: calc(var(--baseSpace)/3);
+		bottom: 0;
 	}
+	img:first-child {width: 7rem;}
 }
-@media only screen and (max-width: 600px) {
-	header > nav > ul > li > a {
-		display: inline-block;
-		text-align: center;
-		margin: auto;
-		padding: auto;
+@media only screen and (max-height: 500px) {
+	main {
+		height: auto;
 	}
-    body > header, body > footer {
-        height: 12vh;
-    }
-    main {
-        height: 76vh;
-    }
 }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136697979-1"></script>
+    <script src="https://kit.fontawesome.com/cef8a422eb.js" crossorigin="anonymous"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,40 +19,42 @@
     <meta property="og:image" content="img/social.png">
     <meta property="og:url" content="https://yingliang.me">
     <meta name="twitter:card" content="img/social.png">
-    <title>Ying Liang: Digital Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav-icon.png">
+    <title>Ying Liang: User Experience</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global-style.css">
     <link rel="stylesheet" href="css/gallery-style.css">
-    <script src="https://kit.fontawesome.com/365706c6e4.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <nav aria-label="Main Navigation">
-        <ul class="flexH">
-          <li><a class="hov" href="index.html" title="Homepage">Ying Liang</a></li>
-          <li><a class="hov" href="about.html" title="About Me">About</a></li>
-          <li><a class="hov active" href="" title="UX Projects">UX Design</a></li>
-          <li><a class="hov" href="coding-projects.html" title="Coding Projects">Coding</a></li>
-          <li><a class="hov" href="business-projects.html" title="Business Projects">Business</a></li>
+        <ul>
+          <li><a href="index.html" title="Homepage"><span class="hover">Ying Liang</span><span aria-hidden="true">YL</span></a></li>
+          <li><a href="about.html" title="About Me"><span class="hover">About</span><span aria-hidden="true"><i class="fas fa-address-card"></i></span></a></li>
+          <li><a href="" title="UX Projects"><span class="hover">UX Design</span><span aria-hidden="true"><i class="fas fa-pencil-ruler"></i></span></a></li>
+          <li><a href="coding-projects.html" title="Coding Projects"><span class="hover">Coding</span><span aria-hidden="true"><i class="fas fa-code"></i></span></a></li>
+          <li><a href="business-projects.html" title="Business Projects"><span class="hover">Business</span><span aria-hidden="true"><i class="fas fa-briefcase"></i></span></a></li>
         </ul>
       </nav>
     </header>
 
     <!--PAGE CONTENT-->
-    <main class="sectPad">
-      <p>
+    <main>
+      <p class="noTopMar">
         Cross-disciplinary background applicable to UX design, UX writing, and user research. 
-        Trained in IBM Design Thinking and Interaction Design Foundation curriculum. 
         Interested in enterprise work and more technical aspects of UX such as information architecture.
       </p>
+      <p>
+        Trained in IBM Design Thinking and Interaction Design Foundation curriculum. 
+        Have worked with tools such as InVisionApp, Adobe XD, and Axure.
+      </p>
       <h2>UX Projects</h2>
-      <section title="Project Gallery">
+      <section class="noBotMar" title="Project Gallery">
         <!--PROJECT GRID-->
         <a class="item" href="file/makeup.pdf" title="Mobile UX Makeup App">
           <img src="img/prev-makeup.jpg" alt ="Mobile UX Makeup App">
-          <div class="info hov" title="project info">
+          <div class="info hover" title="project info">
             <h3>Be Bold: Makeup App</h3>
             <p>
               Startup idea for a B2C makeup app that saves consumers & brands money. Market research, audience analysis, and usability tests conducted.
@@ -61,7 +63,7 @@
         </a>
         <a class="item" href="file/raincheck.pdf" title="Mobile UX Expense Sharing App">
           <img src="img/prev-raincheck.jpg" alt="Mobile UX Expense Sharing App">
-          <div class="info hov" title="project info">
+          <div class="info hover" title="project info">
             <h3>Expense-Sharing App</h3>
             <p>
               Rapid prototyping of an expense-sharing app, following a user-centered design process. Competitive analysis, heuristics analysis, and user testing conducted. 
@@ -70,7 +72,7 @@
         </a>
         <a class="item" href="file/armoire.pdf" title="Mobile UX Closet App">
           <img src="img/prev-armoir.jpg" alt="Mobile UX Closet App">
-          <div class="info hov" title="project info">
+          <div class="info hover" title="project info">
             <h3>Armoire: Virtual Closet</h3>
             <p>
               Startup idea for a virtual closet app that improves online shopping and decreases product returns. Market research, audience analysis, and business plans created for Demo Day pitch. 
@@ -79,7 +81,7 @@
         </a>
         <a class="item" href="file/nyis.pdf" title="NYIS Reward Program Project">
           <img src="img/prev-nyis.jpg" alt="NYIS Reward Program Project">
-          <div class="info hov" title="project info">
+          <div class="info hover" title="project info">
             <h3>NYIS Law Firm</h3>
             <p>
               Led biweekly sprints as scrum master for international law firm client. Conducted usability testing (heatmap/eyetracking, quan/quant, interviews, etc) and helped design final web/app prototype.
@@ -88,7 +90,7 @@
         </a>
         <a class="item" href="file/17strong.pdf" title="17strong Marketing Redesign">
           <img src="img/prev-17strong.jpg" alt="17strong Marketing Redesign">
-          <div class="info hov" title="project info">
+          <div class="info hover" title="project info">
             <h3>17 Strong</h3>
             <p>
               Rebranded City of Hamilton's neighborhood volunteer initiative with usability testing of marketing piece/brochure to encourage more engagement. Created new logo, style guide, and marketing piece.
@@ -99,15 +101,15 @@
     </main>
     <!--UNIVERSAL FOOTER-->
     <footer>
-      <ul class="flexH" title="Social Media Links">
-        <li class="hov"><span class="hov" aria-hidden="true">LinkedIn</span><a href="https://linkedin.com/in/ying-liang" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-        <li class="hov"><span class="hov" aria-hidden="true">Codepen</span><a href="http://codepen.io/ying-liang" title="Codepen"><i class="fab fa-codepen"></i></a></li>
-        <li class="hov"><span class="hov" aria-hidden="true">Github</span><a href="http://github.com/ying-liang" title="Github"><i class="fab fa-github"></i></a></li>
-        <li class="hov"><span class="hov" aria-hidden="true">Instagram</span><a href="https://www.instagram.com/ying.aling/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li class="hov"><span class="hov" aria-hidden="true">Email</span><address title="Send Email"><a href="mailto:liangy.mu@gmail.com"><i class="fas fa-paper-plane"></i></a></address></li>
+      <ul title="Social Media Links">
+        <li class="hover"><span class="hover" aria-hidden="true">LinkedIn</span><a href="https://linkedin.com/in/ying-liang" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        <li class="hover"><span class="hover" aria-hidden="true">Codepen</span><a href="http://codepen.io/ying-liang" title="Codepen"><i class="fab fa-codepen"></i></a></li>
+        <li class="hover"><span class="hover" aria-hidden="true">Github</span><a href="http://github.com/ying-liang" title="Github"><i class="fab fa-github"></i></a></li>
+        <li class="hover"><span class="hover" aria-hidden="true">Instagram</span><a href="https://www.instagram.com/ying.aling/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li class="hover"><span class="hover" aria-hidden="true">Email</span><address title="Send Email"><a href="mailto:liangy.mu@gmail.com"><i class="far fa-envelope"></i></a></address></li>
       </ul>
-      <small title="Copyright"><span id="year"></span> All Rights Reserved.</small>
+      <small id="copyright" title="Ying Liang, All Rights Reserved"></small>
     </footer>
-    <script>document.getElementById("year").innerHTML = "&copy;" + new Date().getFullYear() + " Content & Code by Ying Liang.&nbsp;";</script>
+    <script>document.getElementById("copyright").innerHTML = "&copy;" + new Date().getFullYear() + " Ying Liang. All Rights Reserved.";</script>
   </body>
 </html>

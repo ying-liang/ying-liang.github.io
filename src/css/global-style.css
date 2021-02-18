@@ -1,178 +1,219 @@
-/*global vars*/
+/*CSS Variables*/
 :root {
-    /*brand colors*/
-    /*Don't forget to switch out alpha colors for bg opacity!*/
-    --col-p1: #40a8f5; --col-p2: #2b73a8; --col-p3: #8c8ff7; --col-p4: #70f7c9; --col-p5: #3da899;
+	--col-p1: #40a8f5; --col-p2: #2b73a8; --col-p3: #8c8ff7; --col-p4: #70f7c9; --col-p5: #3da899;
     --col-s1: #d9eefd; --col-s2: #e3e3fd; --col-s3: #e3fdf4; --col-s4: #2b74a8; --col-s5: #5556b9;
     --col-n1: #fff; --col-n2: #d5d5d5; --col-n3: #aaa; --col-n4: #555; --col-n5: #151515;
-    --col-int: #8f805e; --col-info: #6b9cbf; --col-warn: #ffc235; --col-succ: #8abf28; --col-dang: #f85333;
-    /*declared font styles*/
-    --fontH1: 700 calc(48rem/16)/calc(54rem/16) 'Public Sans';
-    --fontH2: 600 calc(32rem/16)/calc(38rem/16) 'Public Sans';
-    --fontH3: 400 calc(22rem/16)/calc(28rem/16) 'Public Sans';
-    --fontH4: 300 calc(20rem/16)/calc(26rem/16) 'Public Sans';
-    --fontP: 400 calc(18rem/16)/calc(24rem/16)'Roboto';
-    /*small to regular font variations*/
-    --fontStrong: 700 calc(18rem/16)/calc(24rem/16)'Roboto';
-    --fontStrongSmallH: 700 calc(18rem/16)/calc(20rem/16)'Roboto';
-    --fontSmallHeight: 400 calc(16rem/16)/calc(20rem/16)'Roboto';
-    --fontSmall: 400 calc(14rem/16)/calc(16rem/16) 'Public Sans';
-    /*spacing control*/
-    --fontIconSize: 1.2rem;
-    --mainGridGap: 0rem;
-    --baseSpace: 2em;
-    --baseSpaceWidth: 4vw;
-}
-/*reset styling and base*/
+	--baseRem: 1rem;
+	--baseWidPer: 4vw;
+	--touchMinvw: 14vw;
+	--fontH1: 700 calc(48rem/16)/calc(54rem/16) 'Public Sans', sans-serif;;
+    --fontH2: 600 calc(32rem/16)/calc(36rem/16) 'Public Sans', sans-serif;;
+    --fontH3: 400 calc(22rem/16)/calc(26rem/16) 'Public Sans', sans-serif;;
+    --fontH4: 300 calc(18rem/16)/calc(20rem/16) 'Public Sans', sans-serif;;
+    --fontP: 400 calc(16rem/16)/calc(18rem/16)'Roboto', sans-serif;
+	--fontSmall: 400 calc(14rem/16)/calc(16rem/16)'Roboto', sans-serif;
+	--footerHeight: 5rem;
+	--headerHeight: 5rem;
+}/*reset styling and base*/
 * {
     margin: 0; padding: 0; border: 0;
-    font: 1rem/1 'Roboto', sans-serif;
-    vertical-align: baseline; box-sizing: border-box;
+	vertical-align: baseline; box-sizing: border-box;
+	font: var(--fontP);
+	color: var(--col-n5);
 }
 body {
-    min-height: 100vh;
+	min-width: 320px;
     width: 100%;
+	min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+	position: relative;
 }
-/*main text styles*/
-a {text-decoration: none;}
-h1 {font: var(--fontH1);}
-h2 {font: var(--fontH2);}
-h3 {font: var(--fontH3);}
-h4 {font: var(--fontH4);}
+body header, body footer {width: inherit;}
+body header {
+	height: var(--headerHeight);
+}
+body footer {height: var(--footerHeight);}
+main {
+	overflow: auto;
+	height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+}
+body header, body footer {
+	background: var(--col-p1);
+	background-image: linear-gradient(to bottom left, var(--col-p1), var(--col-s4));
+}
+/*base text styling*/
+h1 {font: var(--fontH2);}
+h2 {font: var(--fontH3);}
+h3 {font: var(--fontH4);}
 p {font: var(--fontP);}
-small {font: var(--fontSmall); color: var(--col-n1);}
 main ul {list-style: disc inside;}
 main ol {list-style: decimal inside;}
-a.active {color: var(--col-n1);}
-/*page grid*/
-body {display: grid; gap: var(--mainGridGap);
-    grid-template-columns: repeat(12, 1fr);
+
+/*layout*/
+body header, body footer {
+	padding-left: var(--baseWidPer);
+	padding-right: var(--baseWidPer);
 }
-body > header, body > footer, main {
-    grid-column: 1 / span 12;
+body header nav ul, body footer ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
-body > header, body > footer {
-    padding: 0 var(--baseSpaceWidth);
+footer ul li a, header nav ul li a {
+	text-decoration: none;
 }
-/*PAGE LAYOUT*/
-body > header {
-    background-color: var(--col-p2);
-    background-image: linear-gradient(to bottom left, var(--col-p1), var(--col-s4));
-    width: inherit;
-    height: 8vh;
+header nav ul li:first-of-type a span {
+	text-decoration: none;
+	font: var(--fontH3);
+	color: var(--col-n1);
 }
-body > footer {
-    background-color: var(--col-p2);
-    background-image: linear-gradient(to top right, var(--col-p1), var(--col-s4));
-    width: inherit;
-    height: 8vh;
-}
-main {
-    height: 84vh;
-}
-/*HEADER NAV*/
-header > nav {height: inherit;}
-header > nav > ul {
-    width: inherit;
-    height: inherit;
-    justify-content: flex-end;
-}
-header > nav > ul > li {
-    display: inline-block;
-    text-align: right;
-}
-header > nav > ul > li > a {
-    font: var(--fontH3);
-    color: var(--col-s1);
-}
-header > nav > ul > li:nth-of-type(1) {
-    margin-right: auto;
-    text-align: left;
-}
-header > nav > ul > li:nth-of-type(2), 
-header > nav > ul > li:nth-of-type(3),
-header > nav > ul > li:nth-of-type(4) {
-    margin-right: var(--baseSpace);
-}
-header > nav > ul > li:nth-of-type(1) > a {color: var(--col-s1);}
-/*FOOTER CONTENT*/
-footer {
-    display: flex;
-    justify-content: center;
-}
-footer > small {
-    display: block;
-    margin-left: auto;
-    width: inherit;
-    height: inherit;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-footer > small > span {
-    display: inline;
-    font: var(--fontSmall);
-}
-footer > ul {
-    width: inherit;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin-left: calc(var(--baseSpace)/-4);
-}
-footer > ul > li {
-    display: inline-block;
-    position: relative;
-    width: calc(var(--fontIconSize)*2);
-    height: calc(var(--fontIconSize)*2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--col-p2);
-    margin: calc(var(--baseSpace)/4);
-}
-footer > ul > li > a, footer > ul > li > address > a {
-    color: var(--col-n1);
-}
-/*UTILITIES*/
-.fab {font-size: var(--fontIconSize);}
-.flexH {
-    display: flex;
+header nav ul li, footer ul li {
+	display: inline-block;
+	height: var(--touchMinvw);
+	width: var(--touchMinvw);
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	position: relative;
 }
-.sectPad {
-    padding-top: calc(var(--baseSpace)*1.5);
-    padding-bottom: calc(var(--baseSpace)*1.5);
+small {
+	display: block;
+	font: var(--fontSmall);
+	color: var(--col-n1);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 1rem;
 }
-.topMarg {margin-top: 0;}
-.bottomMarg {margin-bottom: 0;}
-/*MEDIA QUERIES*/
+a.item {text-decoration: none;}
+a.item h3 {
+	color:var(--col-p2);
+	margin-bottom: 1rem;
+}
+a.item p {color:var(--col-n5);}
+
+.fab, .far, .fas {
+	font-size: 1.3rem;
+	color: var(--col-n1);
+}
+/*Utility Classes*/
+.noTopMar {margin-top: 0 !important;}
+.noBotMar {margin-bottom: 0 !important;}
+.test {border: 3px solid red;}
+footer ul li span {display: none;}
+header nav ul li a span:nth-child(1) {display: none;}
+/*BIGGER SCREENS*/
+/*Remember to upsize font back to original*/
+
+@media only screen and (max-height: 500px) {
+	main {
+		height: auto;
+	}
+}
+
+@media only screen and (min-height: 320px) {
+	body header ul {
+		position: relative;
+	}
+	body header ul a {
+		position: relative;
+		top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	body header ul a {
+		position: relative;
+		top: 0rem;
+	}
+	/*header*/
+	header nav ul li {
+		background: transparent;
+	}
+	header nav ul li a span:nth-child(2) {display: none;}
+	header nav ul li a span:nth-child(1) {
+		display: inline-block;
+		font: var(--fontH4);
+		text-align: center;
+		color: var(--col-s1);
+	}
+	header nav ul li:nth-child(1) a span {color: var(--col-n1);}
+	/*footer*/
+	body footer ul {
+		justify-content: space-around;
+	}
+	body footer ul li {
+		height:3.5rem;
+		width:3.5rem;
+	}
+}
+@media only screen and (min-width: 800px) {
+	/*text styles*/
+	h1 {font: var(--fontH1);}
+	h2 {font: var(--fontH2);}
+	h3 {font: var(--fontH3);}
+	h4 {font: var(--fontH4);}
+	/*header*/
+	header nav ul li a span:nth-child(1) {
+		font: var(--fontH3);
+	}
+	header nav ul {
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	header nav ul li {
+		width: auto;
+		height: 5rem;
+		border-radius: 0;
+		margin-left: 2rem;
+	}
+	header nav ul li:first-of-type {
+		margin: 0 auto 0 0	;
+	}
+	/*footer*/
+	footer {
+		display: flex;
+		align-items: center;
+	}
+	footer > * {
+	}
+	body footer ul {
+		display: inline-flex;
+		flex-wrap: wrap;
+		width: auto;
+	}
+	footer ul, small {
+		padding: 0;
+		margin: 0;
+	}
+	small {
+		width: 24rem;
+		display: inline-block;
+		margin-left: auto;
+		text-align: right;
+	}
+}
+/*HOVER STYLING*/
 @media(hover: hover) and (pointer: fine) {
-    /*desktop visual cue*/
-    .hov {
-        transition: all 0.5s ease-in-out;
-    }
-    a:hover {
-        color: var(--col-p1);
-    }
+    .hover {transition: all 0.5s ease-in-out;}
+    a:hover {color: var(--col-p1);}
     /*header nav*/
-    header > nav > ul > li > a:hover {
-        color: var(--col-n1);
-    }
-    /*footer icons*/
+	header nav ul li a span:nth-child(1) {
+		color: var(--col-s1);
+	}
+    header nav ul li a span:nth-child(1):hover {color: var(--col-n1);}
+
+
+    /*footer*/
     footer > ul > li > a:hover, 
-    footer > ul > li > address > a:hover {
-        color: var(--col-n1);
-    }
+    footer > ul > li > address > a:hover {color: var(--col-n1);}
     footer > ul > li > span {
         display: block;
         position: absolute;
-        top: calc(var(--baseSpace)*-1.3);
-        padding: calc(var(--baseSpace)/5);
-        border-radius: 10%;
+        bottom: 4rem;
+        padding: .5rem;
+        border-radius: .5rem;
         background: var(--col-p2);
         color: white;
         opacity: 0;
@@ -180,32 +221,54 @@ footer > ul > li > a, footer > ul > li > address > a {
     footer > ul > li > span::after {
         position: absolute;
         content: "";
-        bottom: calc(var(--baseSpace)*-.8);
+        top: 1.6rem;
         border-style: solid;
-        border-width: calc(var(--baseSpace)/1.9);
+        border-width: 1rem;
         border-color: var(--col-p2) transparent transparent transparent;
         width: 0;
         height: 0;
         z-index: 10;
     }
-    footer > ul > li:nth-of-type(1) > span::after, 
-    footer > ul > li:nth-of-type(2) > span::after {right: calc(var(--baseSpace)*.6);}
-    footer > ul > li:nth-of-type(3) > span::after {right: calc(var(--baseSpace)*.4);}
-    footer > ul > li:nth-of-type(4) > span::after {right: calc(var(--baseSpace)*.8);}
-    footer > ul > li:nth-of-type(5) > span::after {right: calc(var(--baseSpace)*.3);}
-    footer > ul > li:hover {
-        background: var(--col-s5);
-    }
+    footer > ul > li:nth-of-type(1) > span::after {left: 1.3rem;}
+    footer > ul > li:nth-of-type(2) > span::after {left: 1.5rem;}
+    footer > ul > li:nth-of-type(3) > span::after {left: 1rem}
+    footer > ul > li:nth-of-type(4) > span::after {left: 1.7rem}
+    footer > ul > li:nth-of-type(5) > span::after {left: .8rem}
     footer > ul > li:hover span {
         opacity: 1;
     }
 }
+/*DARK COLOR SCHEME*/
+@media (prefers-color-scheme: dark) {
+	/*Remember to style while building*/
+	/*:root {
+		--col-n1: #151515; --col-n2: #555; --col-n3: #aaa; --col-n4: #d5d5d5; --col-n5: #fff;
+		--col-p2: #40a8f5;
+		--col-p1: #151515;
+
+
+		--col-p3: #8c8ff7; --col-p4: #70f7c9; --col-p5: #3da899;
+		--col-s1: #d9eefd; --col-s2: #e3e3fd; --col-s3: #e3fdf4; --col-s4: #2b74a8; --col-s5: #5556b9;
+	}
+	body {
+		background: var(--col-n1);
+	}
+	body header, body footer {
+		background:rgba(85, 85, 85, .5);
+	}
+	section a img {
+		filter:opacity(.7);
+	}
+	small {
+		color: var(--col-n4);
+	}
+	header nav ul li:first-of-type a span, .fab, .far, .fas {
+		color: var(--col-p2);
+	}*/
+}
 @media (prefers-reduced-motion: reduce) {
     /*change animation classes:: .animation(s) {animation: none;}*/
-    .hov {transition: none;}
-}
-@media (prefers-color-scheme: dark) {
-    /* change root color variables for high contrast:: :root {--var: #HEXHEX;}*/
+    .hover {transition: none;}
 }
 @media print {
     /*change page styling to be printer friendly - less ink, high contrast, smaller image*/

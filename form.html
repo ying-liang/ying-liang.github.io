@@ -1,20 +1,24 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Submission Form</title><link rel="apple-touch-icon" sizes="180x180" href="img/icons/touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav-icon.png"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/global-style.css"><style>main {
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Submission Form</title><link rel="apple-touch-icon" sizes="180x180" href="img/icons/touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav-icon.png"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/global-style.css"><style>:root {
+        --remPad: .25rem;
+      }
+main {
   padding: 0;
 }
 form {
-	width: 100%;
+	width: auto;
 	background-color: var(--col-s2);
   background-image: linear-gradient(to right, var(--col-s2), var(--col-p4));
-	padding: calc(var(--baseSpace)*1) calc(var(--baseSpace)*2);
+	padding: calc(var(--remPad)*4);
   border-left: 10px solid var(--col-p3);
+  box-sizing: border-box;
 }
 body, main, form {
-  height: 35em !important;
+  height: 35rem !important;
   overflow: auto;
 }
 form > *:not(input[type=submit]) {
-  margin: calc(var(--baseSpace)/4) 0;
-  padding: calc(var(--baseSpace)/8);
+  margin: calc(var(--remPad)*2) 0;
+  padding: var(--remPad);
 }
 form input, form textarea {
 	font: var(--fontH4);
@@ -23,12 +27,13 @@ form label {
 	font: var(--fontH3);
 }
 form textarea {
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 label {
 	display: inline-block;
-  width: calc(var(--baseSpace)*2);
-  margin-right: calc(var(--baseSpace)/4);
+  width: 10rem;
+  margin-right: calc(var(--remPad)*2);
 }
 label:nth-of-type(4) {
 	display: none;
@@ -44,11 +49,26 @@ input[type=submit] {
     background: var(--col-p3); 
     color: var(--col-n1);
     cursor:pointer;
-    margin: calc(var(--baseSpace)/4) 0;
-    padding: calc(var(--baseSpace)/4);
+    margin: calc(var(--remPad)*2) 0;
+    padding: calc(var(--remPad)*2);
 }
 /*Hover states*/
 input[type=submit]:hover {
     background: var(--col-s5); 
     cursor:pointer;
-}</style></head><body><main><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='form-thanks.html';}"></iframe><form action="https://docs.google.com/forms/d/e/1FAIpQLSdxN-tBNhVNQnbNyn2c73mt0xsYrRlWxtnYC9kTxh12rrBlvA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><label for="entry.2005620554">Name</label> <input name="entry.2005620554" title="Enter Your Name" type="text"><br><label for="entry.1045781291">Email</label> <input name="entry.1045781291" title="Enter Your Email Address" type="email" autocompleted="on" required><br><label for="entry.1166974658">Phone</label> <input name="entry.1166974658" title="Enter Your Phone Number" type="tel"><br><label for="entry.839337160">Comment</label> <textarea rows="7" name="entry.839337160" title="Add Your Comment Here" placeholder="Add comments here. Please do not submit passwords or sensitive information."></textarea> <input class="hov" type="submit" title="Submit Form" value="Send Form"></form></main></body></html>
+}
+
+@media only screen and (max-height: 500px) {
+  :root {
+        --remPad: .15rem;
+      }
+      form input, form textarea {
+	font: var(--fontP);
+}
+form label {
+	font: var(--fontH4);
+}
+form textarea {
+  width: 80%;
+}
+}</style></head><body><main><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='form-thanks.html';}"></iframe><form action="https://docs.google.com/forms/d/e/1FAIpQLSdxN-tBNhVNQnbNyn2c73mt0xsYrRlWxtnYC9kTxh12rrBlvA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"><label for="entry.2005620554">Name</label> <input name="entry.2005620554" title="Enter Your Name" type="text"><br><label for="entry.1045781291">Email</label> <input name="entry.1045781291" title="Enter Your Email Address" type="email" autocompleted="on" required><br><label for="entry.1166974658">Phone</label> <input name="entry.1166974658" title="Enter Your Phone Number" type="tel"><br><label for="entry.839337160">Comment</label> <textarea rows="10" name="entry.839337160" title="Add Your Comment Here" placeholder="Add comments here. Please do not submit passwords or sensitive information."></textarea> <input class="hov" type="submit" title="Submit Form" value="Send Form"></form></main></body></html>
