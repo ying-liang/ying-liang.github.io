@@ -1,75 +1,72 @@
+:root {
+    --contGap: 1rem;
+}
 main {
-	overflow: auto;
-	width: 100%;
-	height: calc(100vh - var(--headerHeight) - var(--footerHeight));
-	--gridGap: 0;
-	overflow: auto;
+    grid-column: 1 / span 12;
+    grid-row: 2 / 3;
 	display: grid;
-	grid-gap: var(--gridGap);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
 }
-article, section {
-	width: inherit;
-	grid-column: 1 / span 3;
-	padding: 1rem var(--baseWidPer);
+main > * {
+	overflow: hidden;
 }
-section {
-	background-color: var(--col-s1);
-
+article[aria-label="introduction"] {
+	padding: var(--contGap) var(--baseWidPer);
+	grid-row: 1 / 2;
 }
-@media only screen and (min-width: 800px) {
-	article {grid-column: 1 / span 2;}
-	section {grid-column: 3 / span 1;}
+section[aria-label="education"] {
+	padding: var(--contGap) var(--baseWidPer);
+	background: rgb(var(--lightBlueHEX) / 50%);
+	grid-row: 2 / 3;
 }
-section ul {
-	list-style: none outside;
-	font: var(--fontP);
+section > *, article > * {
+	margin: var(--contGap) 0;
+}
+section[aria-label="education"] ul {
+	list-style: none;
 }
 section a {
-	text-decoration: none;
-	color: var(--col-p2);
-}
-article > *, section > *:not(span) {
-	margin: 1rem 0;
-}
-article img, article h1.noTopMar {
-	display: inline-block;
-}
-article h1.noTopMar {
-	position: relative;
-	margin-left: 1rem;
-	bottom: 2rem;
-}
-img:first-child {border-radius: 50%;width: 5rem;}
-
-main strong, main em {font: var(--fontStrong);}
-main ul li {font: var(--fontSmall);}
-main a {color: var(--col-p2);}
-section span {display: block;}
-section p.role {font: var(--fontSmall);}
-section em + a {
-	font: var(--fontStrong);
+	color: var(--darkBlue);
 	font-weight: 600;
+	transition: var(--transAll);
 }
-iframe {border: 0; overflow: hidden; height: 35em;}
-i.fa-print {
-	color: var(--col-p2); 
-	font-size: 1.5rem; 
-	position: relative;}
-i.fa-print:hover {color: var(--col-p1);}
-i.fa-print::after {
-	content: "view/print résumé";
-	font: var(--fontH3);
-	position: absolute;
-	display: inline-block;
-	left: 2rem;
-	bottom: .1rem;
-	width: 15rem;
-	opacity: 0;
+img[alt="Profile Picture"] {
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+}
+h1 {
+	text-align: center;
+}
+section span {
+	display: block;
+	margin-top: calc(var(--contGap)/2);
+	margin-bottom: 0;
+	font: var(--fontNotation);
+}
+section em {
+	margin: 0;
+}
+section span + p {
+	margin-top: calc(var(--contGap)/2);
+	margin-top: calc(var(--contGap)/2);
+}
+iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	height: 35em;
+}
+article[aria-label="introduction"] div:first-child {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row nowrap;
 }
 .list {
 	display: inline-block;
-	margin-bottom: 1rem;
+	margin-bottom: var(--contGap);
 	width: auto;
 	position: relative;
 }
@@ -79,20 +76,65 @@ i.fa-print::after {
 .list:first-of-type {
 	margin-right: 1rem;
 }
-i.fa-print:hover::after {opacity: 1;}
-
-@media only screen and (max-width: 920px) {
-	article img, article h1.noTopMar {
-		display: block;
+/*hover styling*/
+@media(hover: hover) and (pointer: fine) {
+	section a:hover {
+		color: var(--blue);
 	}
-	article h1.noTopMar {
-		margin-left: 0;
-		bottom: 0;
+	i.fa-print {
+		color: var(--col-p2); 
+		font-size: 1.5rem; 
+		position: relative;
+		transition: var(--transAll);
 	}
-	img:first-child {width: 7rem;}
+	i.fa-print:hover {
+		color: var(--col-p1);
+	}
+	i.fa-print::after {
+		content: attr(title);
+		font: var(--fontSubhead);
+		position: absolute;
+		display: inline-block;
+		left: 2rem;
+		bottom: .1rem;
+		width: 15rem;
+		opacity: 0;
+		transition: var(--transAll);
+	}
+	i.fa-print:hover::after {
+		opacity: 1;
+	}
 }
-@media only screen and (max-height: 500px) {
+@media only screen and (min-width: 500px) {
+	article[aria-label="introduction"] div:first-child {
+		justify-content: flex-start;
+	}
+	h1 {margin-left: var(--contGap);}
+}
+@media only screen and (min-width: 1000px) {
 	main {
-		height: auto;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+	}
+	article[aria-label="introduction"] {
+		padding: var(--contGap) var(--baseWidPer);
+		grid-column: 1 / span 2;
+		grid-row: unset;
+	}
+	section[aria-label="contact"] {
+		padding: var(--contGap) var(--baseWidPer);
+		grid-column: 1 / span 2;
+		grid-row: unset;
+	}
+	section[aria-label="education"] {
+		padding: var(--contGap) var(--baseWidPer);
+		grid-column: 3 / span 4;
+		grid-row: 1 / 2;
+	}
+	.list {
+		font: var(--fontNotation);
+	}
+	section[aria-label="education"]  p, section[aria-label="education"] ul {
+		font: var(--fontBodySmall);
 	}
 }

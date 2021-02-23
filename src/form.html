@@ -1,90 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!--font icons-->
+    <script src="https://kit.fontawesome.com/cef8a422eb.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Submission Form</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/fav-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/global-style.css">
-    <style>
-      :root {
-        --remPad: .25rem;
-      }
-main {
-  padding: 0;
-}
-form {
-	width: auto;
-	background-color: var(--col-s2);
-  background-image: linear-gradient(to right, var(--col-s2), var(--col-p4));
-	padding: calc(var(--remPad)*4);
-  border-left: 10px solid var(--col-p3);
-  box-sizing: border-box;
-}
-body, main, form {
-  height: 35rem !important;
-  overflow: auto;
-}
-form > *:not(input[type=submit]) {
-  margin: calc(var(--remPad)*2) 0;
-  padding: var(--remPad);
-}
-form input, form textarea {
-	font: var(--fontH4);
-}
-form label {
-	font: var(--fontH3);
-}
-form textarea {
-  display: block;
-  width: 100%;
-}
-label {
-	display: inline-block;
-  width: 10rem;
-  margin-right: calc(var(--remPad)*2);
-}
-label:nth-of-type(4) {
-	display: none;
-}
-input, textarea {
-	color: var(--col-n4);
-}
-textarea::placeholder {
-	font-style: italic;
-	color: var(--col-n4);
-}
-input[type=submit] {
-    background: var(--col-p3); 
-    color: var(--col-n1);
-    cursor:pointer;
-    margin: calc(var(--remPad)*2) 0;
-    padding: calc(var(--remPad)*2);
-}
-/*Hover states*/
-input[type=submit]:hover {
-    background: var(--col-s5); 
-    cursor:pointer;
-}
-
-@media only screen and (max-height: 500px) {
-  :root {
-        --remPad: .15rem;
-      }
-      form input, form textarea {
-	font: var(--fontP);
-}
-form label {
-	font: var(--fontH4);
-}
-form textarea {
-  width: 80%;
-}
-}
-    </style>
+    <!--page meta data-->
+    <title>Form</title>
+    <!--page fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&family=Roboto:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <!--css stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/form-style.css">         
   </head>
   <body>
     <main>
@@ -104,3 +32,4 @@ form textarea {
     </main>
   </body>
 </html>
+

@@ -1,105 +1,125 @@
 :root {
-    --gridMin: 280px;
-    --gridGap: 0;
+    --imgMin: 80vw;
+    --contGap: 1rem;
 }
-/*layout*/
 main {
-	padding: 2rem var(--baseWidPer);
+    grid-column: 1 / span 12;
+    grid-row: 2 / 3;
+    padding: var(--contGap) var(--baseWidPer);
 }
-main > * {
-    margin: 1rem 0;
-}
-section {
+main > * {margin: var(--padRem) 0;}
+main h1, main h1 + p {text-align: var(--textAlign);}
+main h1 + p {font: var(--fontHeadline);}
+/*gallery style*/
+section[aria-label="projects"] {
     display: grid;
-    grid-gap: var(--gridGap);
-    grid-column: 1 / span 3;
-    grid-template-columns: repeat(auto-fit, minmax(var(--gridMin), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(var(--imgMin), 1fr));
+    grid-gap: var(--contGap);
+
 }
-a.item {
+section[aria-label="projects"] a:nth-of-type(odd) {background: var(--pink) linear-gradient(to left, var(--pink), var(--purple));}
+section[aria-label="projects"] a:nth-of-type(even) {background: var(--red) linear-gradient(to left, var(--pink), var(--red));}
+section[aria-label="projects"] a {
     position: relative;
-    width: 100%;
-    height: 13em;
-    color: var(--col-n5);
-    margin-bottom: 9rem;
 }
-.item > img {
+section[aria-label="projects"] a img {
     width: 100%;
-	height: 100%;
-    object-fit: cover;
-	padding: 0;
-	margin: 0;
+    display: block; /*default space for descenders - inline elements*/
 }
 .info {
+    display: flex;
+    flex-flow: column nowrap;
+    transition: var(--transAll);
+}
+.info h3 {
+    padding: calc(var(--padRem)/4);
+    text-align: center;
+    background: var(--lightGrey) linear-gradient(to left, var(--lightGrey), var(--light), var(--lightGrey));
+    color: var(--darkBlue);
+}
+.info p {
+    color: var(--light);
+    padding: calc(var(--padRem)/2);
+}
+.lock {
     position: absolute;
-    top: 13rem;
+    top: var(--padRem);
+    right: var(--padRem);
+    width:  2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--light);
+    color: var(--light);
+    font-size: .8rem;
+    box-shadow: 2px 2px 5px black;
+    opacity: .8;
+}
+.lock i {
+    text-shadow: 2px 2px 5px black;   
 }
 @media only screen and (min-width: 500px) {
     :root {
-        --gridGap: 2rem;
-    } 
+        --imgMin: 40vw;
+        --contGap: 2rem;
+    }
 }
 @media only screen and (min-width: 800px) {
     :root {
-        --gridMin: 400px;
-    }
-    section a > * {
-        margin: var(--baseWidPer) 0;
-    }
-    main p:nth-child(1) {
-        font: var(--fontH3);
-        margin: calc(var(--baseWidPer)/2) 0; 
-    }
-    a.item {
-        height: 17em;
-    }
-    .info {
-        top: 17rem;
+        --imgMin: 30vw;
+        --contGap: 3rem;
     }
 }
-/*HOVER STYLE*/
+@media only screen and (min-width: 1200px) {
+    :root {--imgMin: 400px;}
+}
 @media(hover: hover) and (pointer: fine) {
-    :root {
-        --gridGap: 4rem;
+    section[aria-label="projects"] a {
+        height: 15rem;
     }
-    a.item {
-        margin-bottom: 0;
-    }
-    .item > img {
+    section[aria-label="projects"] a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        padding: 0;
-        margin: 0;
     }
     .info {
         position: absolute;
         top: 0;
-        margin: 0;
-    }
-
-    .info {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         height: 100%;
-        padding: 4rem;
-        background: var(--col-p4);
         opacity: 0;
+        padding: var(--padRem);
+    }
+    section[aria-label="projects"] a:nth-child(odd) .info {
+        background: var(--pink) linear-gradient(to left, var(--pink), var(--purple));
+    }
+    section[aria-label="projects"] a:nth-child(even) .info {
+        background: var(--red) linear-gradient(to left, var(--pink), var(--red));
+    }
+    .info h3 {
+        background: initial;
+        text-align: initial;
+        color: var(--light);
+        padding: 0;
+        margin-bottom: var(--padRem);
+    }
+    .info p {
+        padding: 0;
+        flex: 1;
     }
     .info:hover {
         opacity: 1;
     }
-    section {
-        margin-bottom: 3rem;
-    }
-    main h2 {
-        margin-bottom: 1rem;
+    
+}
+@media(hover: hover) and (pointer: fine) and (min-width: 500px) {
+    section[aria-label="projects"] a {
+        height: 13rem;
     }
 }
-
-@media(hover: hover) and (pointer: fine) and (min-width: 500px) {
-    .info {
-        padding: 2.5rem;
+@media(hover: hover) and (pointer: fine) and (min-width: 800px) {
+    section[aria-label="projects"] a {
+        height: 20rem;
     }
-
 }

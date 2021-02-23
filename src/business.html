@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!--google analytics script-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136697979-1"></script>
+    <!--font icons-->
     <script src="https://kit.fontawesome.com/cef8a422eb.js" crossorigin="anonymous"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--page meta data-->
     <meta name="description" content="Ying Liang's digital web portfolio containing coding, business, design, and user experience projects">
     <meta property="og:title" content="Ying Liang's Digital Portfolio">
     <meta property="og:description" content="Business, Tech, and Design">
@@ -22,35 +25,39 @@
     <title>Ying Liang: Business</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/global-style.css">
-    <link rel="stylesheet" href="css/gallery-style.css">
+    <!--page fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&family=Roboto:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <!--css stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/global-style.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery-style.css">          
   </head>
   <body>
     <header>
-      <nav aria-label="Main Navigation">
-        <ul>
-          <li><a href="index.html" title="Homepage"><span class="hover">Ying Liang</span><span aria-hidden="true">YL</span></a></li>
-          <li><a href="about.html" title="About Me"><span class="hover">About</span><span aria-hidden="true"><i class="fas fa-address-card"></i></span></a></li>
-          <li><a href="ux-projects.html" title="UX Projects"><span class="hover">UX Design</span><span aria-hidden="true"><i class="fas fa-pencil-ruler"></i></span></a></li>
-          <li><a href="coding-projects.html" title="Coding Projects"><span class="hover">Coding</span><span aria-hidden="true"><i class="fas fa-code"></i></span></a></li>
-          <li><a href="" title="Business Projects"><span class="hover">Business</span><span aria-hidden="true"><i class="fas fa-briefcase"></i></span></a></li>
-        </ul>
-      </nav>
+      <nav aria-label="main">
+        <a href="index.html">Ying Liang<span class="sr">: homepage</span></a>
+        <a href="about.html">About<span class="sr"> me</span></a>
+        <a class="active" href="">Business <span class="sr"> projects</span></a>
+        <a href="coding.html">Coding <span class="sr">projects</span></a>
+        <a href="design.html">Design <span class="sr">projects</span></a>
+     </nav>
     </header>
-
-    <!--PAGE CONTENT-->
+    <!--page content-->
     <main>
-      <p class="noTopMar">
-        Trained in diverse facets of business with experience as an individual contributor as well as a team collaborator. 
+      <h1 class="noTopMar">Business Growth Mindset</h1>
+      <p>
+        Trained in diverse areas of business with experience as an individual contributor and team collaborator.
+      </p>
+      <p>
         Have worked with agency, startups, SaaS companies, tech consulting, and small businesses. 
+        Able to communicate with a variety of stakeholders about the business value of developement and design.
       </p>
       <h2>Business & Brands</h2>
-      <section class="noBotMar" title="Project Gallery">
-        <!--PROJECT GRID-->
+      <section class="noBotMar" role="contentinfo" aria-label="projects">
+        <!--page grid-->
         <a class="item" href="file/connxus/style-guide.pdf" title="ConnXus Rebranding">
           <img src="img/prev-connxus.jpg" alt ="ConnXus Rebranding">
-          <div class="info hover" title="project info">
+          <div class="info" title="project info">
             <h3>ConnXus Rebranding</h3>
             <p>
               Rebranding project reinforcing brand equity for ConnXus, a supplier management software company.
@@ -59,7 +66,7 @@
         </a>
         <a class="item" href="file/bigland.pdf" title="Bigland Tech Brand">
           <img src="img/prev-bigland.jpg" alt="Bigland Tech Brand">
-          <div class="info hover" title="project info">
+          <div class="info" title="project info">
             <h3>Bigland Tech Branding</h3>
             <p>
               Designed brand assets and identity suites for software Startup.
@@ -68,7 +75,7 @@
         </a>
         <a class="item" href="file/sleepybee.pdf" title="Small Business Designs">
           <img src="img/prev-sleepybee.jpg" alt="Small Business Designs">
-          <div class="info hover" title="project info">
+          <div class="info" title="project info">
             <h3>Small Business Designs</h3>
             <p>
               Designed brand assets and identity suites for small businesses.
@@ -77,17 +84,31 @@
         </a>
       </section>
     </main>
-    <!--UNIVERSAL FOOTER-->
+    <!--global footer-->
     <footer>
-      <ul title="Social Media Links">
-        <li class="hover"><span class="hover" aria-hidden="true">LinkedIn</span><a href="https://linkedin.com/in/ying-liang" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-        <li class="hover"><span class="hover" aria-hidden="true">Codepen</span><a href="http://codepen.io/ying-liang" title="Codepen"><i class="fab fa-codepen"></i></a></li>
-        <li class="hover"><span class="hover" aria-hidden="true">Github</span><a href="http://github.com/ying-liang" title="Github"><i class="fab fa-github"></i></a></li>
-        <li class="hover"><span class="hover" aria-hidden="true">Instagram</span><a href="https://www.instagram.com/ying.aling/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li class="hover"><span class="hover" aria-hidden="true">Email</span><address title="Send Email"><a href="mailto:liangy.mu@gmail.com"><i class="far fa-envelope"></i></a></address></li>
-      </ul>
-      <small id="copyright" title="Ying Liang, All Rights Reserved"></small>
+      <a title="LinkedIn" href="https://linkedin.com/in/ying-liang">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          <span class="sr">LinkedIn</span>
+      </a>
+      <a title="Codepen" href="http://codepen.io/ying-liang">
+          <i class="fab fa-codepen" aria-hidden="true"></i>
+          <span class="sr">CodePen</span>
+      </a>
+      <a title="Github" href="http://github.com/ying-liang">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span class="sr">Github</span>
+      </a>
+      <a title="Instagram" href="https://www.instagram.com/ying.aling/">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span class="sr">Instagram</span>
+      </a>
+      <a title="Email" href="mailto:liangy.mu@gmail.com">
+          <i class="far fa-envelope" aria-hidden="true"></i>
+          <address class="sr" title="Email Me">Liangy.mu@gmail.com</address>
+      </a>
+      <small id="copyright"></small>
     </footer>
+    <!--current year copyright-->
     <script>document.getElementById("copyright").innerHTML = "&copy;" + new Date().getFullYear() + " Ying Liang. All Rights Reserved.";</script>
   </body>
 </html>
