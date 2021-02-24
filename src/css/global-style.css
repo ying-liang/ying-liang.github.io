@@ -20,6 +20,7 @@
     --darkBlue: #04497A;
     --lightBlue: #4BA4E3;
     --lightBlueHEX: 75 164 227;
+    --lightHEX: 255 255 255;
     --slate: #2f4858;
     --yellow: #ecea62;
     --grey: #757575;
@@ -33,6 +34,7 @@
     --padRem: 1rem;
     --textAlign: center;
     --transAll: all 0.5s ease-in-out;
+    --iframeHeight: 24rem;
 }
 /*base styling*/
 body {
@@ -50,6 +52,7 @@ body {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 /*text styling*/
@@ -143,10 +146,20 @@ body::-webkit-scrollbar {
     display: none;
 }
 /*responsive breakpoint - med screen*/
+@media only screen and (max-width: 500px) {
+    nav[aria-label="main"] a:first-child {
+        color: var(--light);
+    }
+    .active {color: var(--lightGrey) !important;}
+    nav[aria-label="main"] a {
+        margin: 0 5px;
+    }
+}
 @media only screen and (min-width: 500px) {
     :root {
         --padRem: 1.5rem;
         --textAlign: left;
+        --iframeHeight: 36rem;
     }
     nav[aria-label="main"] a:first-child, 
     nav[aria-label="main"] a:not(a:first-child) {
@@ -170,6 +183,7 @@ body::-webkit-scrollbar {
     }
     nav[aria-label="main"] a:first-child {
         margin-right: auto;
+        color: var(--light);
         flex: none;
     }
     nav[aria-label="main"] a:not(a:first-child) {
@@ -221,18 +235,9 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 }
-@media(hover: hover) and (pointer: fine) and (min-width: 800px) {
-    body::-webkit-scrollbar {
-        display: unset;
-        width: .5rem;
-    }
-    body::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
-    }
-     
-    body::-webkit-scrollbar-thumb {
-      background: var(--lightBlue);
-      outline: 1px solid var(--grey);
+@media only screen and (min-width: 1000px) {
+    :root {
+        --iframeHeight: 40rem;
     }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -1,119 +1,84 @@
 :root {
-	/*root variables not connected to global style*/
-	/*text styles*/
-	--fontTitleLarge: 600 calc(34rem/16)/calc(41rem/16)'Roboto Slab', sans-serif;
-	--fontTitleMed: 400 calc(28rem/16)/calc(34rem/16)'Roboto Slab', sans-serif;
-	--fontTitleSmall: 400 calc(22rem/16)/calc(28rem/16)'Roboto Slab', sans-serif;
-	--fontHeadline: 400 calc(17rem/16)/calc(26rem/16)'Roboto Slab', sans-serif;
-	--fontBody: 400 calc(17rem/16)/calc(22rem/16)'Roboto', sans-serif;
-	--fontBodySmall: 400 calc(15rem/16)/calc(18rem/16)'Roboto', sans-serif;
-	--fontCallout: 600 calc(16rem/16)/calc(21rem/16)'Roboto Slab', sans-serif;
-	--fontSubhead: 600 calc(15rem/16)/calc(20rem/16)'Roboto Slab', sans-serif;
-	--fontNotation: 400 calc(13rem/16)/calc(16rem/16)'Roboto Slab', sans-serif;
-	--fontCode: 400 calc(16rem/16)/calc(18rem/16)'Roboto Mono', monospace;
-	/*colors*/
-	--red: #DD313C;
-	--orange: #CC4E0F;
-	--pink: #BE4B83;
-	--purple: #714885;
-	--blue: #056cb6;
-	--darkBlue: #04497A;
-	--lightBlue: #4BA4E3;
-	--lightBlueHEX: 75 164 227;
-	--slate: #2f4858;
-	--yellow: #ecea62;
-	--grey: #757575;
-	--lightGrey: #ccc;
-	--darkGrey: #353535;
-	--light: #fff;
-	--dark: #000;
-	--remPad: .25rem;
-	--transAll: all 0.5s ease-in-out;
-  }
-body {
-    font: var(--fontBody);
-}
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    box-sizing: border-box;
-}
-form {
-	width: 100%;
-	background-color: var(--purple);
-	background-image: linear-gradient(to right, var(--purple), var(--red));
-	padding: calc(var(--remPad)*4);
-	border-left: 10px solid var(--red);
-	box-sizing: border-box;
-}
-body, main, form {
-	height: auto;
-	max-height: 45rem;
-	overflow: auto;
-}
-form > *:not(input[type=submit]) {
-	margin: calc(var(--remPad)*2) 0;
-	padding: var(--remPad);
-}
-form input, form textarea, form label {
-font: var(--fontHeadline);
-}
-form label {
-	color: var(--light);
-}
-form textarea {
-	display: block;
-	width: 100%;
-}
-label {
-	display: inline-block;
-	width: 10rem;
-	margin-right: calc(var(--remPad)*2);
-}
-label:nth-of-type(4) {
-	display: none;
-}
-input, textarea {
-color: var(--darkBlue);
-}
-textarea::placeholder {
-font-style: italic;
-color: var(--darkGrey);
-}
-input[type=submit] {
-background: var(--orange); 
-color: var(--light);
-cursor:pointer;
-margin: calc(var(--remPad)*2) 0;
-padding: calc(var(--remPad)*2);
-transition: var(--transAll);
-}
-/*hover style*/
-input[type=submit]:hover {
-	background: var(--lightBlue); 
-	cursor:pointer;
+	--contPad: 1rem;
 }
 
-@media only screen and (max-height: 500px) {
-:root {
-	--remPad: .1rem;
-  }
-  form > *:not(input[type=submit]) {
-	margin: calc(var(--remPad)/2) 0;
-	padding: calc(var(--remPad)/2);
+body {
+	min-width: unset;
+	min-height: unset;
+	height: var(--iframeHeight);
+	background-color: var(--purple);
+	background-image: linear-gradient(to right, var(--purple), var(--pink));
 }
-	form input, form textarea {
-	font: var(--fontNotation);
-	margin: 0;
+main {
+	padding: 0;
+	grid-column: 1 / span 12;
+}
+form {
+	padding: calc(var(--contPad)*1);
+}
+label, input {
+	display: inline-block;
+	padding: calc(var(--contPad)/2);
+}
+label {
+	width: 5rem;
+	background: var(--pink);
+	color: var(--light);
+	text-align: center;
+	flex: none;
+}
+button {
+	padding: calc(var(--contPad)/2);
+	width: 5rem;
+	background: var(--lightGrey);
+	transition: var(--transAll);
+}
+textarea {
+	padding: calc(var(--contPad)/2);
+	display: block;
+	height: 120px;
+	width: 100%;
+}
+textarea, .flexWrap {
+	margin-bottom: var(--contPad);
+}
+textarea::placeholder {
+	font-style: italic;
+	color: var(--black);
+}
+label[title="comment"] {
+	display: none;
+}
+input {
+	width: 100%;
+	flex: auto;
+}
+input, textarea {
+	background: rgb(var(--lightHEX) / 50%);
+}
+.flexWrap {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+/*hover styling*/
+@media(hover: hover) and (pointer: fine) {
+	button:hover {
+		background: var(--lightBlue);
 	}
-	form label {
-	font: var(--fontNotation);
+}
+@media only screen and (min-width: 500px) {
+	:root {
+		--contPad: 1.5rem;
 	}
-	form textarea {
-	width: 80%;
+	.flexWrap {
+		justify-content: flex-start;
+	}
+	input {
+		flex: none;
+		width: 20rem;
+	}
+	textarea {
+		height: 15rem;
 	}
 }

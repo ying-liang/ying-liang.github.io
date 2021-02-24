@@ -19,7 +19,7 @@ section[aria-label="education"] {
 	background: rgb(var(--lightBlueHEX) / 50%);
 	grid-row: 2 / 3;
 }
-section > *, article > * {
+section > *, article > *{
 	margin: var(--contGap) 0;
 }
 section[aria-label="education"] ul {
@@ -52,12 +52,12 @@ section span + p {
 	margin-top: calc(var(--contGap)/2);
 }
 iframe {
-	display: block;
 	width: 100%;
-	height: auto;
-	overflow: hidden;
-	height: 35em;
+	display: block;
+	height: var(--iframeHeight);
+	margin-bottom: 0;
 }
+
 article[aria-label="introduction"] div:first-child {
 	display: flex;
 	justify-content: space-between;
@@ -111,23 +111,21 @@ article[aria-label="introduction"] div:first-child {
 	}
 	h1 {margin-left: var(--contGap);}
 }
+@media only screen and (min-width: 800px) {
+	iframe{
+		margin-bottom: var(--contGap);
+	}
+}
 @media only screen and (min-width: 1000px) {
 	main {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 1fr;
 	}
 	article[aria-label="introduction"] {
-		padding: var(--contGap) var(--baseWidPer);
-		grid-column: 1 / span 2;
-		grid-row: unset;
-	}
-	section[aria-label="contact"] {
-		padding: var(--contGap) var(--baseWidPer);
 		grid-column: 1 / span 2;
 		grid-row: unset;
 	}
 	section[aria-label="education"] {
-		padding: var(--contGap) var(--baseWidPer);
 		grid-column: 3 / span 4;
 		grid-row: 1 / 2;
 	}
