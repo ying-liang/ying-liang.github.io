@@ -38,6 +38,11 @@ img[alt="Profile Picture"] {
 h1 {
 	text-align: center;
 }
+article strong {
+	font-weight: 700;
+	color: var(--darkBlue);
+	background: rgb(var(--lightBlueHEX) / 25%);
+}
 section span {
 	display: block;
 	margin-top: calc(var(--contGap)/2);
