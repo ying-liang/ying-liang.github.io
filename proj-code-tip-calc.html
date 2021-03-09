@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>JS Tip Calculator by Ying Liang</title><style>* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+:root {
+    font-family: 'Roboto', sans-serif;
+    --em-size: 1.1em;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BF964B;
+    background-color: #401E0A;
+}
+header {height: 20vh;}
+main {
+    display: grid;
+    column-gap: var(--em-size);
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #eee;
+    height: 80vh;
+    min-height: 500px;
+    color: #401E0A;
+    min-width: 620px;
+}
+section:nth-child(3) {
+    color: #BF964B;
+    background-color: #401E0A;
+    padding-top: 4vh;
+}
+section.results {
+    grid-column: 1 / 3;
+    width: 100%;
+    text-align: center;
+}
+section.calculate {
+    margin-top: 4vh;
+    margin-right: 4vh;
+}
+.img, .dollar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img {
+    align-items: top;
+    margin-top: 4vh;
+}
+.coin {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background-color: #F2E52E;
+    border: 2em solid #F2C230;
+    position: relative;
+}
+.coin::after {
+    content: "";
+    position: absolute;
+    top: -2em;
+    left: -2em;
+    width: 0em;
+    height: 0px;
+    border-width: 10em;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #fff #fff transparent transparent;
+    z-index: 1;
+    opacity: 0.2;
+}
+.dollar {
+    width: 100%;
+    height: 100%;
+    font-size: calc(var(--em-size) * 11);
+    font-weight: 900;
+    color: #F2C230;
+}
+h1 {font: 4em 'Lobster', cursive;}
+h2 {
+    line-height: calc(var(--em-size) * 2);
+    font-size: calc(var(--em-size) * 1.4);
+    font-weight: bold;
+}
+h3 {font: 2.5em 'Lobster', cursive;}
+h3 > span {
+    color: #F2C230;
+}
+input {
+    background-color: #ddd;
+    width: 100%;
+}
+input, button {
+    height: calc(var(--em-size) * 2);
+    padding: calc(var(--em-size) / 3);
+}
+button {
+    margin: var(--em-size) 0 var(--em-size) 0;
+    font-weight: bold;
+    transition: all .25s ease-in-out;
+    background-color: #F2C230;
+    border-radius: .5em;
+}
+button:hover {background-color: #F2E52E;}
+input, button, .sign {font-size: calc(var(--em-size) * 1.2);}
+button.round { margin-left: var(--em-size);}
+
+@media screen and (max-width: 700px) {
+    header > h1 > span {
+        display: none;
+    }
+    .img {
+        margin-left: 4vw;
+    }
+    main {
+        column-gap: 4em;
+    }
+    .coin {
+        width: 18em;
+        height: 18em;
+    }
+    button {
+        padding: .5em;
+    }
+    button.round { margin-left: 0;}
+    button > span {
+        display: none;
+    }
+}
+@media screen and (max-height: 700px) {
+    header {height: 15vh;}
+    main {height: 85vh;}
+    h1 {font-size: 3em;}
+    h2 {font-size: 1em;}
+    h3 {font-size: 2em;}
+}</style><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"></head><body><header><h1><span>Javascript </span>Tip Calculator</h1></header><main><section class="img"><div class="coin"><div class="dollar">$</div></div></section><section class="calculate"><h2 class="test">Enter Your Bill ($)</h2><input type="number" class="billAmount"><h2>Enter Your Tip (%)</h2><input type="number" class="tipAmount" value="15"><h2>Split Bill (#)</h2><input type="number" class="split" value="1"><div class="buttons"><button class="calc" onclick="calcTip();">Calculate</button> <button class="round" onclick="roundTip(calcTip());">Round <span>Close </span>to Dollar</button></div></section><section class="results"><h3 class="tip-total">Your tip is<span></span></h3><h3 class="total-total">For a total bill of<span></span></h3></section></main><script>function calcTip() {
+    var split = Number(document.querySelector(".split").value);
+    var billInput = Number(document.querySelector(".billAmount").value);
+    var tipInput = Number(document.querySelector(".tipAmount").value) / 100;  
+    var totalTip = Math.round((billInput * tipInput) * 100) / 100;
+    var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
+    if(split > 1) {
+        var splitTip = Math.round((totalTip / split) * 100) / 100;
+        var totalBill = billInput + (splitTip * split);
+        var totalTip = splitTip * split;
+        spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
+    } else {
+        var totalBill = billInput + totalTip;
+        spanTip.innerText = " $" + totalTip.toFixed(2);
+    }
+    var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
+    spanTotal.innerText = " $" + totalBill.toFixed(2);
+    return [totalBill, totalTip];
+}
+function roundTip(array) {
+    var split = Number(document.querySelector(".split").value);
+    var totalBill = array[0];
+    var totalTip = array[1];
+    var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
+    var adjTotalBill = Math.ceil(totalBill);
+    if(split > 1) {
+        var splitTip = Math.round((totalTip / split) * 100) / 100;
+        var increaseTip = adjTotalBill - totalBill;
+        var splitTipInc = Math.round((increaseTip / split) * 100) / 100;
+        splitTip = splitTip + splitTipInc;
+        var billInput = totalBill - totalTip;
+        adjTotalBill = splitTip * split + billInput;
+        totalTip = splitTip * split;
+        spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
+    } else {
+        var adjTip = adjTotalBill - totalBill + totalTip;
+        spanTip.innerText = " $" + adjTip.toFixed(2);
+    }
+    var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
+    spanTotal.innerText = " $" + adjTotalBill.toFixed(2);
+}</script></body></html>

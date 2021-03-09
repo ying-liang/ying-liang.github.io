@@ -1,1 +1,0 @@
-main{padding-top:calc(var(--baseTextSpace)/2) 0}section{display:grid;grid-gap:var(--margin);grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-auto-rows:300px 200px}section>a{display:block;width:100%;height:100%;overflow:auto}section img{width:100%;height:100%;object-fit:cover}.fab{font-size:calc(var(--baseTextSpace)*2)}
