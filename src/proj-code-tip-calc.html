@@ -1,190 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JS Tip Calculator by Ying Liang</title>
-  <style>
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
+    <head>
+        <!--google analytics script-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136697979-1"></script>
+        <!--font icons-->
+        <script src="https://kit.fontawesome.com/cef8a422eb.js" crossorigin="anonymous"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'UA-136697979-1');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--page meta data-->
+        <meta name="description" content="Ying Liang's digital web portfolio containing coding, business, design, and user experience projects">
+        <meta property="og:title" content="Ying Liang's Digital Portfolio">
+        <meta property="og:description" content="Business, Tech, and Design">
+        <meta property="og:image" content="img/social.png">
+        <meta property="og:url" content="https://yingliang.me">
+        <meta name="twitter:card" content="img/social.png">
+        <!--ADD PROJECT TITLE HERE-->
+        <title>JS Tip Calculator by Ying Liang</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon.png">
+        <!--page fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <!--ADD PROJECT FONT(S) HERE-->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&family=Roboto+Slab:wght@400;600&family=Roboto:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+        <!--css stylesheets-->
+        <link rel="stylesheet" type="text/css" href="css/global-style.css">
+        <link rel="stylesheet" type="text/css" href="css/calculator-style.css"> 
+      </head>
+    <body>
+        <!--global header-->
+        <header>
+            <nav aria-label="main">
+                <a href="index.html">Ying Liang<span class="sr">: homepage</span></a>
+                <a href="about.html">About<span class="sr"> me</span></a>
+                <a href="business.html">Business <span class="sr"> projects</span></a>
+                <a href="coding.html">Coding <span class="sr">projects</span></a>
+                <a href="design.html">Design <span class="sr">projects</span></a>
+            </nav>
+        </header>
+        <!--page content-->
+        <main>
+            <article>
+                <!--ADD PROJECT CODE-->
+                <div id="projContainer">
+                    <header>
+                        <h1><span>Javascript </span>Tip Calculator</h1>
+                    </header>
+                    <div class="contentWrap">
+                        <section class="img">
+                            <div class="coin">
+                                <div class="dollar">$</div>
+                            </div>
+                        </section>
+                        <div class="flexWrap">
+                            <label for="bill">Enter Bill $</label>
+                            <input id="billAmount" name="bill" type="number"/>
+                        </div>
+                        <div class="flexWrap">
+                            <label for="tip">Enter Tip %</label>
+                            <input id="tipAmount" value="15" name="tip" type="number"/>
+                        </div>
+                        <div class="flexWrap">
+                            <label for="bill">Split Bill #</label>
+                            <input id="split" value="1" name="bill" type="number"/>
+                        </div>
+                        <div class="buttons">
+                            <button id="calc" onClick="calcTip();">Calculate</button>
+                            <button id="round" onclick="roundTip(calcTip());">Round <span>Close </span>to Dollar</button>
+                        </div>
+                    </div>
+                    <footer>
+                        <h3 id="tip-total">Tip:<span></span></h3>
+                        <h3 id="total-total">Total:<span></span></h3>
+                    </footer>
+                </div>
+            </article>
+            <section>
+                <h2 class="sr">Code</h2>
+<section class="codeBox"><h3>HTML</h3><pre><code>&lt;div id="projContainer"&gt;
+    &lt;header&gt;
+        &lt;h1&gt;&lt;span&gt;Javascript &lt;/span&gt;Tip Calculator&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;div class="contentWrap"&gt;
+        &lt;section class="img"&gt;
+            &lt;div class="coin"&gt;
+                &lt;div class="dollar"&gt;$&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;div class="flexWrap"&gt;
+            &lt;label for="bill"&gt;Enter Bill $&lt;/label&gt;
+            &lt;input id="billAmount" name="bill" type="number"/&gt;
+        &lt;/div&gt;
+        &lt;div class="flexWrap"&gt;
+            &lt;label for="tip"&gt;Enter Tip %&lt;/label&gt;
+            &lt;input id="tipAmount" value="15" name="tip" type="number"/&gt;
+        &lt;/div&gt;
+        &lt;div class="flexWrap"&gt;
+            &lt;label for="bill"&gt;Split Bill #&lt;/label&gt;
+            &lt;input id="split" value="1" name="bill" type="number"/&gt;
+        &lt;/div&gt;
+        &lt;div class="buttons"&gt;
+            &lt;button id="calc" onClick="calcTip();"&gt;Calculate&lt;/button&gt;
+            &lt;button id="round" onclick="roundTip(calcTip());"&gt;Round &lt;span&gt;Close &lt;/span&gt;to Dollar&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+        &lt;h3 id="tip-total"&gt;Tip:&lt;span&gt;&lt;/span&gt;&lt;/h3&gt;
+        &lt;h3 id="total-total"&gt;Total:&lt;span&gt;&lt;/span&gt;&lt;/h3&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;</code></pre></section>
+<section class="codeBox"><h3>CSS</h3><pre><code>:root {
+	--imgSize: 12rem;
+	--cornerCurve: 5px;
 }
-:root {
-    font-family: 'Roboto', sans-serif;
-    --em-size: 1.1em;
+h1 span, button span {display: none;}
+#projContainer {
+	background: #eee;
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#projContainer > * {
+	width: inherit;
+	padding: var(--contGap);
+}
+article header {
+	color: #BF964B;
+    background: #401E0A;
+}
+article footer {
     color: #BF964B;
-    background-color: #401E0A;
+    background: #401E0A;
+	display: inline-block;
+	text-align: left;
 }
-header {height: 20vh;}
-main {
-    display: grid;
-    column-gap: var(--em-size);
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #eee;
-    height: 80vh;
-    min-height: 500px;
-    color: #401E0A;
-    min-width: 620px;
+h1 {
+	font: 2em 'Lobster', cursive;
+	padding: var(--contGap) 0;
+	width: 100%;
+	text-align: var(--textAlign);
 }
-section:nth-child(3) {
-    color: #BF964B;
-    background-color: #401E0A;
-    padding-top: 4vh;
+footer h3 {font: 1.6em 'Lobster', cursive;}
+footer h3 span {color: #F2E52E;}
+.flexWrap {
+	width: inherit;
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: var(--contGap);
+	margin-bottom: var(--contGap);
+	justify-content: space-between;
+	border-radius: var(--cornerCurve);
 }
-section.results {
-    grid-column: 1 / 3;
-    width: 100%;
-    text-align: center;
+label, input {
+	display: inline-block;
+	padding: calc(var(--contGap)/4);
 }
-section.calculate {
-    margin-top: 4vh;
-    margin-right: 4vh;
+label {
+	width: 6rem;
+	flex: none;
+	display: grid;
+	place-items: center;
+	color: #BF964B;
+    background: #401E0A;
+	border-radius: var(--cornerCurve) 0% 0% var(--cornerCurve);
+}
+input {
+	width: calc(100% - 6rem);
+	background:rgb(242 194 48 / 50%);
+	flex: auto;
+	border-radius: 0% var(--cornerCurve) var(--cornerCurve) 0%;
+}
+button:first-of-type {
+	margin-right: var(--contGap);
+}
+button {
+	border-radius: var(--cornerCurve);
+	padding: calc(var(--contGap)/4);
+	background: #F2C230;
+	transition: var(--transAll);
+}
+button:hover {
+	background: #F2E52E;
+	color: var(--dark);
 }
 .img, .dollar {
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.img {
-    align-items: top;
-    margin-top: 4vh;
+    display: grid;
+    place-items: center;
 }
 .coin {
-    width: 20em;
-    height: 20em;
+    width: var(--imgSize);
+    height: var(--imgSize);
     border-radius: 50%;
     background-color: #F2E52E;
-    border: 2em solid #F2C230;
     position: relative;
+	overflow: hidden;
+	border: calc(var(--imgSize)/12) solid #F2C230;
 }
 .coin::after {
     content: "";
     position: absolute;
-    top: -2em;
-    left: -2em;
-    width: 0em;
-    height: 0px;
-    border-width: 10em;
+    top: -.2rem;
+    left: -.2rem;
+    border-width: calc(var(--imgSize)/2);
     border-style: solid;
     border-radius: 50%;
     border-color: #fff #fff transparent transparent;
     z-index: 1;
-    opacity: 0.2;
+    opacity: .3;
 }
 .dollar {
     width: 100%;
     height: 100%;
-    font-size: calc(var(--em-size) * 11);
+    font-size: calc(var(--imgSize)*.5);
     font-weight: 900;
     color: #F2C230;
 }
-h1 {font: 4em 'Lobster', cursive;}
-h2 {
-    line-height: calc(var(--em-size) * 2);
-    font-size: calc(var(--em-size) * 1.4);
-    font-weight: bold;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-h3 {font: 2.5em 'Lobster', cursive;}
-h3 > span {
-    color: #F2C230;
+input[type=number] {
+  -moz-appearance: textfield;
 }
-input {
-    background-color: #ddd;
-    width: 100%;
+/*CSS Breakpoints*/
+@media only screen and (min-width: 800px) {
+	:root {
+		--contGap: 1.5rem;
+	}
+	h1 {font-size: 3rem;}
+	footer h3 {font-size: 2rem;}
+	#projContainer {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	.contentWrap {
+		flex: auto;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	}
+	article footer {
+		height: 10rem;
+	}
+	label {width: 10rem;}
+	input, label, button {
+		font-size: 1.5rem;
+		padding: calc(var(--contGap)/3);
+	}
+	h1 span, button span {display: inline;}
 }
-input, button {
-    height: calc(var(--em-size) * 2);
-    padding: calc(var(--em-size) / 3);
-}
-button {
-    margin: var(--em-size) 0 var(--em-size) 0;
-    font-weight: bold;
-    transition: all .25s ease-in-out;
-    background-color: #F2C230;
-    border-radius: .5em;
-}
-button:hover {background-color: #F2E52E;}
-input, button, .sign {font-size: calc(var(--em-size) * 1.2);}
-button.round { margin-left: var(--em-size);}
+@media only screen and (min-width: 1000px) {
+	:root {
+		--imgSize: 20vw;
+	}
+	.contentWrap {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: repeat(4, 3rem);
+		grid-gap: var(--contGap);
+		margin-top: 15vh;
+		height: calc(100% - 15vh);
+	}
+	.img {
+		grid-column: 1 / 2;
+		grid-row: 1 / -1;
+	}
+	.flexWrap, .buttons {
+		grid-column: 2 / 3;
+		margin: 0;
+	}
+	.dollar {
+		font-size: 14vw;
+	}
+	article footer {
+		height: 15vh;
+	}
+	.contentWrap {
+		padding: 0 calc(var(--contGap)*2) !important;
+	}
 
-@media screen and (max-width: 700px) {
-    header > h1 > span {
-        display: none;
-    }
-    .img {
-        margin-left: 4vw;
-    }
-    main {
-        column-gap: 4em;
-    }
-    .coin {
-        width: 18em;
-        height: 18em;
-    }
-    button {
-        padding: .5em;
-    }
-    button.round { margin-left: 0;}
-    button > span {
-        display: none;
-    }
-}
-@media screen and (max-height: 700px) {
-    header {height: 15vh;}
-    main {height: 85vh;}
-    h1 {font-size: 3em;}
-    h2 {font-size: 1em;}
-    h3 {font-size: 2em;}
-}
-  </style>
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1><span>Javascript </span>Tip Calculator</h1>
-    </header>
-    <main>
-        <section class="img">
-            <div class="coin">
-                <div class="dollar">$</div>
-            </div>
-        </section>
-        
-        <section class="calculate">
-            <h2 class="test">Enter Your Bill ($)</h2>
-            <input type="number" class="billAmount">
-            <h2>Enter Your Tip (%)</h2>
-            <input type="number" class="tipAmount" value="15">
-            <h2>Split Bill (#)</h2>
-            <input type="number" class="split" value="1">
-            <div class="buttons">
-                <button class="calc" onClick="calcTip();">Calculate</button>
-                <button class="round" onclick="roundTip(calcTip());">Round <span>Close </span>to Dollar</button>
-            </div>
-        </section>
-
-        <section class="results">
-            <h3 class="tip-total">Your tip is<span></span></h3>
-            <h3 class="total-total">For a total bill of<span></span></h3>
-        </section>
-    </main>
-    <script>
-        function calcTip() {
-    var split = Number(document.querySelector(".split").value);
-    var billInput = Number(document.querySelector(".billAmount").value);
-    var tipInput = Number(document.querySelector(".tipAmount").value) / 100;  
+}</code></pre></section>
+<section class="codeBox"><h3>JS</h3><pre><code>function calcTip() {
+    var split = Number(document.querySelector("#split").value);
+    var billInput = Number(document.querySelector("#billAmount").value);
+    var tipInput = Number(document.querySelector("#tipAmount").value) / 100;  
     var totalTip = Math.round((billInput * tipInput) * 100) / 100;
     var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
     if(split > 1) {
@@ -201,7 +309,7 @@ button.round { margin-left: var(--em-size);}
     return [totalBill, totalTip];
 }
 function roundTip(array) {
-    var split = Number(document.querySelector(".split").value);
+    var split = Number(document.querySelector("#split").value);
     var totalBill = array[0];
     var totalTip = array[1];
     var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
@@ -221,7 +329,77 @@ function roundTip(array) {
     }
     var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
     spanTotal.innerText = " $" + adjTotalBill.toFixed(2);
-}
-    </script>
-</body>
+}</code></pre></section>
+            </section>
+        </main>
+        <!--global footer-->
+        <footer>
+            <a data-title="LinkedIn" href="https://linkedin.com/in/ying-liang">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                <span class="sr">LinkedIn</span>
+            </a>
+            <a data-title="Codepen" href="http://codepen.io/ying-liang">
+                <i class="fab fa-codepen" aria-hidden="true"></i>
+                <span class="sr">CodePen</span>
+            </a>
+            <a data-title="Github" href="http://github.com/ying-liang">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr">Github</span>
+            </a>
+            <a data-title="Instagram" href="https://www.instagram.com/ying.aling/">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr">Instagram</span>
+            </a>
+            <a data-title="Email" href="mailto:liangy.mu@gmail.com">
+                <i class="far fa-envelope" aria-hidden="true"></i>
+                <address class="sr">Liangy.mu@gmail.com</address>
+            </a>
+            <small id="copyright"></small>
+          </footer>
+          <!--current year copyright-->
+          <script>
+            function calcTip() {
+        var split = Number(document.querySelector("#split").value);
+        var billInput = Number(document.querySelector("#billAmount").value);
+        var tipInput = Number(document.querySelector("#tipAmount").value) / 100;  
+        var totalTip = Math.round((billInput * tipInput) * 100) / 100;
+        var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
+        if(split > 1) {
+            var splitTip = Math.round((totalTip / split) * 100) / 100;
+            var totalBill = billInput + (splitTip * split);
+            var totalTip = splitTip * split;
+            spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
+        } else {
+            var totalBill = billInput + totalTip;
+            spanTip.innerText = " $" + totalTip.toFixed(2);
+        }
+        var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
+        spanTotal.innerText = " $" + totalBill.toFixed(2);
+        return [totalBill, totalTip];
+    }
+    function roundTip(array) {
+        var split = Number(document.querySelector("#split").value);
+        var totalBill = array[0];
+        var totalTip = array[1];
+        var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
+        var adjTotalBill = Math.ceil(totalBill);
+        if(split > 1) {
+            var splitTip = Math.round((totalTip / split) * 100) / 100;
+            var increaseTip = adjTotalBill - totalBill;
+            var splitTipInc = Math.round((increaseTip / split) * 100) / 100;
+            splitTip = splitTip + splitTipInc;
+            var billInput = totalBill - totalTip;
+            adjTotalBill = splitTip * split + billInput;
+            totalTip = splitTip * split;
+            spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
+        } else {
+            var adjTip = adjTotalBill - totalBill + totalTip;
+            spanTip.innerText = " $" + adjTip.toFixed(2);
+        }
+        var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
+        spanTotal.innerText = " $" + adjTotalBill.toFixed(2);
+    }
+        </script>
+          <script>document.getElementById("copyright").innerHTML = "&copy;" + new Date().getFullYear() + " Ying Liang. All Rights Reserved.";</script>
+    </body>
 </html>

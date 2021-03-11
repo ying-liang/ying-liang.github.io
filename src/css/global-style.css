@@ -75,7 +75,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: minmax(min-content, 5rem) auto minmax(min-content, 5rem);
 }
-header {
+body header {
     width: inherit;
     padding: 0 var(--baseWidPer);
     background: var(--blue) linear-gradient(to left, var(--darkBlue), var(--blue));
@@ -90,7 +90,7 @@ nav[aria-label="main"] {
     display: inline-flex;
     flex-flow: row wrap;
 }
-footer {
+body footer {
     grid-column: 1 / span 12;
     grid-row: 3 / 4;
     width: inherit;
