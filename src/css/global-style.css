@@ -139,6 +139,7 @@ footer small {
 .active {color: var(--light) !important;}
 .noTopMar {margin-top: 0 !important;}
 .noBotMar {margin-bottom: 0 !important;}
+.inactive {cursor: default;}
 /*screen reader content for accessiblity*/
 .sr {
     height: 1px; width: 1px;
