@@ -50,14 +50,12 @@ section[aria-label="projects"] a img {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    border: 3px solid var(--light);
     color: var(--light);
-    font-size: .8rem;
-    box-shadow: 2px 2px 5px black;
-    opacity: .8;
+    font-size: 1.1rem;
+    opacity: .7;
 }
 .lock i {
-    text-shadow: 2px 2px 5px black;   
+    text-shadow: 2px 2px 5px rgb(0 0 0 / 50%);   
 }
 @media only screen and (min-width: 500px) {
     :root {
