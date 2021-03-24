@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",
-    "yargs-parser": "^20.2.4"
+    "yargs-parser": "^20.2.7"
   }
 }

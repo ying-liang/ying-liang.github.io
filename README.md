@@ -5,28 +5,28 @@
 <p>
     <b>Modern technology</b>
     <ul>
-        <li>- High performance and security</li>
-        <li>- Technical debt reduced by not supporting old browsers like IE</li>
+        <li>High performance and security</li>
+        <li>Technical debt reduced by only supporting modern browsers</li>
     </ul>
 </p>
 
 <p>
     <b>Responsive design</b>
     <ul>
-        <li>- Minimal device breakpoints (min. 320px screen)</li>
-        <li>- Relative CSS units and repetitive CSS variables </li>
-        <li>- Media query formants for devices and reduced motion</li>
-        <li>- Meta data implemented for social sharing</li>
+        <li>Minimal device breakpoints (min. 320px screen)</li>
+        <li>Relative CSS units and repetitive CSS variables </li>
+        <li>Media query formants for devices and reduced motion</li>
+        <li>Meta data implemented for social sharing</li>
     </ul>
 </p>
 
 <p>
     <b>Accessible for all</b>
     <ul>
-        <li>- Keyboard navigable</li>
-        <li>- Semantic, descriptive HTML</li>
-        <li>- Color contrast checked</li>
-        <li>- ARIA implemented, meeting WCAG AA guidelines</li>
-        <li>- CSS classes for screen reader/visual impairment</li>
+        <li>Keyboard navigable</li>
+        <li>Semantic, descriptive HTML</li>
+        <li>Color contrast checked</li>
+        <li>ARIA implemented, meeting WCAG AA guidelines</li>
+        <li>CSS classes for screen reader/visual impairment</li>
     </ul>
 </p>
