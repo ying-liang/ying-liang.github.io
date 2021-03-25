@@ -11,6 +11,12 @@ main {
 main > * {
 	margin: var(--contGap) 0;
 }
+section > h3 {
+	margin-bottom: var(--contGap);
+}
+section figure img {
+	display: block;
+}
 h2 + p {
 	font: var(--fontHeadline);
 }
@@ -37,20 +43,12 @@ ul.projNotes:last-of-type {
 article section:nth-last-of-type(2) a img {
 	background: rgb(var(--lightGray) / 50%);
 }
-/*SPECIFIC PROJECT STYLE MOVE TO HTML*/
+/*SPECIFIC PROJECT STYLE*/
 :root {
 	--gridGap: 3vw;
 	--imgMin: 20vw;
 	--connRed: #79242f;
 	--lightGray: 200 200 200;
-}
-section.icons {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--imgMin), 1fr));
-	grid-gap: var(--gridGap);
-}
-section > h3 {
-	margin-bottom: var(--contGap);
 }
 section.icons h3 {
 	grid-column: 1 / -1;
@@ -58,8 +56,10 @@ section.icons h3 {
 section.icons h3 {
 	margin-bottom: calc(var(--contGap)/2);
 }
-section figure img {
-	display: block;
+section.icons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--imgMin), 1fr));
+	grid-gap: var(--gridGap);
 }
 section.icons figure img {
 	width: 100%;

@@ -8,6 +8,15 @@ main {
     grid-row: 2 / 3;
 	padding: var(--contGap) var(--baseWidPer);
 }
+section > h3 {
+	margin-bottom: var(--contGap);
+}
+article section h3 {
+	margin: var(--contGap) 0;
+}
+section figure img {
+	display: block;
+}
 main > * {
 	margin: var(--contGap) 0;
 }
@@ -37,47 +46,7 @@ ul.projNotes:last-of-type {
 article section:nth-last-of-type(2) a img {
 	background: rgb(var(--lightGray) / 50%);
 }
-/*SPECIFIC PROJECT STYLE MOVE TO HTML*/
-:root {
-	--gridGap: 3vw;
-	--imgMin: 20vw;
-	--connRed: #79242f;
-	--lightGray: 200 200 200;
-}
-section.icons {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--imgMin), 1fr));
-	grid-gap: var(--gridGap);
-}
-section > h3 {
-	margin-bottom: var(--contGap);
-}
-section.icons h3 {
-	grid-column: 1 / -1;
-}
-section.icons h3 {
-	margin-bottom: calc(var(--contGap)/2);
-}
-section figure img {
-	display: block;
-}
-section.icons figure img {
-	width: 100%;
-	height: 100%;
-}
-img.smallIcon {
-	width: 80% !important;
-	height: 80% !important;
-}
-section.icons figure {
-	display: inline-block;
-	width: var(--imgMin);
-	height: var(--imgMin);
-	display: grid;
-	place-items: center;
-}
-iframe.pdf {display: none;}
-.fileLink img {width: 100%;}
+/*project styles*/
 span.viewPDF {position: relative;}
 span.viewPDF::after {
 	content: "(Click for PDF)";
@@ -88,15 +57,10 @@ span.viewPDF::after {
 	height: 1.2rem;
 	font: var(--fontNotation);
 }
-figure.card h3 {
-	display: none;
-}
-#brand figure img {
+.fileLink img {width: 100%;}
+img[alt="recruit back"], img[alt^="foldout"] {display: none;}
+section.brand img {
 	box-shadow: 2px 2px 5px var(--dark);
-}
-#brand figure:nth-of-type(1), 
-#brand figure:nth-of-type(2) {
-	margin-bottom: var(--contGap);
 }
 /*TEMPLATE MEDIA QUERIES*/
 @media only screen and (min-width: 500px) {
@@ -117,88 +81,80 @@ figure.card h3 {
 	#summary ul:last-of-type {
 		margin-top: 0;
 	}
-
 }
-/*SPECIFIC PROJECT MEDIA QUERIES*/
+/*project styles*/
 @media only screen and (min-width: 500px) {
-	:root {
-		--imgMin: 5rem;
-		--docHeight: 20rem;
-	}
-	iframe.pdf {
-		width: 100%;
-		display: block;
-		height: var(--docHeight);
-		box-shadow: 2px 2px 5px var(--dark);
-	}
 	span.viewPDF {display: none;}
-	h3 + a {display: none;}
-	#brand {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto 30% auto;
-		grid-gap: var(--contGap);
+	img[alt="recruit back"], 
+	img[alt="foldout front"] {
+		display: inline-block;
 	}
-	#brand h3 {
-		grid-column: 1 / 3;
-		grid-row: 1 / 2;
-		width: 100%;
-		margin-bottom: 0;
+	.fileLink > img[alt="thrive foldout"] {
+		display: none;
 	}
-	#banner {
-		grid-column: 1 / 2;
-		grid-row: 2 / 4;
-		margin-bottom: var(--contGap) !important;
+	.fileLink:first-of-type {
+		pointer-events: none;
+		cursor: default;
 	}
-	figure.card h3 {
-		display: block;
-		margin-top: var(--contGap);
-	}
-	figure.card {
-		grid-column: 2 / 3;
-	}
-	#brand figure:nth-of-type(1), 
-	#brand figure:nth-of-type(2) {
-	margin-bottom: unset;
+	figure img[alt="recruit front"] {
+		margin-bottom: var(--contGap);
 	}
 }
-@media only screen and (min-width: 800px) {
-	:root {
-		--docHeight: 20rem;
-	}
-	article {
-		display: flex;
-		flex-flow: row wrap;
-	}
-	.icons {
-		flex: 0 0 47%;
-	}
-	.icons:nth-of-type(even) {
-		margin-left: auto;
-	}
-	#brand, article section:nth-last-of-type(2) {
-		flex: 0 0 100%;
-	}
-	section.flyers {
-		width: 47%;
-	}
-	article section:nth-last-of-type(3) {
-		margin-left: auto;
-	}
 
-}
 @media only screen and (min-width: 800px) {
 	:root {
-		--docHeight: 30rem;
+		--imgWid: 22rem;
 	}
-	#brand, #style {
-		width: 47%;
-		flex: auto;
+	img[alt^="recruit"] {
+		display: inline-block;
+		width: var(--imgWid);
 	}
-	#style {
-		margin-right: calc(2*var(--contGap));
+	img[alt="recruit front"] {
+		float: left;
+	} 
+	img[alt="recruit back"] {
+		margin-left: var(--contGap);
+		clear: left;
 	}
-	#brand {
-		margin-left: auto;
+	img[alt^="foldout"] {
+		display: inline-block;
+		width: var(--imgWid);
+	}
+	img[alt="foldout front"] {
+		float: left;
+	}
+	img[alt="foldout back"] {
+		margin-left: var(--contGap);
+		clear: left;
+	}
+	img[alt*="inner"] {
+		margin-top: var(--contGap);
+		width: calc(var(--imgWid) + var(--contGap) / 2);
+	}
+	img[alt*="inner left"] {
+		position: relative;
+		float: left;
+	}
+	img[alt*="inner right"] {
+		position: relative;
+		clear: left;
+	}
+	img[alt="donation form"] {
+		width: calc(var(--imgWid)*.6);
+		margin-top: var(--contGap);
+		float: left;
+		margin-right: var(--contGap);
+	}
+	img[alt="site preview"] {
+		width: calc(var(--imgWid) + 9rem);
+	}
+	#donate {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	:root {
+		--imgWid: 33rem;
 	}
 }
