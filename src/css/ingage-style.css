@@ -67,6 +67,9 @@ img[alt*="foldout"]:not([alt*="front"]) {
 section.brand img {
 	box-shadow: 2px 2px 5px var(--dark);
 }
+iframe {
+	display: none;
+}
 /*TEMPLATE MEDIA QUERIES*/
 @media only screen and (min-width: 500px) {
 	:root {
@@ -156,7 +159,7 @@ section.brand img {
 		width: 16rem;
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1300px) {
 	:root {
 		--imgWid: 36rem;
 		--docHeight: 45rem;

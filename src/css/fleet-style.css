@@ -1,0 +1,144 @@
+:root {
+    --contGap: 1rem;
+	--textAlign: center;
+	--imgWid: 100%;
+}
+/*PROJECT TEMPLATE STYLE*/
+main {
+    grid-column: 1 / span 12;
+    grid-row: 2 / 3;
+	padding: var(--contGap) var(--baseWidPer);
+}
+section > h3 {
+	margin-bottom: var(--contGap);
+}
+article section h3 {
+	margin: var(--contGap) 0;
+}
+section figure img {
+	display: block;
+}
+main > * {
+	margin: var(--contGap) 0;
+}
+h2 + p {
+	font: var(--fontHeadline);
+}
+.projNotes li h3 {
+	font: var(--fontTitleSmall);
+	margin-bottom: var(--contGap);
+}
+.projNotes li:first-of-type, 
+ul.projNotes:last-of-type {
+	list-style: none;
+}
+.projNotes li em {
+	font-weight: 700;
+	display: block;
+}
+#intro > *, #summary > *, article > section {
+	margin: var(--contGap) 0;
+}
+#summary small {
+	display: block;
+	width: 100%;
+	text-align: var(--textAlign);
+}
+span.viewPDF {position: relative;}
+span.viewPDF::after {
+	content: "(Click for PDF)";
+	position: absolute;
+	top: .2rem;
+	left: .5rem;
+	width: 6rem;
+	height: 1.2rem;
+	font: var(--fontNotation);
+}
+/*project-styles*/
+article section figure img {
+	width: var(--imgWid);
+}
+.personaCard img {
+	width: 100%;
+}
+.personaSumm > *, .personaCard img {
+	margin-bottom: var(--contGap);
+}
+.personaCard ul, .personaCard ol {
+	list-style-position: outside;
+	margin-left: var(--contGap);
+}
+/*TEMPLATE MEDIA QUERIES*/
+@media only screen and (min-width: 500px) {
+	:root {
+		--textAlign: left;
+		--contGap: 1.5rem;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.projNotes li em, ol.projNotes, ul:first-of-type {
+		display: inline-block;
+	}
+	.viewPDF {
+		display: none;
+	}
+	a[href$=".pdf"] {
+		cursor: default;
+	}
+	#summary ul:first-of-type {
+		margin-left: var(--contGap);
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	#summary ul:last-of-type {
+		margin-top: 0;
+	}
+}
+/*project queries*/
+@media only screen and (min-width: 800px) {
+	.personaCard {
+		display: flex;
+		flex-flow: row nowrap;
+		padding: var(--contGap);
+		background: rgb(200 200 200 / 70%);
+	}
+	.personaCard img {
+		width: 40%;
+		object-fit: scale-down;
+		align-self: flex-start;
+		margin-right: var(--contGap);
+		border-radius: 50%;
+	}
+	.personaSumm > * {
+		margin-bottom: calc(var(--contGap)/2);
+	}
+	.personaCard:first-of-type {
+		margin-bottom: var(--contGap);
+	}
+}
+@media only screen and (min-width: 1200px) {
+	:root {
+		--imgWid: 70vw;
+	}
+	#personas {
+		display: flex;
+		flex-flow: row;
+		width: 80vw;
+	}
+	.personaCard img {
+		width: 20vw;
+		border-radius: 0;
+		display: inline-block;
+	}
+	.personaCard {
+		margin-bottom: 0;
+		margin-top: 0;
+		flex-flow: row wrap;
+		background: none;
+		padding: initial;
+	}
+	.personaCard:first-of-type {
+		margin-bottom: initial;
+		margin-right: 4vw;
+	}
+}
