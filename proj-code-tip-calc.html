@@ -245,44 +245,4 @@ function roundTip(array) {
     }
     var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
     spanTotal.innerText = " $" + adjTotalBill.toFixed(2);
-}</code></pre></section></section></main><!--global footer--><footer><a data-title="LinkedIn" href="https://linkedin.com/in/ying-liang"><i class="fab fa-linkedin-in" aria-hidden="true"></i> <span class="sr">LinkedIn</span> </a><a data-title="Codepen" href="http://codepen.io/ying-liang"><i class="fab fa-codepen" aria-hidden="true"></i> <span class="sr">CodePen</span> </a><a data-title="Github" href="http://github.com/ying-liang"><i class="fab fa-github" aria-hidden="true"></i> <span class="sr">Github</span> </a><a data-title="Instagram" href="https://www.instagram.com/ying.aling/"><i class="fab fa-instagram" aria-hidden="true"></i> <span class="sr">Instagram</span> </a><a data-title="Email" href="mailto:liangy.mu@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i><address class="sr">Liangy.mu@gmail.com</address></a><small id="copyright"></small></footer><!--current year copyright--><script>function calcTip() {
-        var split = Number(document.querySelector("#split").value);
-        var billInput = Number(document.querySelector("#billAmount").value);
-        var tipInput = Number(document.querySelector("#tipAmount").value) / 100;  
-        var totalTip = Math.round((billInput * tipInput) * 100) / 100;
-        var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
-        if(split > 1) {
-            var splitTip = Math.round((totalTip / split) * 100) / 100;
-            var totalBill = billInput + (splitTip * split);
-            var totalTip = splitTip * split;
-            spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
-        } else {
-            var totalBill = billInput + totalTip;
-            spanTip.innerText = " $" + totalTip.toFixed(2);
-        }
-        var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
-        spanTotal.innerText = " $" + totalBill.toFixed(2);
-        return [totalBill, totalTip];
-    }
-    function roundTip(array) {
-        var split = Number(document.querySelector("#split").value);
-        var totalBill = array[0];
-        var totalTip = array[1];
-        var spanTip = document.querySelectorAll("h3")[0].querySelector("span"); 
-        var adjTotalBill = Math.ceil(totalBill);
-        if(split > 1) {
-            var splitTip = Math.round((totalTip / split) * 100) / 100;
-            var increaseTip = adjTotalBill - totalBill;
-            var splitTipInc = Math.round((increaseTip / split) * 100) / 100;
-            splitTip = splitTip + splitTipInc;
-            var billInput = totalBill - totalTip;
-            adjTotalBill = splitTip * split + billInput;
-            totalTip = splitTip * split;
-            spanTip.innerText = " $" + splitTip.toFixed(2) + " ($" + totalTip.toFixed(2) + " all)";
-        } else {
-            var adjTip = adjTotalBill - totalBill + totalTip;
-            spanTip.innerText = " $" + adjTip.toFixed(2);
-        }
-        var spanTotal = document.querySelectorAll("h3")[1].querySelector("span"); 
-        spanTotal.innerText = " $" + adjTotalBill.toFixed(2);
-    }</script><script>document.getElementById("copyright").innerHTML = "&copy;" + new Date().getFullYear() + " Ying Liang. All Rights Reserved.";</script></body></html>
+}</code></pre></section></section></main><!--global footer--><footer><a data-title="LinkedIn" href="https://linkedin.com/in/ying-liang"><i class="fab fa-linkedin-in" aria-hidden="true"></i> <span class="sr">LinkedIn</span> </a><a data-title="Codepen" href="http://codepen.io/ying-liang"><i class="fab fa-codepen" aria-hidden="true"></i> <span class="sr">CodePen</span> </a><a data-title="Github" href="http://github.com/ying-liang"><i class="fab fa-github" aria-hidden="true"></i> <span class="sr">Github</span> </a><a data-title="Instagram" href="https://www.instagram.com/ying.aling/"><i class="fab fa-instagram" aria-hidden="true"></i> <span class="sr">Instagram</span> </a><a data-title="Email" href="mailto:liangy.mu@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i><address class="sr">Liangy.mu@gmail.com</address></a><small id="copyright"></small></footer><script src="js/calculator.js"></script><!--current year copyright--><script>document.getElementById("copyright").innerHTML = "&copy;" + new Date().getFullYear() + " Ying Liang. All Rights Reserved.";</script></body></html>

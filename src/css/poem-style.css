@@ -1,0 +1,198 @@
+/*reset*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*layout*/
+body {
+	width: 100%;
+	padding-top: 10vh;
+	font: 1rem 'Josefin Slab', serif;
+	background: #eee;
+}
+footer {
+	width: inherit;
+	text-align: center;	
+
+}
+nav {
+	width: inherit;
+	padding: 1rem 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding: .5rem;
+}
+main {
+	width: 1000px;
+	height: 600px;
+	position: relative;
+	border: 1rem solid black;
+	margin: 0 auto;
+	font-size: 2rem;
+	overflow: hidden;
+}
+main section {
+	background: white;
+	height: 100%;
+	display: none;
+}
+.active {
+	display: block;
+}
+main section:not(section:first-of-type) {
+	padding-top: 10rem;
+	text-align: center;
+}
+main section:nth-child(7) {
+	height: 100%;
+	background-color:black;
+}
+/*content*/
+nav a {
+	display: grid;
+	place-items: center;
+	width: 2rem;
+	height: 2rem;
+	margin: .5rem;
+	background-color:#999;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1.2rem;
+	text-decoration: none;
+	transition: background-color 1.5s ease;
+}
+main small {
+	position: absolute;
+	margin: 1rem;
+	right: 0;
+	font-size: 1.1rem;
+	color: #666;
+}
+h1, h2 {
+	position: absolute;
+	text-shadow: 2px 2px rgb(0 0 0 / .2);
+	z-index: 400;
+	text-indent: 5px;
+}
+h1 {
+	left: 100px;
+	top: 100px;
+	font: 4rem 'Dancing Script', cursive;
+}
+h2 {
+	left: 100px;
+	top: 200px;
+	font-size: 1.5rem;
+}
+span {
+	cursor: default;
+}
+span[class^="text"] {
+	color:#B00000;
+}
+span:not(span[class^="text"]) {
+	transition: all .5s ease;
+	color: gray;
+}
+a.heart {
+	font-size: 3rem;
+	display: block;
+	animation: pulse 2s infinite;
+	text-decoration: none;
+	color: rgb(165 25 25 / 1);
+}
+#pageFive span:nth-of-type(2) {
+	color: white;
+}
+img {
+	transition: opacity 1s ease-in;
+	position: absolute;
+	display: block;
+}
+img[class^=pic] {
+	height: 130px;
+	display: none;
+}
+img[alt="girl"] {
+	top: 50px;
+	z-index: 300;
+	width: 1000px;
+}
+img[alt="mask"] {
+	bottom: 20px;
+	left: 10px;
+	z-index: 200;
+	width: 380px;
+}
+img[alt="burst"] {
+	width: 300px;
+	bottom: 20px;
+	left: 20px;
+	z-index: 100;
+}
+img[alt="lungs"] {left: 130px; top: 190px;}
+img[alt="cicada"] {left: 710px; top: 200px;}
+img[alt="gas mask"] {left: 700px; top: 430px;}
+img[alt="paradise"] {left: 360px; top: 0px;}
+img[alt="heart"] {left: 700px; top: 200px;}
+img[alt="guts"] {height: 90px; left: 280px; top: 400px;}
+img[alt="mind"] {height: 90px; left: 420px; top: 400px;}
+img[alt="ribs"] {height: 90px; left: 620px; top: 400px;}
+/*hover states*/
+nav a:hover {
+	background-color: black !important;
+}
+.wishHover {
+	font-weight: bold;
+	font-size: 2.4rem;
+	color: black !important;
+}
+.burrowHover {
+	font-style: italic;
+	color: black !important;
+}
+.crunchHover {
+	font: 2.5rem 'Black Ops One', cursive;
+	color: black !important;
+}
+.nothingHover {
+	color: white !important;
+	font-size: .5rem;
+}
+.soresHover {
+	font: 1.5rem 'Shadows Into Light', cursive;
+	color: black !important;
+}
+.patienceHover {
+	font: 2.5rem 'Dancing Script', cursive;
+	color: black !important;
+}
+.hopeHover {
+	font: 2.5rem 'Crafty Girls', cursive;
+	color: black !important;
+}
+.eyesHover {
+	font: 2.5rem 'Kreon', serif;
+	color: black !important;
+}  
+.reposeHover {
+	font: 2.5rem 'Calligraffitti', cursive;
+	color: black !important;
+}
+.hangHover {
+	font-size: 3rem;
+	color:white !important;
+}
+/*animations*/
+img[alt="burst"] {animation: spin 20s linear infinite;}
+@keyframes spin {100%{transform:rotate(360deg);}}
+@keyframes pulse {
+   0% {transform: scale(1.1);}
+   50% {transform: scale(0.8);}
+   100% {transform: scale(1);}
+}
